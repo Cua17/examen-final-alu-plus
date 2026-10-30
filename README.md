@@ -10,8 +10,9 @@ división entera), con sumador Prefix Adder (Kogge-Stone) y un bus
 triestado real para AND/OR — la combinación asignada a mí según la matriz
 del PDF (ver [`docs/01-alu-estructura.md`](docs/01-alu-estructura.md)).
 Parte 2 (síntesis + diseño físico con Design Compiler / IC Compiler II,
-PDK de GF 150nm + librerías M31) queda preparada en `parte2/` a la espera
-de acceso al servidor del curso.
+PDK SkyWater sky130 — el material de apoyo real del curso corrige al PDF,
+que decía GF 150nm/M31 — ver [`parte2/docs/00-estado.md`](parte2/docs/00-estado.md))
+queda preparada en `parte2/` a la espera de correr en el servidor del curso.
 
 José Daniel Cuá Fagiani — Carné 21200
 
@@ -72,9 +73,11 @@ Tiene que terminar en `TESTBENCH: PASS` (35/35). Igual para
 - **Vivado Simulator 2026.1** (`xvlog`/`xelab`/`xsim`, línea de comandos)
   para simular y verificar toda la Parte 1 — mismo criterio que
   [P3](../P3/README.md).
-- **Design Compiler** / **IC Compiler II** (Synopsys), PDK de GF 150nm +
-  librerías standard M31 — Parte 2, pendiente de acceso al servidor del
-  curso (scripts ya preparados en `parte2/scripts/`).
+- **Design Compiler** / **IC Compiler II** (Synopsys), PDK SkyWater sky130
+  (`sky130_fd_sc_hd`) — Parte 2, scripts ya preparados en `parte2/scripts/`
+  siguiendo el flujo real del curso (ver
+  [`parte2/docs/00-estado.md`](parte2/docs/00-estado.md)), pendiente de
+  correr en el servidor.
 
 ## Video y presentación
 
