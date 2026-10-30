@@ -1,0 +1,14 @@
+# artefactos de simulacion Vivado (xvlog/xelab/xsim)
+xsim.dir/
+*.jou
+*.log
+*.pb
+*.wdb
+.Xil/
+
+# artefactos de Design Compiler / IC Compiler II (Parte 2, cuando corra en el servidor)
+parte2/reportes/
+parte2/netlist/
+parte2/gds/
+*.ddc
+alu_plus_sync_lib/
