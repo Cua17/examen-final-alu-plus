@@ -1,0 +1,68 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : alu_plus_sync_WIDTH16
+Version: X-2025.06-SP5-5
+Date   : Mon Nov  2 14:20:27 2026
+****************************************
+
+
+Library(s) Used:
+
+    M31LLSC733GL150MS_25CTT3P3_ctyp_nldm (File: /home/cuax/bootcamp_data/ExamenFinal_ALU/m31/M31LLSC733GL150MS_25CTT3P3_ctyp_nldm.db)
+
+
+Operating Conditions: 25CTT3P3   Library: M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+alu_plus_sync_WIDTH16  MW0K              M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+alu_plus_WIDTH16       MW0K              M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+prefix_adder_WIDTH16   MW0K              M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+array_divider_WIDTH16  MW0K              M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+mux2_WIDTH16_6         MW0K              M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+mux2_WIDTH16_4         MW0K              M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+mux2_WIDTH16_3         MW0K              M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+mux2_WIDTH16_0         MW0K              M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+mux2_WIDTH16_1         MW0K              M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+mux2_WIDTH16_2         MW0K              M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+mux2_WIDTH16_5         MW0K              M31LLSC733GL150MS_25CTT3P3_ctyp_nldm
+
+
+Global Operating Voltage = 3.3  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  =   1.4379 mW   (69%)
+  Net Switching Power  = 632.6550 uW   (31%)
+                         ---------
+Total Dynamic Power    =   2.0705 mW  (100%)
+
+Cell Leakage Power     =   6.1127 nW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.5910            0.0000            0.0000            0.5910  (  28.54%)  i
+register       7.4214e-02        5.3925e-02          353.9665            0.1281  (   6.19%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      0.7727            0.5787        5.7588e+03            1.3514  (  65.27%)
+--------------------------------------------------------------------------------------------------
+Total              1.4379 mW         0.6327 mW     6.1127e+03 pW         2.0705 mW
+1

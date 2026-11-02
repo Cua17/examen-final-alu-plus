@@ -1,43 +1,50 @@
 # synth_dc.tcl -- flujo de sintesis con Design Compiler (dc_shell) para
 # alu_plus_sync (WIDTH=16).
 #
-# Libreria real confirmada por el material de apoyo del curso (Google
-# Drive "DC y ICC2", TCL_DC_ICC2_originales_y_comentados.zip): es
-# SkyWater sky130 (sky130_fd_sc_hd), NO el GF 150nm / M31 que decia el PDF
-# del examen -- ver parte2/docs/00-estado.md para la aclaracion completa.
-# Esta version sigue el mismo patron de setup que
-# dc_ppa1_performance.tcl / dc_ppa2_power.tcl del material de apoyo
-# (mismo curso, mismas librerias, proyecto anterior "ProyectoCPU_F").
+# Libreria REAL confirmada en dos pasos:
+#   1. PDK de proceso: GlobalFoundries 150MCU (GF 150nm), ZIP oficial de GF
+#      (GF-20261031T234429Z-1-001.zip) que el usuario bajo de su Drive.
+#   2. Libreria de celdas: M31LLSC733GL150MS -- "7-Track SVT Low Leakage
+#      Standard Cell Library" de M31 para el mismo proceso GF 150MCU,
+#      dominio 3.3V (la variante digital normal; existe tambien
+#      M31LLSC750GL150MS para dominio 5V/IO, no aplica a un bloque logico
+#      puro como esta ALU). ZIP de M31 que el usuario bajo de su cuenta
+#      (M31-20261101T003501Z-1-001.zip), confirmado por el ayudante del
+#      catedratico por audio: "la libreria m31... la que te voy a enviar
+#      es para la del circuito" (no la de memoria/SRAM).
+#   Esto reemplaza la version anterior de este script (sky130), que estaba
+#   mal -- ver parte2/docs/00-estado.md para el historial completo de la
+#   correccion.
 #
-# COMO CORRERLO (en el servidor del curso, una vez dentro por SSH):
-#   dc_shell-t -f parte2/scripts/synth_dc.tcl | tee parte2/reportes/synth_dc.log
+# COMO CORRERLO (en el servidor del curso, una vez dentro por SSH -- OJO,
+# hay que pararse DENTRO de parte2/scripts antes de correrlo, los paths
+# relativos del script asumen ese cwd):
+#   cd ExamenFinal/parte2/scripts
+#   dc_shell-t -f synth_dc.tcl | tee ../reportes/synth_dc.log
 #
-# PENDIENTE DE VERIFICAR EN EL SERVIDOR (marcado "AJUSTAR" abajo):
-#   - $HOME de "cuax" puede no ser /home/synuser19/... (ese es de otro
-#     usuario, de un proyecto anterior) -- confirmar con "echo $DESIGN_REF_PATH"
-#     o preguntando al profesor donde vive el PDK para este examen.
-#   - El resto de la ruta (new_google_skywater/.../sky130_fd_sc_hd...) es
-#     la instalacion compartida del curso y probablemente es la misma
-#     para todos los usuarios.
+# Rutas esperadas en el servidor (ver parte2/docs/00-estado.md "Subida de
+# archivos al servidor" para como se generaron):
+#   /home/cuax/bootcamp_data/ExamenFinal_ALU/GF_PDK/...   (techfiles GF, ya extraidos)
+#   /home/cuax/bootcamp_data/ExamenFinal_ALU/m31/...      (libreria M31, ya extraida)
 
 # ------------------------------------------------------------------
-# 0. Librerias (sky130_fd_sc_hd, confirmado por el material de apoyo)
+# 0. Librerias (M31LLSC733GL150MS, corner tipico 25C/TT/3.3V)
 # ------------------------------------------------------------------
-set DESIGN_REF_PATH "/home/cuax/bootcamp_data/ExamenFinal_ALU"  ;# AJUSTAR: verificar $HOME real de cuax
-set PDK_ROOT "${DESIGN_REF_PATH}/new_google_skywater/latest/pdk/synopsys/results"
+set DESIGN_REF_PATH "/home/cuax/bootcamp_data/ExamenFinal_ALU"
+set M31_LIB_PATH     "${DESIGN_REF_PATH}/m31"
 
-set_app_var search_path "$search_path .. ./rtl ./libs ${PDK_ROOT}/lib/sky130_fd_sc_hd/db_nldm"
+set_app_var search_path "$search_path .. ./rtl ${M31_LIB_PATH}"
 set_app_var synthetic_library dw_foundation.sldb
 
+# Corner tipico (25C, TT, 3.3V) -- el ZIP de M31 trae mas corners
+# (cworst/cbest a distintas temperaturas/voltajes) si hace falta signoff
+# multi-corner mas adelante; para el flujo basico que pide el PDF alcanza
+# con el tipico.
 set_app_var target_library \
-    "sky130_fd_sc_hd__ss_100C_1v40.db"
+    "${M31_LIB_PATH}/M31LLSC733GL150MS_25CTT3P3_ctyp_nldm.db"
 
 set_app_var link_library \
     "* $target_library $synthetic_library"
-
-set_min_library \
-    sky130_fd_sc_hd__ss_100C_1v40.db \
-    -min_version sky130_fd_sc_hd__ff_100C_1v95.db
 
 get_libs
 
@@ -50,29 +57,21 @@ set RTL_FILES {
     ../../src/prefix_adder.sv
     ../../src/array_divider.sv
     ../../src/alu_plus.sv
-    rtl/alu_plus_sync.sv
+    ../rtl/alu_plus_sync.sv
 }
 analyze -format sverilog $RTL_FILES
 elaborate alu_plus_sync -parameters "WIDTH=16"
 current_design alu_plus_sync
 link
 
-set_operating_conditions \
-    -max ss_100C_1v40 \
-    -max_library sky130_fd_sc_hd__ss_100C_1v40 \
-    -min ff_100C_1v95 \
-    -min_library sky130_fd_sc_hd__ff_100C_1v95
-
 # ------------------------------------------------------------------
-# 2. Restricciones de timing (mismo patron que el material de apoyo:
-#    uncertainty/transition/latencia como fraccion del periodo, grupos
-#    de paths IN->REG / REG->OUT / IN->OUT)
+# 2. Restricciones de timing
 # ------------------------------------------------------------------
 # Periodo de partida para un bloque chico (ALU de 16 bits + registros) en
-# sky130_fd_sc_hd, corner ss_100C_1v40 -- AJUSTAR con report_timing real,
-# igual criterio que el resto del curso (nada inventado, el numero final
-# sale de un reporte real).
-set clk_val 10.0
+# GF150MCU + M31 7-track (proceso de 150nm, bastante mas lento que un nodo
+# moderno) -- AJUSTAR con el report_timing real de la primera corrida;
+# 20ns (50MHz) es un punto de partida conservador, no un numero medido.
+set clk_val 20.0
 set CLK_PORT clk
 
 create_clock -name clk -period $clk_val [get_ports $CLK_PORT]

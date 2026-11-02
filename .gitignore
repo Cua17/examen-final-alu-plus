@@ -6,9 +6,16 @@ xsim.dir/
 *.wdb
 .Xil/
 
-# artefactos de Design Compiler / IC Compiler II (Parte 2, cuando corra en el servidor)
-parte2/reportes/
-parte2/netlist/
+# artefactos de Design Compiler / IC Compiler II -- NOTA: reportes/ y
+# netlist/ NO van acá: el PDF los pide como entregables explícitos
+# ("Entregables: RTL, testbench, scripts Tcl, SDC, netlists... y un
+# informe breve con reportes"), así que sí se versionan.
 parte2/gds/
 *.ddc
 alu_plus_sync_lib/
+lib_icc2_*/
+
+# excepcion: estos SI son logs reales de herramientas, entregables
+!parte2/reportes/synth_dc.log
+!parte2/reportes/vcs_sync.log
+!parte2/reportes/impl_icc2.log

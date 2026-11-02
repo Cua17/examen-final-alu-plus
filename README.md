@@ -10,9 +10,10 @@ división entera), con sumador Prefix Adder (Kogge-Stone) y un bus
 triestado real para AND/OR — la combinación asignada a mí según la matriz
 del PDF (ver [`docs/01-alu-estructura.md`](docs/01-alu-estructura.md)).
 Parte 2 (síntesis + diseño físico con Design Compiler / IC Compiler II,
-PDK SkyWater sky130 — el material de apoyo real del curso corrige al PDF,
-que decía GF 150nm/M31 — ver [`parte2/docs/00-estado.md`](parte2/docs/00-estado.md))
-queda preparada en `parte2/` a la espera de correr en el servidor del curso.
+PDK real de GlobalFoundries 150nm ("150MCU") + celdas M31, tal como dice
+el PDF — ver [`parte2/docs/00-estado.md`](parte2/docs/00-estado.md) para el
+estado y lo que falta) queda preparada en `parte2/` a la espera de correr
+en el servidor del curso.
 
 José Daniel Cuá Fagiani — Carné 21200
 
@@ -22,11 +23,18 @@ José Daniel Cuá Fagiani — Carné 21200
 |---|---|
 | `sim/testbench.sv` (WIDTH=8, xvlog/xelab/xsim) | **35/35 PASS**, sin warnings |
 | `sim/testbench_widths.sv` (WIDTH=16 y WIDTH=32, misma arquitectura) | **10/10 PASS** |
-| `parte2/sim/testbench_sync.sv` (envoltorio síncrono, WIDTH=16, pre-chequeo antes de VCS/Verdi) | **5/5 PASS** |
+| `parte2/sim/testbench_sync.sv` (envoltorio síncrono, WIDTH=16, Vivado xsim) | **5/5 PASS** |
+| `parte2/sim/testbench_sync.sv` con **VCS** real (servidor del curso) | **5/5 PASS** |
+| Síntesis **Design Compiler** real (GF150MCU + M31LLSC733GL150MS) | **Timing OK — WNS/TNS = 0.00, 0 violaciones**, 2671 celdas, 30448 µm² |
 
-Parte 2 (Design Compiler / IC Compiler II): **pendiente** — scripts y
-documentación listos en `parte2/`, ver
-[`parte2/docs/00-estado.md`](parte2/docs/00-estado.md).
+Reportes reales y respuestas de la Discusión (PDF item 7.1) en
+[`parte2/docs/05-discusion.md`](parte2/docs/05-discusion.md) y
+[`parte2/docs/04-triestado.md`](parte2/docs/04-triestado.md).
+
+Parte 2 — IC Compiler II (floorplan/place&route/GDSII): **bloqueada** —
+la librería física M31 que tenemos es formato Milkyway clásico y esta
+instalación de ICC2 no lo soporta; falta una versión NDM. Ver
+[`parte2/docs/00-estado.md`](parte2/docs/00-estado.md) para el detalle.
 
 ## Contenido
 
@@ -73,11 +81,11 @@ Tiene que terminar en `TESTBENCH: PASS` (35/35). Igual para
 - **Vivado Simulator 2026.1** (`xvlog`/`xelab`/`xsim`, línea de comandos)
   para simular y verificar toda la Parte 1 — mismo criterio que
   [P3](../P3/README.md).
-- **Design Compiler** / **IC Compiler II** (Synopsys), PDK SkyWater sky130
-  (`sky130_fd_sc_hd`) — Parte 2, scripts ya preparados en `parte2/scripts/`
-  siguiendo el flujo real del curso (ver
-  [`parte2/docs/00-estado.md`](parte2/docs/00-estado.md)), pendiente de
-  correr en el servidor.
+- **Design Compiler** / **IC Compiler II** (Synopsys), PDK real de
+  GlobalFoundries 150nm ("150MCU") + celdas M31 — Parte 2, scripts en
+  `parte2/scripts/` pendientes de reescribir con las rutas reales del PDK
+  (ver [`parte2/docs/00-estado.md`](parte2/docs/00-estado.md) para el
+  detalle y lo que todavía falta), pendiente de correr en el servidor.
 
 ## Video y presentación
 
