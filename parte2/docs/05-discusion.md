@@ -100,16 +100,92 @@ por etapa sin manera de paralelizarlo con esta arquitectura.
   coinciden — no hay margen entre bloques para "robarle" tiempo a uno
   para dárselo a otro.
 
-## 2. Reportes de IC Compiler II — PENDIENTE
+## 2. Reportes de IC Compiler II
 
-No se completan estas respuestas todavía: requieren la librería física
-M31 en formato NDM (ver nota al inicio) para poder correr
-`place_opt`→`clock_opt`→`route_auto`→`route_opt` de verdad. Se completan
-en cuanto esté resuelto — ver [`00-estado.md`](00-estado.md).
+Corrido completo en el servidor el 2026-11-02:
+`create_lib` (librería M31 vía LEF, no Milkyway — ver
+[`00-estado.md`](00-estado.md) para el porqué) →
+`place_opt` → `clock_opt` → `route_auto` → `route_opt` → `write_gds`,
+los cinco sin errores fatales, GDSII final exportado
+(`parte2/gds/alu_plus_sync.gds`, 1.86 MB). Fuente de los números:
+`reportes/icc2/{00_pre_place,10_place_opt,20_clock_opt,30_route_auto,40_post_route}/report_qor.rpt`.
 
-1. ¿Cómo cambia el WNS entre las diferentes etapas?
-2. ¿Cómo afectan el clock skew y las latencias del reloj al timing?
-3. ¿Aumentó el área respecto a Design Compiler? ¿Por qué?
-4. ¿Existen violaciones de setup, hold, capacitancia o transición?
-5. ¿Qué muestran las verificaciones de routing, legalidad y conexiones de
-   alimentación?
+**Resultado honesto, no es "todo perfecto":** a diferencia de Design
+Compiler (que cumplía timing con slack 0.00 exacto a nivel lógico), el
+diseño **no cumple timing** una vez metidos los efectos físicos reales
+(parásitos de ruteo, celdas tap, árbol de reloj real) — el camino
+crítico final queda violado por **-1.45 ns**. Esto es exactamente el
+tipo de brecha pre-layout vs. post-layout que esta sección del examen
+busca que se entienda, así que se reporta tal cual salió, sin suavizarlo.
+
+### 1. ¿Cómo cambia el WNS entre las diferentes etapas?
+
+| Etapa | WNS (slack, grupo `clk`) | TNS | Caminos violados | Peor hold | Violaciones hold |
+|---|---|---|---|---|---|
+| `00_pre_place` (post-floorplan, antes de optimizar) | -6.63 ns | -115.36 ns | 18 | -0.52 ns | 20 |
+| `10_place_opt` | -3.02 ns | -49.66 ns | 18 | -0.50 ns | 19 |
+| `20_clock_opt` | -1.26 ns | -15.22 ns | 18 | **0.00 ns** | **0** |
+| `30_route_auto` | -1.45 ns | -18.52 ns | 18 | -0.01 ns | 2 |
+| `40_post_route` (`route_opt`, final) | -1.45 ns | -18.18 ns | 18 | -0.01 ns | 1 |
+
+El WNS mejora muchísimo entre `pre_place` y `clock_opt` (de -6.63 a
+-1.26 ns) porque `place_opt` y `clock_opt` optimizan activamente timing
+(upsizing de celdas, buffering, useful skew). Pero **empeora un poco**
+después de `route_auto` (-1.45 ns) porque ahí se reemplazan las
+estimaciones de parásitos por los parásitos **reales** extraídos del
+ruteo — siempre más pesados que la estimación. `route_opt` no logró
+recuperar ese margen perdido (se mantuvo en -1.45 ns).
+
+### 2. ¿Cómo afectan el clock skew y las latencias del reloj al timing?
+
+El efecto más claro está en el **hold**: antes de `clock_opt` había
+19-20 violaciones de hold (peor caso -0.50/-0.52 ns) porque el reloj
+llegaba a cada registro con una latencia "ideal" (sin árbol real). Una
+vez que `clock_opt` construye el árbol de reloj real con *useful skew*
+(cada rama del reloj llega en el momento justo para ayudar al camino más
+lento), las violaciones de hold bajan a **0**. El ruteo real del reloj
+después (`route_auto`/`route_opt`) reintroduce una violación de hold
+mínima (-0.01 ns, 1-2 caminos) — esperable, ya no es skew "ideal" sino
+el de los cables reales.
+
+### 3. ¿Aumentó el área respecto a Design Compiler? ¿Por qué?
+
+Sí, pero hay que separar dos números:
+
+- **Área de celdas lógicas** (lo que DC reporta): DC = 30448.05 µm²,
+  ICC2 post-route = 30367.41 µm² — prácticamente igual (incluso un poco
+  menor, por el swapping de celdas que hace `place_opt`/`route_opt`
+  durante la optimización de timing/área).
+- **Área física total** (celdas lógicas + físicas): ICC2 reporta
+  **33238.19 µm²** — un 9% más que DC. La diferencia son las **1764
+  celdas tap** (`TAP01AS7`) que `create_tap_cells` insertó en el
+  floorplan — necesarias para la regla de proceso (conexión de pozo/
+  substrate contra latch-up), pero DC nunca las ve porque son un
+  concepto 100% físico, no lógico.
+
+### 4. ¿Existen violaciones de setup, hold, capacitancia o transición?
+
+- **Setup:** sí, 18 caminos violados, peor caso -1.45 ns (ver tabla
+  arriba). Startpoint `b_reg_reg[6]`, Endpoint `z_out_reg`, Path Group
+  `clk` — mismo patrón que en DC: el camino pasa por
+  `u_alu/u_divider` completo.
+- **Hold:** 1 violación residual, -0.01 ns — prácticamente resuelta por
+  `clock_opt`.
+- **Capacitancia/transición:** `report_qor.rpt` no muestra violaciones de
+  max transition ni max capacitancia en el diseño final (`MaxTrnV`,
+  `MaxCapV` = 0 en el resumen de `route_opt`).
+
+### 5. ¿Qué muestran las verificaciones de routing, legalidad y conexiones de alimentación?
+
+- `check_legality` (post-route): **"check_legality succeeded"** — sin
+  violaciones (celdas fuera de sitio, fuera de región, de voltage area,
+  de movebound, de márgenes de CTS o de coloring: todas en 0).
+- `check_routes` (post-route): **0 nets abiertas**, **0 DRC**, sin
+  violaciones de antena (no hay reglas de antena definidas en este PDK
+  para este flujo básico).
+- `check_pg_connectivity` (post-placement): **0 celdas, vías o cables
+  flotantes** tanto en VDD como en VSS — las 2661 celdas estándar están
+  correctamente conectadas a alimentación (comparado con el chequeo
+  hecho justo después del floorplan, donde las 2661 celdas aparecían
+  "flotantes" porque todavía no estaban colocadas — es el orden esperado,
+  no un error).

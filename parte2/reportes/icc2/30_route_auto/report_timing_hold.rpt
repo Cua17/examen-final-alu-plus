@@ -1,0 +1,365 @@
+****************************************
+Report : timing
+        -path_type full
+        -delay_type min
+        -max_paths 10
+        -report_by design
+Design : alu_plus_sync_WIDTH16
+Version: Y-2026.03-SP2
+Date   : Mon Nov  2 19:03:55 2026
+****************************************
+
+  Startpoint: a_reg_reg[9] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: result_out_reg[9] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.25      0.25
+
+  a_reg_reg[9]/CK (SFFQX1AS7)                      0.00      0.25 r
+  a_reg_reg[9]/Q (SFFQX1AS7)                       0.72      0.97 r
+  u_alu/u_adder/intadd_0/U2/S (FAX1AS7)            0.27      1.24 r
+  u_alu/u_b0/U10/O (MUX2X1AS7)                     0.30      1.54 r
+  u_alu/u_c0/ctmTdsLR_1_2858/O (NAND2X4AS7)        0.08      1.61 f
+  u_alu/u_c0/ctmTdsLR_1_12/O (OAI12B2X2AS7)        0.11      1.72 r
+  U66/O (AND2X1AS7)                                0.19      1.91 r
+  result_out_reg[9]/D (SFFQX1AS7)                  0.00      1.91 r
+  data arrival time                                          1.91
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 2.05      2.05
+  result_out_reg[9]/CK (SFFQX1AS7)                 0.00      2.05 r
+  library hold time                               -0.14      1.92
+  data required time                                         1.92
+  ------------------------------------------------------------------------
+  data required time                                         1.92
+  data arrival time                                         -1.91
+  ------------------------------------------------------------------------
+  slack (VIOLATED)                                          -0.01
+
+
+
+  Startpoint: b_reg_reg[4] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: result_out_reg[4] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.25      0.25
+
+  b_reg_reg[4]/CK (SFFQX4AS7)                      0.00      0.25 r
+  b_reg_reg[4]/Q (SFFQX4AS7)                       0.41      0.67 f
+  u_alu/u_adder/U4/O (AOI22B2X1AS7)                0.31      0.98 r
+  u_alu/u_adder/intadd_0/U7/S (FAX1AS7)            0.23      1.22 r
+  u_alu/u_b0/U5/O (MUX2X1AS7)                      0.24      1.46 r
+  u_alu/u_c0/ctmTdsLR_1_3064/O (NAND2X1AS7)        0.14      1.60 f
+  u_alu/u_c0/ctmTdsLR_1_13/O (OAI12B2X2AS7)        0.14      1.74 r
+  U71/O (AND2X1AS7)                                0.18      1.92 r
+  result_out_reg[4]/D (SFFQX1AS7)                  0.00      1.92 r
+  data arrival time                                          1.92
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 2.05      2.05
+  result_out_reg[4]/CK (SFFQX1AS7)                 0.00      2.05 r
+  library hold time                               -0.13      1.92
+  data required time                                         1.92
+  ------------------------------------------------------------------------
+  data required time                                         1.92
+  data arrival time                                         -1.92
+  ------------------------------------------------------------------------
+  slack (VIOLATED)                                          -0.00
+
+
+
+  Startpoint: result_out_reg[14] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: result_out[14] (output port clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: REGOUT
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 1.01      1.01
+
+  result_out_reg[14]/CK (SFFQX1AS7)                0.00      1.01 r
+  result_out_reg[14]/Q (SFFQX1AS7)                 0.27      1.29 f
+  copt_gre_h_inst_4758/O (CLKBUFX1AS7)             0.43      1.71 f
+  result_out[14] (out)                             0.00      1.71 f
+  data arrival time                                          1.71
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 1.91      1.91
+  output external delay                           -0.20      1.71
+  data required time                                         1.71
+  ------------------------------------------------------------------------
+  data required time                                         1.71
+  data arrival time                                         -1.71
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.00
+
+
+
+  Startpoint: a_reg_reg[5] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: result_out_reg[5] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.25      0.25
+
+  a_reg_reg[5]/CK (SFFQX1AS7)                      0.00      0.25 r
+  a_reg_reg[5]/Q (SFFQX1AS7)                       0.72      0.97 r
+  u_alu/u_adder/intadd_0/U6/S (FAX1AS7)            0.27      1.24 r
+  u_alu/u_b0/U6/O (MUX2X1AS7)                      0.24      1.48 r
+  u_alu/u_c0/U1/O (NAND2X1AS7)                     0.13      1.61 f
+  u_alu/u_c0/ctmTdsLR_1_1772/O (OAI12B2X2AS7)      0.11      1.73 r
+  U70/O (AND2X1AS7)                                0.20      1.93 r
+  result_out_reg[5]/D (SFFQX1AS7)                  0.00      1.93 r
+  data arrival time                                          1.93
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 2.06      2.06
+  result_out_reg[5]/CK (SFFQX1AS7)                 0.00      2.06 r
+  library hold time                               -0.14      1.92
+  data required time                                         1.92
+  ------------------------------------------------------------------------
+  data required time                                         1.92
+  data arrival time                                         -1.93
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.01
+
+
+
+  Startpoint: a_reg_reg[12] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: result_out_reg[14] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.25      0.25
+
+  a_reg_reg[12]/CK (SFFQX1AS7)                     0.00      0.25 r
+  a_reg_reg[12]/Q (SFFQX1AS7)                      0.46      0.71 f
+  u_alu/u_adder/ctmTdsLR_1_4429/O (NAND2X1AS7)     0.21      0.92 r
+  u_alu/u_adder/U29/O (AOI22B2X1AS7)               0.14      1.06 f
+  u_alu/u_adder/U44/O (AOI22B2X1AS7)               0.21      1.27 r
+  u_alu/u_b0/U15/O (MUX2X1AS7)                     0.23      1.50 r
+  u_alu/u_c0/U3/O (NAND2X1AS7)                     0.13      1.63 f
+  u_alu/u_c0/ctmTdsLR_1_201/O (OAI12B2X2AS7)       0.11      1.74 r
+  U62/O (AND2X1AS7)                                0.19      1.93 r
+  result_out_reg[14]/D (SFFQX1AS7)                 0.00      1.93 r
+  data arrival time                                          1.93
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 2.06      2.06
+  result_out_reg[14]/CK (SFFQX1AS7)                0.00      2.06 r
+  library hold time                               -0.13      1.92
+  data required time                                         1.92
+  ------------------------------------------------------------------------
+  data required time                                         1.92
+  data arrival time                                         -1.93
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.01
+
+
+
+  Startpoint: b_reg_reg[0] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: result_out_reg[0] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.25      0.25
+
+  b_reg_reg[0]/CK (SFFQX2AS7)                      0.00      0.25 r
+  b_reg_reg[0]/Q (SFFQX2AS7)                       0.36      0.61 f
+  u_alu/ZBUF_2519_inst_2591/O (CLKBUFX2AS7)        0.26      0.88 f
+  u_alu/u_adder/U35/O (AOI22B2X1AS7)               0.23      1.11 r
+  u_alu/u_b0/copt_gre_h_inst_4769/O (CLKBUFX1AS7)
+                                                   0.17      1.28 r
+  u_alu/u_b0/U1/O (MUX2X1AS7)                      0.21      1.49 r
+  u_alu/u_c0/U48/O (NAND2X1AS7)                    0.13      1.62 f
+  u_alu/u_c0/ctmTdsLR_1_1917/O (OAI12B2X2AS7)      0.13      1.75 r
+  U60/O (AND2X1AS7)                                0.18      1.93 r
+  result_out_reg[0]/D (SFFQX1AS7)                  0.00      1.93 r
+  data arrival time                                          1.93
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 2.06      2.06
+  result_out_reg[0]/CK (SFFQX1AS7)                 0.00      2.06 r
+  library hold time                               -0.13      1.92
+  data required time                                         1.92
+  ------------------------------------------------------------------------
+  data required time                                         1.92
+  data arrival time                                         -1.93
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.01
+
+
+
+  Startpoint: aluControl_in[2] (input port clocked by clk)
+  Endpoint: ctrl_reg_reg[2] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: INREG
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.89      0.89
+  input external delay                             0.20      1.09 r
+  aluControl_in[2] (in)                            0.00      1.09 r
+  copt_gre_h_inst_4755/O (DELAX4AS7)               0.28      1.37 r
+  copt_gre_h_inst_4756/O (DELAX4AS7)               0.29      1.66 r
+  U114/O (NOR2B1X1AS7)                             0.27      1.93 r
+  ctrl_reg_reg[2]/D (SFFQX1AS7)                    0.00      1.93 r
+  data arrival time                                          1.93
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 2.05      2.05
+  ctrl_reg_reg[2]/CK (SFFQX1AS7)                   0.00      2.05 r
+  library hold time                               -0.14      1.92
+  data required time                                         1.92
+  ------------------------------------------------------------------------
+  data required time                                         1.92
+  data arrival time                                         -1.93
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.01
+
+
+
+  Startpoint: aluControl_in[1] (input port clocked by clk)
+  Endpoint: ctrl_reg_reg[1] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: INREG
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.89      0.89
+  input external delay                             0.20      1.09 r
+  aluControl_in[1] (in)                            0.00      1.09 r
+  copt_gre_h_inst_4753/O (DELAX4AS7)               0.27      1.37 r
+  copt_gre_h_inst_4754/O (CLKBUFX1AS7)             0.14      1.51 r
+  copt_gre_h_inst_4752/O (CLKBUFX2AS7)             0.17      1.68 r
+  U113/O (NOR2B1X1AS7)                             0.25      1.93 r
+  ctrl_reg_reg[1]/D (SFFQX4AS7)                    0.00      1.93 r
+  data arrival time                                          1.93
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 2.05      2.05
+  ctrl_reg_reg[1]/CK (SFFQX4AS7)                   0.00      2.05 r
+  library hold time                               -0.14      1.91
+  data required time                                         1.91
+  ------------------------------------------------------------------------
+  data required time                                         1.91
+  data arrival time                                         -1.93
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.01
+
+
+
+  Startpoint: b_reg_reg[8] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: result_out_reg[8] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.25      0.25
+
+  b_reg_reg[8]/CK (SFFQX2AS7)                      0.00      0.25 r
+  b_reg_reg[8]/Q (SFFQX2AS7)                       0.34      0.59 f
+  u_alu/HFSBUF_737_3/O (CLKBUFX3AS7)               0.33      0.92 f
+  u_alu/u_adder/U2/O (AOI22B2X1AS7)                0.35      1.27 r
+  u_alu/u_adder/intadd_0/U3/S (FAX1AS7)            0.25      1.52 r
+  u_alu/u_b0/U9/O (MUX2X1AS7)                      0.23      1.74 r
+  u_alu/u_c0/U45/O (NAND2X1AS7)                    0.09      1.84 f
+  u_alu/u_c0/copt_gre_h_inst_4770/O (DELAX1AS7)    0.29      2.13 f
+  u_alu/u_c0/ctmTdsLR_1_1000/O (OAI12B2X2AS7)      0.09      2.22 r
+  U67/O (AND2X1AS7)                                0.19      2.41 r
+  result_out_reg[8]/D (SFFQX1AS7)                  0.00      2.41 r
+  data arrival time                                          2.41
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 2.48      2.48
+  result_out_reg[8]/CK (SFFQX1AS7)                 0.00      2.48 r
+  library hold time                               -0.09      2.39
+  data required time                                         2.39
+  ------------------------------------------------------------------------
+  data required time                                         2.39
+  data arrival time                                         -2.41
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.02
+
+
+
+  Startpoint: result_out_reg[15] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: result_out[15] (output port clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: REGOUT
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 1.01      1.01
+
+  result_out_reg[15]/CK (SFFQX1AS7)                0.00      1.01 r
+  result_out_reg[15]/Q (SFFQX1AS7)                 0.28      1.29 f
+  copt_h_inst_4493/O (CLKBUFX1AS7)                 0.44      1.73 f
+  result_out[15] (out)                             0.00      1.73 f
+  data arrival time                                          1.73
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 1.91      1.91
+  output external delay                           -0.20      1.71
+  data required time                                         1.71
+  ------------------------------------------------------------------------
+  data required time                                         1.71
+  data arrival time                                         -1.73
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.02
+
+
+1

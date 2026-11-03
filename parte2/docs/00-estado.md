@@ -111,6 +111,51 @@ versión NDM de `M31LLSC733GL150MS` (o un paso de conversión que no
 encontramos en esta instalación) — no es algo que se pueda resolver
 localmente inventando un comando.
 
+## 2026-11-02 (continuación) — ICC2 corrido completo, de punta a punta
+
+El bloqueo de Milkyway que reporté antes **no era un bloqueo real** — el
+usuario insistió en que verificara mejor antes de preguntarle al
+profesor, e hizo bien: leyendo el manual completo de `create_lib` (no
+solo buscando nombres de comandos) encontré que `-ref_libs` acepta
+Milkyway, LEF o librerías NDM directamente, convirtiendo automáticamente.
+El camino Milkyway necesitaba un ejecutable externo
+(`lib.configuration.icc_shell_exec`) que casi funcionó pero falló en un
+paso intermedio (`import_icc_fram` esperaba un LEF empaquetado); el
+camino que sí funcionó de punta a punta fue darle a `-ref_libs`
+directamente el **`.lef`** de celdas que M31 también incluye en el mismo
+release — mismo resultado (librería NDM construida automáticamente),
+sin esa complicación.
+
+Una vez resuelto eso, aparecieron y se corrigieron, una por una, varias
+diferencias reales entre GF150MCU/M31 y el patrón genérico (sky130) que
+tenía el script original:
+
+- Capas: `METAL1`..`METAL5` (mayúsculas), no `met1`..`met5`.
+- Celda tap: `TAP01AS7` (confirmado con `grep MACRO` sobre el `.lef`), y
+  el nombre completo de la librería de referencia es
+  `M31LLSC733GL150MS_25CTT3P3_ctyp_nldm/TAP01AS7` (el mismo nombre que el
+  `.db` de Liberty, no `M31LLSC733GL150MS` a secas).
+- Pines de alimentación de las celdas: `VCCK`/`GNDK` (no `VDD`/`VSS`) —
+  pero la red lógica que ICC2 crea para el dominio por defecto (diseño
+  sin UPF) sigue llamándose `VDD`/`VSS`, son dos cosas distintas.
+  `connect_pg_net -automatic` conecta los pines reales a esas redes.
+- Parásitos TLUPlus: faltaba `read_parasitic_tech` +
+  `set_parasitic_parameters` (sin esto, `place_opt` fallaba con "No
+  corner has valid parasitic").
+- Densidad: con utilización 0.55 y celdas tap cada 10 unidades (1764
+  celdas tap insertadas), la legalización fallaba. Bajando a utilización
+  0.35 y distancia de tap a 30, legalizó sin problema.
+
+**Resultado final:** `place_opt` → `clock_opt` → `route_auto` →
+`route_opt` → `write_gds` corrieron completos. `check_legality` y
+`check_routes` finales: sin violaciones. GDSII real exportado
+(`parte2/gds/alu_plus_sync.gds`). El diseño **no cumple timing**
+post-layout (slack -1.45 ns, 18 caminos violados en el grupo `clk`) —
+resultado real, no un error del flujo; está completo en
+[`05-discusion.md`](05-discusion.md) con la comparación por etapa y la
+explicación de por qué empeora después de `route_auto` (parásitos reales
+vs. estimados).
+
 ## Verificación con VCS — HECHO
 
 `vcs -full64 -sverilog` compiló `testbench_sync.sv` sin errores y corrió

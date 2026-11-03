@@ -26,15 +26,19 @@ José Daniel Cuá Fagiani — Carné 21200
 | `parte2/sim/testbench_sync.sv` (envoltorio síncrono, WIDTH=16, Vivado xsim) | **5/5 PASS** |
 | `parte2/sim/testbench_sync.sv` con **VCS** real (servidor del curso) | **5/5 PASS** |
 | Síntesis **Design Compiler** real (GF150MCU + M31LLSC733GL150MS) | **Timing OK — WNS/TNS = 0.00, 0 violaciones**, 2671 celdas, 30448 µm² |
+| Flujo físico **IC Compiler II** real (floorplan→place→CTS→route→GDSII) | **Completo**, GDSII exportado; timing post-layout **no cumple** (slack -1.45 ns) — ver detalle |
 
-Reportes reales y respuestas de la Discusión (PDF item 7.1) en
+Reportes reales y respuestas de la Discusión (PDF item 7.1), incluyendo
+la comparación de timing/área entre DC e ICC2 etapa por etapa, en
 [`parte2/docs/05-discusion.md`](parte2/docs/05-discusion.md) y
 [`parte2/docs/04-triestado.md`](parte2/docs/04-triestado.md).
 
-Parte 2 — IC Compiler II (floorplan/place&route/GDSII): **bloqueada** —
-la librería física M31 que tenemos es formato Milkyway clásico y esta
-instalación de ICC2 no lo soporta; falta una versión NDM. Ver
-[`parte2/docs/00-estado.md`](parte2/docs/00-estado.md) para el detalle.
+Parte 2 completa de punta a punta: scripts, netlist, SDC, reportes de
+cada etapa de ICC2 y el GDSII final en `parte2/gds/alu_plus_sync.gds`.
+Ver [`parte2/docs/00-estado.md`](parte2/docs/00-estado.md) para el
+detalle de cómo se resolvió cada bloqueo técnico encontrado en el camino
+(librería M31 vía LEF, nombres de capas/celdas reales de GF+M31, redes
+de alimentación, parásitos, densidad de floorplan).
 
 ## Contenido
 
@@ -44,9 +48,9 @@ instalación de ICC2 no lo soporta; falta una versión NDM. Ver
 4. [Banderas NZCV y bus triestado AND/OR](docs/04-flags-triestado.md)
 5. [Verificación](docs/05-verificacion.md)
 6. Parte 2 — Physical Design + Synopsys (`parte2/`):
-   [estado y bloqueador](parte2/docs/00-estado.md) ·
-   [tratamiento del triestado en síntesis](parte2/docs/04-triestado.md) (pendiente) ·
-   [discusión con los reportes reales](parte2/docs/05-discusion.md) (pendiente)
+   [estado y cómo se resolvió cada bloqueo](parte2/docs/00-estado.md) ·
+   [tratamiento del triestado en síntesis](parte2/docs/04-triestado.md) ·
+   [discusión con los reportes reales](parte2/docs/05-discusion.md)
 
 ## Estructura del repositorio
 
@@ -57,9 +61,12 @@ docs/          diseño de la ALU+, prefix adder, divisor, flags/triestado, verif
 guiones/       guion para la presentación oral / video (Parte 1)
 parte2/
   rtl/         alu_plus_sync.sv (envoltorio síncrono, registros de entrada/salida)
-  sim/         testbench_sync.sv (pre-chequeo funcional, antes de VCS/Verdi)
-  scripts/     constraints.sdc, synth_dc.tcl (Design Compiler), impl_icc2.tcl (IC Compiler II)
-  docs/        estado/bloqueador, discusión (pendiente de correr en el servidor)
+  sim/         testbench_sync.sv (verificado con Vivado xsim y VCS real)
+  scripts/     synth_dc.tcl (Design Compiler), impl_icc2.tcl (IC Compiler II) -- ambos corridos reales
+  netlist/     netlist sintetizada (alu_plus_sync_synth.v) y SDC de DC
+  reportes/    reportes reales de DC e ICC2 (uno por etapa), logs de synth_dc/impl_icc2/VCS
+  gds/         alu_plus_sync.gds (GDSII final de ICC2)
+  docs/        estado del flujo, discusión con reportes reales, tratamiento del triestado
 ```
 
 ## Cómo reproducir (Parte 1)
@@ -82,10 +89,11 @@ Tiene que terminar en `TESTBENCH: PASS` (35/35). Igual para
   para simular y verificar toda la Parte 1 — mismo criterio que
   [P3](../P3/README.md).
 - **Design Compiler** / **IC Compiler II** (Synopsys), PDK real de
-  GlobalFoundries 150nm ("150MCU") + celdas M31 — Parte 2, scripts en
-  `parte2/scripts/` pendientes de reescribir con las rutas reales del PDK
-  (ver [`parte2/docs/00-estado.md`](parte2/docs/00-estado.md) para el
-  detalle y lo que todavía falta), pendiente de correr en el servidor.
+  GlobalFoundries 150nm ("150MCU") + celdas M31LLSC733GL150MS — Parte 2,
+  corrida completa en el servidor del curso (síntesis + floorplan + place
+  + CTS + route + GDSII), ver
+  [`parte2/docs/00-estado.md`](parte2/docs/00-estado.md) para el detalle
+  completo de cómo se resolvió cada bloqueo técnico.
 
 ## Video y presentación
 

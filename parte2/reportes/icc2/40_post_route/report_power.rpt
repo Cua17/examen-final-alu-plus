@@ -1,0 +1,51 @@
+****************************************
+Report : power
+        -significant_digits 2
+Design : alu_plus_sync_WIDTH16
+Version: Y-2026.03-SP2
+Date   : Mon Nov  2 19:04:15 2026
+****************************************
+Mode: default
+Corner: default
+Scenario: default
+Voltage: 3.30
+Temperature: 25.00
+
+Voltage Unit         : 1V
+Capacitance Unit     : 1pF
+Time Unit            : 1ns
+Temperature Unit     : 1C
+Dynamic Power Unit   : 1pW
+Leakage Power Unit   : 1pW
+
+Switched supply net power scaling:
+scaling for leakage power
+
+Supply nets:
+VDD (power) probability 1.00 (default)
+VSS (ground) probability 1.00 (default)
+
+  Cell Internal Power    = 1.38e+09 pW ( 55.6%)
+  Net Switching Power    = 1.10e+09 pW ( 44.4%)
+Total Dynamic Power      = 2.49e+09 pW (100.0%)
+
+Cell Leakage Power       = 6.14e+03 pW
+
+
+  Attributes
+  ----------
+      u  -  User defined power group
+      i  -  Includes clock pin internal power
+
+Power Group         Internal Power        Switching Power          Leakage Power            Total Power    (   %  )    Attrs
+-----------------------------------------------------------------------------------------------------------------------------
+io_pad                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+memory                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+black_box                 0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+clock_network             4.84e+08               2.61e+08               5.17e+01               7.45e+08    ( 29.9%)        i
+register                  6.94e+07               5.12e+07               4.31e+02               1.21e+08    (  4.8%)         
+sequential                0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+combinational             8.32e+08               7.92e+08               5.66e+03               1.62e+09    ( 65.2%)         
+-----------------------------------------------------------------------------------------------------------------------------
+Total                     1.38e+09 pW            1.10e+09 pW            6.14e+03 pW            2.49e+09 pW
+1
