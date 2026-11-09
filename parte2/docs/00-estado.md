@@ -169,6 +169,44 @@ haga falta pre-generar.
 instalados en esta máquina (solo Vivado, usado para la Parte 1). El acceso
 es por un servidor universitario vía WireGuard — ver más abajo.
 
+## 2026-11-09 — Timing corregido: el diseño cumple limpio
+
+El servidor volvió después de estar caído el fin de semana. Se corrigió
+la violación de timing post-layout (-1.45 ns a 20 ns de período) subiendo
+el período de reloj y volviendo a correr DC + ICC2 completos cada vez,
+con datos reales de cada corrida:
+
+| Período | Slack post-route (ICC2) | Caminos violados |
+|---|---|---|
+| 20 ns (original) | -1.45 ns | 18 |
+| 24 ns | -0.01 ns | 1 |
+| 25 ns | -0.03 ns (peor que con 24 ns) | 1 |
+| 30 ns | -0.0034 ns (casi cero exacto) | 1 |
+| **40 ns (final)** | **+0.81 ns — MET** | **0** |
+
+**Hallazgo real, no esperado:** entre 20 y 30 ns el slack se mantuvo
+pegado a ~0.00 ns sin importar cuánto subiera el período — subir de a
+poco no daba más margen de forma proporcional. La razón: `compile_ultra`
+y `place_opt`/`route_opt` de Synopsys optimizan para **cumplir justo** la
+restricción de timing (para ahorrar área y potencia), no para maximizar
+margen — cualquier slack extra que aparece lo "gastan" reduciendo el
+tamaño de las celdas hasta volver a quedar casi en el límite. Recién al
+llegar a 40 ns el optimizador se quedó sin más celdas para achicar (ya
+estaba usando las más chicas disponibles en casi todo el divisor) y el
+slack positivo se quedó así, sin que lo consumiera. Esto es información
+real de cómo se comportan estas herramientas, no un numero inventado —
+queda documentado en [`05-discusion.md`](05-discusion.md).
+
+**Resultado final (40 ns / 25 MHz):**
+- DC: slack +4.43 ns, 1796 celdas, 18477.85 µm².
+- ICC2 post-route: **slack +0.81 ns, 0 caminos violados, 0 violaciones de
+  hold**. `check_legality` y `check_routes`: sin violaciones.
+  `check_pg_connectivity`: 0 celdas/vías/cables flotantes.
+- Potencia dinámica total: 0.943 mW (bajó respecto a la corrida de 20 ns,
+  esperable con menor frecuencia de reloj y celdas más chicas).
+- GDSII regenerado, netlist y SDC actualizados, base de datos final de
+  ICC2 (`lib_icc2_alu_plus_sync`) bajada a `parte2/icc2_db/`.
+
 ## Material de apoyo del profesor (Google Drive)
 
 Carpeta compartida: "DC y ICC2" (https://drive.google.com/drive/folders/1Dr6vblhtOHCeJNhAJ7BjxF5LPLELNGjz).

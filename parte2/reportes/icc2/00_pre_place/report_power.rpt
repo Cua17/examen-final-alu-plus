@@ -3,7 +3,7 @@ Report : power
         -significant_digits 2
 Design : alu_plus_sync_WIDTH16
 Version: Y-2026.03-SP2
-Date   : Mon Nov  2 18:56:57 2026
+Date   : Mon Nov  9 12:15:41 2026
 ****************************************
 Information: Activity propagation will be performed for scenario default.
 Information: Doing activity propagation for mode 'default' and corner 'default' with effort level 'medium'. (POW-024)
@@ -31,23 +31,23 @@ scaling for leakage power
 Supply nets:
 VDD (power) probability 1.00 (default)
 VSS (ground) probability 1.00 (default)
-Warning: Power table extrapolation (extrapolation mode) for port I2 on cell U65 for parameter Tinp. Lowest table value = 0.027700, highest table value = 2.549200, value = 3.463745 (POW-046)
-Warning: Power table extrapolation (extrapolation mode) for port O on cell U65 for parameter Tinp. Lowest table value = 0.027700, highest table value = 2.549200, value = 3.463745 (POW-046)
-Warning: Power table extrapolation (extrapolation mode) for port I2 on cell U66 for parameter Tinp. Lowest table value = 0.027700, highest table value = 2.549200, value = 3.463745 (POW-046)
-Warning: Power table extrapolation (extrapolation mode) for port O on cell U66 for parameter Tinp. Lowest table value = 0.027700, highest table value = 2.549200, value = 3.463745 (POW-046)
-Warning: Power table extrapolation (extrapolation mode) for port I2 on cell U67 for parameter Tinp. Lowest table value = 0.027700, highest table value = 2.549200, value = 3.463955 (POW-046)
-Warning: Power table extrapolation (extrapolation mode) for port O on cell U67 for parameter Tinp. Lowest table value = 0.027700, highest table value = 2.549200, value = 3.463955 (POW-046)
-Warning: Power table extrapolation (extrapolation mode) for port I2 on cell U68 for parameter Tinp. Lowest table value = 0.027700, highest table value = 2.549200, value = 3.466377 (POW-046)
-Warning: Power table extrapolation (extrapolation mode) for port O on cell U68 for parameter Tinp. Lowest table value = 0.027700, highest table value = 2.549200, value = 3.466377 (POW-046)
-Warning: Power table extrapolation (extrapolation mode) for port I2 on cell U69 for parameter Tinp. Lowest table value = 0.027700, highest table value = 2.549200, value = 3.465176 (POW-046)
-Warning: Power table extrapolation (extrapolation mode) for port O on cell U69 for parameter Tinp. Lowest table value = 0.027700, highest table value = 2.549200, value = 3.465176 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port I1 on cell U87 for parameter Tinp. Lowest table value = 0.027700, highest table value = 2.549200, value = 0.000534 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port I2 on cell U87 for parameter Tinp. Lowest table value = 0.027700, highest table value = 2.549200, value = 2.973156 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port O on cell U87 for parameter Tinp. Lowest table value = 0.027700, highest table value = 2.549200, value = 0.000534 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port I1 on cell U88 for parameter Tinp. Lowest table value = 0.027700, highest table value = 2.549200, value = 0.000496 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port I2 on cell U88 for parameter Tinp. Lowest table value = 0.027700, highest table value = 2.549200, value = 2.972965 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port O on cell U88 for parameter Tinp. Lowest table value = 0.027700, highest table value = 2.549200, value = 0.000496 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port I1 on cell U89 for parameter Tinp. Lowest table value = 0.027700, highest table value = 2.549200, value = 0.000496 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port I2 on cell U89 for parameter Tinp. Lowest table value = 0.027700, highest table value = 2.549200, value = 2.972965 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port O on cell U89 for parameter Tinp. Lowest table value = 0.027700, highest table value = 2.549200, value = 0.000496 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port I1 on cell U90 for parameter Tinp. Lowest table value = 0.027700, highest table value = 2.549200, value = 0.000496 (POW-046)
 Note - message 'POW-046' limit (10) exceeded. Remainder will be suppressed.
 
-  Cell Internal Power    = 1.48e+09 pW ( 62.0%)
-  Net Switching Power    = 9.04e+08 pW ( 38.0%)
-Total Dynamic Power      = 2.38e+09 pW (100.0%)
+  Cell Internal Power    = 8.48e+08 pW ( 75.9%)
+  Net Switching Power    = 2.69e+08 pW ( 24.1%)
+Total Dynamic Power      = 1.12e+09 pW (100.0%)
 
-Cell Leakage Power       = 6.11e+03 pW
+Cell Leakage Power       = 3.15e+03 pW
 
 
   Attributes
@@ -60,10 +60,10 @@ Power Group         Internal Power        Switching Power          Leakage Power
 io_pad                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
 memory                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
 black_box                 0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
-clock_network             5.89e+08               0.00e+00               0.00e+00               5.89e+08    ( 24.7%)        i
-register                  7.19e+07               7.66e+07               3.54e+02               1.48e+08    (  6.2%)         
+clock_network             4.77e+08               0.00e+00               0.00e+00               4.77e+08    ( 42.7%)        i
+register                  4.52e+07               3.79e+07               3.16e+02               8.30e+07    (  7.4%)         
 sequential                0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
-combinational             8.15e+08               8.28e+08               5.76e+03               1.64e+09    ( 69.0%)         
+combinational             3.26e+08               2.31e+08               2.83e+03               5.57e+08    ( 49.9%)         
 -----------------------------------------------------------------------------------------------------------------------------
-Total                     1.48e+09 pW            9.04e+08 pW            6.11e+03 pW            2.38e+09 pW
+Total                     8.48e+08 pW            2.69e+08 pW            3.15e+03 pW            1.12e+09 pW
 1

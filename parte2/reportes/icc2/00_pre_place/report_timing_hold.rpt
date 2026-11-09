@@ -6,11 +6,11 @@ Report : timing
         -report_by design
 Design : alu_plus_sync_WIDTH16
 Version: Y-2026.03-SP2
-Date   : Mon Nov  2 18:56:57 2026
+Date   : Mon Nov  9 12:15:41 2026
 ****************************************
 
-  Startpoint: a_in[8] (input port clocked by clk)
-  Endpoint: a_reg_reg[8] (rising edge-triggered flip-flop clocked by clk)
+  Startpoint: a_in[9] (input port clocked by clk)
+  Endpoint: a_reg_reg[9] (rising edge-triggered flip-flop clocked by clk)
   Mode: default
   Corner: default
   Scenario: default
@@ -21,27 +21,27 @@ Date   : Mon Nov  2 18:56:57 2026
   ------------------------------------------------------------------------
   clock clk (rise edge)                            0.00      0.00
   clock network delay (ideal)                      0.00      0.00
-  input external delay                             0.20      0.20 r
-  a_in[8] (in)                                     0.00      0.20 r
-  U88/O (AND2X1AS7)                                0.15      0.35 r
-  a_reg_reg[8]/D (SFFQX1AS7)                       0.00      0.35 r
-  data arrival time                                          0.35
+  input external delay                             0.40      0.40 r
+  a_in[9] (in)                                     0.00      0.40 r
+  U98/O (AND2X1AS7)                                0.15      0.55 r
+  a_reg_reg[9]/D (SFFQX1AS7)                       0.00      0.55 r
+  data arrival time                                          0.55
 
   clock clk (rise edge)                            0.00      0.00
-  clock network delay (ideal)                      1.60      1.60
-  a_reg_reg[8]/CK (SFFQX1AS7)                      0.00      1.60 r
-  library hold time                               -0.08      1.52
-  data required time                                         1.52
+  clock network delay (ideal)                      3.20      3.20
+  a_reg_reg[9]/CK (SFFQX1AS7)                      0.00      3.20 r
+  library hold time                               -0.08      3.12
+  data required time                                         3.12
   ------------------------------------------------------------------------
-  data required time                                         1.52
-  data arrival time                                         -0.35
+  data required time                                         3.12
+  data arrival time                                         -0.55
   ------------------------------------------------------------------------
-  slack (VIOLATED)                                          -1.17
+  slack (VIOLATED)                                          -2.57
 
 
 
-  Startpoint: a_in[6] (input port clocked by clk)
-  Endpoint: a_reg_reg[6] (rising edge-triggered flip-flop clocked by clk)
+  Startpoint: b_in[4] (input port clocked by clk)
+  Endpoint: b_reg_reg[4] (rising edge-triggered flip-flop clocked by clk)
   Mode: default
   Corner: default
   Scenario: default
@@ -52,115 +52,22 @@ Date   : Mon Nov  2 18:56:57 2026
   ------------------------------------------------------------------------
   clock clk (rise edge)                            0.00      0.00
   clock network delay (ideal)                      0.00      0.00
-  input external delay                             0.20      0.20 r
-  a_in[6] (in)                                     0.00      0.20 r
-  U86/O (AND2X1AS7)                                0.15      0.35 r
-  a_reg_reg[6]/D (SFFQX1AS7)                       0.00      0.35 r
-  data arrival time                                          0.35
+  input external delay                             0.40      0.40 r
+  b_in[4] (in)                                     0.00      0.40 r
+  U82/O (AND2X1AS7)                                0.15      0.55 r
+  b_reg_reg[4]/D (SFFQX1AS7)                       0.00      0.55 r
+  data arrival time                                          0.55
 
   clock clk (rise edge)                            0.00      0.00
-  clock network delay (ideal)                      1.60      1.60
-  a_reg_reg[6]/CK (SFFQX1AS7)                      0.00      1.60 r
-  library hold time                               -0.08      1.52
-  data required time                                         1.52
+  clock network delay (ideal)                      3.20      3.20
+  b_reg_reg[4]/CK (SFFQX1AS7)                      0.00      3.20 r
+  library hold time                               -0.08      3.12
+  data required time                                         3.12
   ------------------------------------------------------------------------
-  data required time                                         1.52
-  data arrival time                                         -0.35
+  data required time                                         3.12
+  data arrival time                                         -0.55
   ------------------------------------------------------------------------
-  slack (VIOLATED)                                          -1.17
-
-
-
-  Startpoint: a_in[5] (input port clocked by clk)
-  Endpoint: a_reg_reg[5] (rising edge-triggered flip-flop clocked by clk)
-  Mode: default
-  Corner: default
-  Scenario: default
-  Path Group: INREG
-  Path Type: min
-
-  Point                                            Incr      Path  
-  ------------------------------------------------------------------------
-  clock clk (rise edge)                            0.00      0.00
-  clock network delay (ideal)                      0.00      0.00
-  input external delay                             0.20      0.20 r
-  a_in[5] (in)                                     0.00      0.20 r
-  U85/O (AND2X1AS7)                                0.15      0.35 r
-  a_reg_reg[5]/D (SFFQX1AS7)                       0.00      0.35 r
-  data arrival time                                          0.35
-
-  clock clk (rise edge)                            0.00      0.00
-  clock network delay (ideal)                      1.60      1.60
-  a_reg_reg[5]/CK (SFFQX1AS7)                      0.00      1.60 r
-  library hold time                               -0.08      1.52
-  data required time                                         1.52
-  ------------------------------------------------------------------------
-  data required time                                         1.52
-  data arrival time                                         -0.35
-  ------------------------------------------------------------------------
-  slack (VIOLATED)                                          -1.17
-
-
-
-  Startpoint: a_in[11] (input port clocked by clk)
-  Endpoint: a_reg_reg[11] (rising edge-triggered flip-flop clocked by clk)
-  Mode: default
-  Corner: default
-  Scenario: default
-  Path Group: INREG
-  Path Type: min
-
-  Point                                            Incr      Path  
-  ------------------------------------------------------------------------
-  clock clk (rise edge)                            0.00      0.00
-  clock network delay (ideal)                      0.00      0.00
-  input external delay                             0.20      0.20 r
-  a_in[11] (in)                                    0.00      0.20 r
-  U91/O (AND2X1AS7)                                0.15      0.35 r
-  a_reg_reg[11]/D (SFFQX1AS7)                      0.00      0.35 r
-  data arrival time                                          0.35
-
-  clock clk (rise edge)                            0.00      0.00
-  clock network delay (ideal)                      1.60      1.60
-  a_reg_reg[11]/CK (SFFQX1AS7)                     0.00      1.60 r
-  library hold time                               -0.08      1.52
-  data required time                                         1.52
-  ------------------------------------------------------------------------
-  data required time                                         1.52
-  data arrival time                                         -0.35
-  ------------------------------------------------------------------------
-  slack (VIOLATED)                                          -1.17
-
-
-
-  Startpoint: b_in[5] (input port clocked by clk)
-  Endpoint: b_reg_reg[5] (rising edge-triggered flip-flop clocked by clk)
-  Mode: default
-  Corner: default
-  Scenario: default
-  Path Group: INREG
-  Path Type: min
-
-  Point                                            Incr      Path  
-  ------------------------------------------------------------------------
-  clock clk (rise edge)                            0.00      0.00
-  clock network delay (ideal)                      0.00      0.00
-  input external delay                             0.20      0.20 r
-  b_in[5] (in)                                     0.00      0.20 r
-  U99/O (AND2X1AS7)                                0.15      0.35 r
-  b_reg_reg[5]/D (SFFQX1AS7)                       0.00      0.35 r
-  data arrival time                                          0.35
-
-  clock clk (rise edge)                            0.00      0.00
-  clock network delay (ideal)                      1.60      1.60
-  b_reg_reg[5]/CK (SFFQX1AS7)                      0.00      1.60 r
-  library hold time                               -0.08      1.52
-  data required time                                         1.52
-  ------------------------------------------------------------------------
-  data required time                                         1.52
-  data arrival time                                         -0.35
-  ------------------------------------------------------------------------
-  slack (VIOLATED)                                          -1.17
+  slack (VIOLATED)                                          -2.57
 
 
 
@@ -176,27 +83,27 @@ Date   : Mon Nov  2 18:56:57 2026
   ------------------------------------------------------------------------
   clock clk (rise edge)                            0.00      0.00
   clock network delay (ideal)                      0.00      0.00
-  input external delay                             0.20      0.20 r
-  a_in[13] (in)                                    0.00      0.20 r
-  U93/O (AND2X1AS7)                                0.15      0.35 r
-  a_reg_reg[13]/D (SFFQX1AS7)                      0.00      0.35 r
-  data arrival time                                          0.35
+  input external delay                             0.40      0.40 r
+  a_in[13] (in)                                    0.00      0.40 r
+  U102/O (AND2X1AS7)                               0.15      0.55 r
+  a_reg_reg[13]/D (SFFQX1AS7)                      0.00      0.55 r
+  data arrival time                                          0.55
 
   clock clk (rise edge)                            0.00      0.00
-  clock network delay (ideal)                      1.60      1.60
-  a_reg_reg[13]/CK (SFFQX1AS7)                     0.00      1.60 r
-  library hold time                               -0.08      1.52
-  data required time                                         1.52
+  clock network delay (ideal)                      3.20      3.20
+  a_reg_reg[13]/CK (SFFQX1AS7)                     0.00      3.20 r
+  library hold time                               -0.08      3.12
+  data required time                                         3.12
   ------------------------------------------------------------------------
-  data required time                                         1.52
-  data arrival time                                         -0.35
+  data required time                                         3.12
+  data arrival time                                         -0.55
   ------------------------------------------------------------------------
-  slack (VIOLATED)                                          -1.17
+  slack (VIOLATED)                                          -2.57
 
 
 
-  Startpoint: a_in[10] (input port clocked by clk)
-  Endpoint: a_reg_reg[10] (rising edge-triggered flip-flop clocked by clk)
+  Startpoint: b_in[5] (input port clocked by clk)
+  Endpoint: b_reg_reg[5] (rising edge-triggered flip-flop clocked by clk)
   Mode: default
   Corner: default
   Scenario: default
@@ -207,53 +114,22 @@ Date   : Mon Nov  2 18:56:57 2026
   ------------------------------------------------------------------------
   clock clk (rise edge)                            0.00      0.00
   clock network delay (ideal)                      0.00      0.00
-  input external delay                             0.20      0.20 r
-  a_in[10] (in)                                    0.00      0.20 r
-  U90/O (AND2X1AS7)                                0.15      0.35 r
-  a_reg_reg[10]/D (SFFQX1AS7)                      0.00      0.35 r
-  data arrival time                                          0.35
+  input external delay                             0.40      0.40 r
+  b_in[5] (in)                                     0.00      0.40 r
+  U83/O (AND2X1AS7)                                0.15      0.55 r
+  b_reg_reg[5]/D (SFFQX1AS7)                       0.00      0.55 r
+  data arrival time                                          0.55
 
   clock clk (rise edge)                            0.00      0.00
-  clock network delay (ideal)                      1.60      1.60
-  a_reg_reg[10]/CK (SFFQX1AS7)                     0.00      1.60 r
-  library hold time                               -0.08      1.52
-  data required time                                         1.52
+  clock network delay (ideal)                      3.20      3.20
+  b_reg_reg[5]/CK (SFFQX1AS7)                      0.00      3.20 r
+  library hold time                               -0.08      3.12
+  data required time                                         3.12
   ------------------------------------------------------------------------
-  data required time                                         1.52
-  data arrival time                                         -0.35
+  data required time                                         3.12
+  data arrival time                                         -0.55
   ------------------------------------------------------------------------
-  slack (VIOLATED)                                          -1.16
-
-
-
-  Startpoint: b_in[11] (input port clocked by clk)
-  Endpoint: b_reg_reg[11] (rising edge-triggered flip-flop clocked by clk)
-  Mode: default
-  Corner: default
-  Scenario: default
-  Path Group: INREG
-  Path Type: min
-
-  Point                                            Incr      Path  
-  ------------------------------------------------------------------------
-  clock clk (rise edge)                            0.00      0.00
-  clock network delay (ideal)                      0.00      0.00
-  input external delay                             0.20      0.20 r
-  b_in[11] (in)                                    0.00      0.20 r
-  U104/O (AND2X1AS7)                               0.15      0.35 r
-  b_reg_reg[11]/D (SFFQX1AS7)                      0.00      0.35 r
-  data arrival time                                          0.35
-
-  clock clk (rise edge)                            0.00      0.00
-  clock network delay (ideal)                      1.60      1.60
-  b_reg_reg[11]/CK (SFFQX1AS7)                     0.00      1.60 r
-  library hold time                               -0.08      1.52
-  data required time                                         1.52
-  ------------------------------------------------------------------------
-  data required time                                         1.52
-  data arrival time                                         -0.35
-  ------------------------------------------------------------------------
-  slack (VIOLATED)                                          -1.16
+  slack (VIOLATED)                                          -2.57
 
 
 
@@ -269,27 +145,27 @@ Date   : Mon Nov  2 18:56:57 2026
   ------------------------------------------------------------------------
   clock clk (rise edge)                            0.00      0.00
   clock network delay (ideal)                      0.00      0.00
-  input external delay                             0.20      0.20 r
-  b_in[10] (in)                                    0.00      0.20 r
-  U103/O (AND2X1AS7)                               0.15      0.35 r
-  b_reg_reg[10]/D (SFFQX2AS7)                      0.00      0.35 r
-  data arrival time                                          0.35
+  input external delay                             0.40      0.40 r
+  b_in[10] (in)                                    0.00      0.40 r
+  U88/O (AND2X1AS7)                                0.15      0.55 r
+  b_reg_reg[10]/D (SFFQX1AS7)                      0.00      0.55 r
+  data arrival time                                          0.55
 
   clock clk (rise edge)                            0.00      0.00
-  clock network delay (ideal)                      1.60      1.60
-  b_reg_reg[10]/CK (SFFQX2AS7)                     0.00      1.60 r
-  library hold time                               -0.09      1.51
-  data required time                                         1.51
+  clock network delay (ideal)                      3.20      3.20
+  b_reg_reg[10]/CK (SFFQX1AS7)                     0.00      3.20 r
+  library hold time                               -0.08      3.12
+  data required time                                         3.12
   ------------------------------------------------------------------------
-  data required time                                         1.51
-  data arrival time                                         -0.35
+  data required time                                         3.12
+  data arrival time                                         -0.55
   ------------------------------------------------------------------------
-  slack (VIOLATED)                                          -1.16
+  slack (VIOLATED)                                          -2.57
 
 
 
-  Startpoint: a_in[15] (input port clocked by clk)
-  Endpoint: a_reg_reg[15] (rising edge-triggered flip-flop clocked by clk)
+  Startpoint: b_in[0] (input port clocked by clk)
+  Endpoint: b_reg_reg[0] (rising edge-triggered flip-flop clocked by clk)
   Mode: default
   Corner: default
   Scenario: default
@@ -300,22 +176,146 @@ Date   : Mon Nov  2 18:56:57 2026
   ------------------------------------------------------------------------
   clock clk (rise edge)                            0.00      0.00
   clock network delay (ideal)                      0.00      0.00
-  input external delay                             0.20      0.20 r
-  a_in[15] (in)                                    0.00      0.20 r
-  U95/O (AND2X1AS7)                                0.15      0.35 r
-  a_reg_reg[15]/D (SFFQX1AS7)                      0.00      0.35 r
-  data arrival time                                          0.35
+  input external delay                             0.40      0.40 r
+  b_in[0] (in)                                     0.00      0.40 r
+  U78/O (AND2X1AS7)                                0.15      0.55 r
+  b_reg_reg[0]/D (SFFQX1AS7)                       0.00      0.55 r
+  data arrival time                                          0.55
 
   clock clk (rise edge)                            0.00      0.00
-  clock network delay (ideal)                      1.60      1.60
-  a_reg_reg[15]/CK (SFFQX1AS7)                     0.00      1.60 r
-  library hold time                               -0.08      1.52
-  data required time                                         1.52
+  clock network delay (ideal)                      3.20      3.20
+  b_reg_reg[0]/CK (SFFQX1AS7)                      0.00      3.20 r
+  library hold time                               -0.08      3.12
+  data required time                                         3.12
   ------------------------------------------------------------------------
-  data required time                                         1.52
-  data arrival time                                         -0.35
+  data required time                                         3.12
+  data arrival time                                         -0.55
   ------------------------------------------------------------------------
-  slack (VIOLATED)                                          -1.16
+  slack (VIOLATED)                                          -2.57
+
+
+
+  Startpoint: a_in[12] (input port clocked by clk)
+  Endpoint: a_reg_reg[12] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: INREG
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+  input external delay                             0.40      0.40 r
+  a_in[12] (in)                                    0.00      0.40 r
+  U101/O (AND2X1AS7)                               0.15      0.55 r
+  a_reg_reg[12]/D (SFFQX1AS7)                      0.00      0.55 r
+  data arrival time                                          0.55
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      3.20      3.20
+  a_reg_reg[12]/CK (SFFQX1AS7)                     0.00      3.20 r
+  library hold time                               -0.08      3.12
+  data required time                                         3.12
+  ------------------------------------------------------------------------
+  data required time                                         3.12
+  data arrival time                                         -0.55
+  ------------------------------------------------------------------------
+  slack (VIOLATED)                                          -2.57
+
+
+
+  Startpoint: a_in[10] (input port clocked by clk)
+  Endpoint: a_reg_reg[10] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: INREG
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+  input external delay                             0.40      0.40 r
+  a_in[10] (in)                                    0.00      0.40 r
+  U99/O (AND2X1AS7)                                0.15      0.55 r
+  a_reg_reg[10]/D (SFFQX1AS7)                      0.00      0.55 r
+  data arrival time                                          0.55
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      3.20      3.20
+  a_reg_reg[10]/CK (SFFQX1AS7)                     0.00      3.20 r
+  library hold time                               -0.08      3.12
+  data required time                                         3.12
+  ------------------------------------------------------------------------
+  data required time                                         3.12
+  data arrival time                                         -0.55
+  ------------------------------------------------------------------------
+  slack (VIOLATED)                                          -2.57
+
+
+
+  Startpoint: a_in[8] (input port clocked by clk)
+  Endpoint: a_reg_reg[8] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: INREG
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+  input external delay                             0.40      0.40 r
+  a_in[8] (in)                                     0.00      0.40 r
+  U97/O (AND2X1AS7)                                0.15      0.55 r
+  a_reg_reg[8]/D (SFFQX1AS7)                       0.00      0.55 r
+  data arrival time                                          0.55
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      3.20      3.20
+  a_reg_reg[8]/CK (SFFQX1AS7)                      0.00      3.20 r
+  library hold time                               -0.08      3.12
+  data required time                                         3.12
+  ------------------------------------------------------------------------
+  data required time                                         3.12
+  data arrival time                                         -0.55
+  ------------------------------------------------------------------------
+  slack (VIOLATED)                                          -2.57
+
+
+
+  Startpoint: b_in[13] (input port clocked by clk)
+  Endpoint: b_reg_reg[13] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: INREG
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+  input external delay                             0.40      0.40 r
+  b_in[13] (in)                                    0.00      0.40 r
+  U91/O (AND2X1AS7)                                0.15      0.55 r
+  b_reg_reg[13]/D (SFFQX1AS7)                      0.00      0.55 r
+  data arrival time                                          0.55
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      3.20      3.20
+  b_reg_reg[13]/CK (SFFQX1AS7)                     0.00      3.20 r
+  library hold time                               -0.08      3.12
+  data required time                                         3.12
+  ------------------------------------------------------------------------
+  data required time                                         3.12
+  data arrival time                                         -0.55
+  ------------------------------------------------------------------------
+  slack (VIOLATED)                                          -2.57
 
 
 1

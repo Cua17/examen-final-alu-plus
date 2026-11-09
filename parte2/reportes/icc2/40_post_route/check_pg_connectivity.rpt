@@ -3,13 +3,13 @@ Secondary net will be checked together from primary net. They will be treated as
 Primary Net : VDD    Secondary Net:
 Primary Net : VSS    Secondary Net:
 Loading cell instances...
-Number of Standard Cells: 3332
+Number of Standard Cells: 2155
 Number of Macro Cells: 0
 Number of IO Pad Cells: 0
 Number of Blocks: 0
 Loading P/G wires and vias...
-Number of VDD Wires: 56
-Number of VDD Vias: 828
+Number of VDD Wires: 45
+Number of VDD Vias: 550
 Number of VDD Terminals: 0
 **************Verify net VDD connectivity*****************
   Number of floating wires: 0
@@ -22,8 +22,8 @@ Number of VDD Terminals: 0
 ************************************************************
 Loading cell instances...
 Loading P/G wires and vias...
-Number of VSS Wires: 54
-Number of VSS Vias: 685
+Number of VSS Wires: 42
+Number of VSS Vias: 424
 Number of VSS Terminals: 0
 **************Verify net VSS connectivity*****************
   Number of floating wires: 0

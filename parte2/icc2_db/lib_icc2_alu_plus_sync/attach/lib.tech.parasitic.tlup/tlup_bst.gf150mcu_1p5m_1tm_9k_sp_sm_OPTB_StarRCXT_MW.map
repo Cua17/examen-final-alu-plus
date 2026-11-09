@@ -1,0 +1,29 @@
+**************************************************************************************
+* Copyright Â© Apr 2024 by GLOBALFOUNDRIES Inc. 
+* The information disclosed herein is the property of GLOBALFOUNDRIES Inc. 
+* GLOBALFOUNDRIES reserves all proprietary, design, manufacturing, reproduction, use, 
+* and sales right thereto, and to any article or process utilizing such information, 
+* except to the extent that rights are expressly granted to others.
+***************************************************************************************
+
+conducting_layers
+METAL5	Metal5
+METAL4	Metal4
+METAL3	Metal3
+METAL2	Metal2
+METAL1	Metal1
+
+via_layers
+VIA4	Via4
+VIA3	Via3
+VIA2	Via2
+VIA1	Via1
+
+remove_layers
+FuseTop
+Poly2
+DIFF
+Poly2_CONT
+DIFF_CONT
+SUBCONT
+FuseTop_VIA

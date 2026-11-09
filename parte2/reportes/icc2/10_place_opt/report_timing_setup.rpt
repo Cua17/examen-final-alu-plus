@@ -6,10 +6,10 @@ Report : timing
         -report_by design
 Design : alu_plus_sync_WIDTH16
 Version: Y-2026.03-SP2
-Date   : Mon Nov  2 19:00:20 2026
+Date   : Mon Nov  9 12:16:54 2026
 ****************************************
 
-  Startpoint: a_reg_reg[14] (rising edge-triggered flip-flop clocked by clk)
+  Startpoint: b_reg_reg[9] (rising edge-triggered flip-flop clocked by clk)
   Endpoint: z_out_reg (rising edge-triggered flip-flop clocked by clk)
   Mode: default
   Corner: default
@@ -20,317 +20,139 @@ Date   : Mon Nov  2 19:00:20 2026
   Point                                            Incr      Path  
   ------------------------------------------------------------------------
   clock clk (rise edge)                            0.00      0.00
-  clock network delay (ideal)                      1.60      1.60
+  clock network delay (ideal)                      3.20      3.20
 
-  a_reg_reg[14]/CK (SFFQX2AS7)                     0.00      1.60 r
-  a_reg_reg[14]/Q (SFFQX2AS7)                      0.52      2.12 r
-  u_alu/u_divider/ctmTdsLR_1_2750/O (NAND2B1X1AS7)
-                                                   0.18      2.30 r
-  u_alu/u_divider/ctmTdsLR_1_1662/O (NAND3X2AS7)   0.15      2.45 f
-  u_alu/u_divider/U1356/O (NOR2X4AS7)              0.17      2.62 r
-  u_alu/u_divider/U383/O (NAND3X4AS7)              0.14      2.76 f
-  u_alu/u_divider/U710/O (NAND2X2AS7)              0.11      2.88 r
-  u_alu/u_divider/ctmTdsLR_2_1504/O (NAND2X2AS7)   0.10      2.98 f
-  u_alu/u_divider/ctmTdsLR_1_1829/O (NAND2X2AS7)   0.12      3.10 r
-  u_alu/u_divider/ctmTdsLR_2_1129/O (NAND2X4AS7)   0.10      3.20 f
-  u_alu/u_divider/ctmTdsLR_1_1805/O (AOI12X2AS7)   0.20      3.40 r
-  u_alu/u_divider/ctmTdsLR_1_2862/O (OAI12B2X2AS7)
-                                                   0.27      3.67 r
-  u_alu/u_divider/U940/O (NAND2X2AS7)              0.11      3.78 f
-  u_alu/u_divider/U938/O (NAND2X4AS7)              0.15      3.94 r
-  u_alu/u_divider/U1104/O (NAND2X2AS7)             0.18      4.12 f
-  u_alu/u_divider/ctmTdsLR_2_2208/O (OAI12B2X1AS7)
-                                                   0.15      4.27 r
-  u_alu/u_divider/ctmTdsLR_1_2207/O (NAND2X2AS7)   0.12      4.40 f
-  u_alu/u_divider/ctmTdsLR_1_2087/O (NAND2X1AS7)   0.14      4.53 r
-  u_alu/u_divider/ctmTdsLR_2_2088/O (NAND2B1X2AS7)
-                                                   0.09      4.63 f
-  u_alu/u_divider/ctmTdsLR_2_2189/O (NAND4X2AS7)   0.16      4.78 r
-  u_alu/u_divider/ctmTdsLR_2_1631/O (NAND3X4AS7)   0.16      4.95 f
-  u_alu/u_divider/ctmTdsLR_1_1038/O (AOI12B2X2AS7)
-                                                   0.33      5.28 f
-  u_alu/u_divider/U1109/O (AOI12X4AS7)             0.22      5.50 r
-  u_alu/u_divider/ctmTdsLR_1_1174/O (NAND2X1AS7)   0.12      5.62 f
-  u_alu/u_divider/ctmTdsLR_1_868/O (NAND2B1X2AS7)
-                                                   0.13      5.75 r
-  u_alu/u_divider/ctmTdsLR_1_2693/O (NAND2B1X2AS7)
-                                                   0.11      5.87 f
-  u_alu/u_divider/ctmTdsLR_2_1653/O (OAI112X2AS7)
-                                                   0.18      6.05 r
-  u_alu/u_divider/ctmTdsLR_1_1652/O (INVX2AS7)     0.09      6.14 f
-  u_alu/u_divider/ctmTdsLR_1_2171/O (NOR2X2AS7)    0.18      6.32 r
-  u_alu/u_divider/U1294/O (AOI12X2AS7)             0.12      6.44 f
-  u_alu/u_divider/U1290/O (OAI12X4AS7)             0.26      6.70 r
-  u_alu/u_divider/U1311/O (NAND2X4AS7)             0.20      6.90 f
-  u_alu/u_divider/U1415/O (NAND2X1AS7)             0.17      7.07 r
-  u_alu/u_divider/ctmTdsLR_1_756/O (OAI12X1AS7)    0.14      7.22 f
-  u_alu/u_divider/ctmTdsLR_1_83/O (OAI12B2X2AS7)   0.17      7.38 r
-  u_alu/u_divider/ctmTdsLR_1_3073/O (OAI12B2X4AS7)
-                                                   0.11      7.49 f
-  u_alu/u_divider/U930/O (AOI12X4AS7)              0.26      7.75 r
-  u_alu/u_divider/U1726/O (OAI12X1AS7)             0.13      7.88 f
-  u_alu/u_divider/ctmTdsLR_1_3017/O (OAI22B2X1AS7)
-                                                   0.24      8.12 f
-  u_alu/u_divider/U1580/O (NAND2X2AS7)             0.19      8.31 r
-  u_alu/u_divider/ctmTdsLR_1_3065/O (NAND2X1AS7)   0.13      8.44 f
-  u_alu/u_divider/ctmTdsLR_2_3066/O (NAND3X2AS7)   0.14      8.59 r
-  u_alu/u_divider/ctmTdsLR_3_3067/O (NAND2X2AS7)   0.10      8.68 f
-  u_alu/u_divider/U1660/O (AOI12X2AS7)             0.23      8.91 r
-  u_alu/u_divider/U1110/O (OAI12X2AS7)             0.13      9.04 f
-  u_alu/u_divider/ctmTdsLR_1_32/O (NAND2X2AS7)     0.13      9.17 r
-  u_alu/u_divider/U697/O (NAND2X4AS7)              0.16      9.34 f
-  u_alu/u_divider/U1231/O (INVX8AS7)               0.16      9.50 r
-  u_alu/u_divider/U413/O (NAND2X2AS7)              0.10      9.60 f
-  u_alu/u_divider/U729/O (NAND3X1AS7)              0.14      9.74 r
-  u_alu/u_divider/U728/O (CLKINVX2AS7)             0.12      9.85 f
-  u_alu/u_divider/ctmTdsLR_1_3068/O (NAND3B1X2AS7)
-                                                   0.28     10.14 f
-  u_alu/u_divider/U468/O (NAND2X4AS7)              0.18     10.31 r
-  u_alu/u_divider/ctmTdsLR_1_1218/O (NAND2X2AS7)   0.11     10.42 f
-  u_alu/u_divider/U639/O (NAND3X4AS7)              0.16     10.58 r
-  u_alu/u_divider/ctmTdsLR_1_751/O (NAND3B1X1AS7)
-                                                   0.18     10.76 f
-  u_alu/u_divider/U757/O (NAND2X2AS7)              0.18     10.94 r
-  u_alu/u_divider/U1323/O (NAND2X1AS7)             0.11     11.05 f
-  u_alu/u_divider/U1321/O (OAI12X2AS7)             0.18     11.23 r
-  u_alu/u_divider/ZINV_4_inst_3759/O (INVX2AS7)    0.08     11.31 f
-  u_alu/u_divider/U934/O (NAND2X4AS7)              0.15     11.46 r
-  u_alu/u_divider/ctmTdsLR_1_1456/O (NAND3X2AS7)   0.14     11.61 f
-  u_alu/u_divider/ctmTdsLR_1_1410/O (NAND3X4AS7)   0.13     11.73 r
-  u_alu/u_divider/ctmTdsLR_1_3092/O (NAND2B1X4AS7)
-                                                   0.15     11.88 f
-  u_alu/u_divider/ctmTdsLR_1_1403/O (OAI12B2X1AS7)
-                                                   0.22     12.10 f
-  u_alu/u_divider/ctmTdsLR_3_1405/O (NAND2X2AS7)   0.15     12.24 r
-  u_alu/u_divider/U1183/O (NAND2X2AS7)             0.11     12.36 f
-  u_alu/u_divider/U634/O (OAI12X2AS7)              0.23     12.59 r
-  u_alu/u_divider/ctmTdsLR_1_3069/O (INVX2AS7)     0.08     12.66 f
-  u_alu/u_divider/ctmTdsLR_2_1521/O (NAND2X4AS7)   0.12     12.78 r
-  u_alu/u_divider/ctmTdsLR_1_2179/O (NAND3X2AS7)   0.14     12.93 f
-  u_alu/u_divider/ctmTdsLR_2_1709/O (NAND3X4AS7)   0.14     13.06 r
-  u_alu/u_divider/ctmTdsLR_1_1708/O (NAND2X4AS7)   0.17     13.23 f
-  u_alu/u_divider/ctmTdsLR_3_181/O (OAI12B2X1AS7)
-                                                   0.22     13.45 f
-  u_alu/u_divider/U582/O (NAND2X2AS7)              0.17     13.63 r
-  u_alu/u_divider/U150/O (NOR2X2AS7)               0.08     13.71 f
-  u_alu/u_divider/U689/O (NOR2X2AS7)               0.26     13.97 r
-  u_alu/u_divider/U562/O (AOI12X4AS7)              0.12     14.09 f
-  u_alu/u_divider/U921/O (OAI12X2AS7)              0.27     14.36 r
-  u_alu/u_divider/U1151/O (NAND2X4AS7)             0.15     14.50 f
-  u_alu/u_divider/ctmTdsLR_1_735/O (NAND2X2AS7)    0.15     14.65 r
-  u_alu/u_divider/ctmTdsLR_2_736/O (INVX3AS7)      0.10     14.75 f
-  u_alu/u_divider/ctmTdsLR_1_1320/O (NAND2X1AS7)   0.13     14.88 r
-  u_alu/u_divider/U1686/O (NAND3X2AS7)             0.14     15.01 f
-  u_alu/u_divider/U109/O (NAND2X2AS7)              0.14     15.15 r
-  u_alu/u_divider/ctmTdsLR_1_146/O (NAND2X2AS7)    0.13     15.28 f
-  u_alu/u_divider/U624/O (AOI12X4AS7)              0.31     15.59 r
-  u_alu/u_divider/U100/O (INVX3AS7)                0.10     15.68 f
-  u_alu/u_divider/U1562/O (AOI12X1AS7)             0.29     15.97 r
-  u_alu/u_divider/ctmTdsLR_1_1009/O (NAND2X1AS7)   0.11     16.08 f
-  u_alu/u_divider/ctmTdsLR_2_1010/O (OAI12X1AS7)   0.16     16.25 r
-  u_alu/u_divider/ctmTdsLR_2_2673/O (INVX1AS7)     0.08     16.32 f
-  u_alu/u_divider/ctmTdsLR_1_2672/O (OAI12B2X1AS7)
-                                                   0.23     16.55 f
-  u_alu/u_divider/ctmTdsLR_2_1384/O (NAND3X2AS7)   0.13     16.68 r
-  u_alu/u_divider/ctmTdsLR_3_1385/O (NAND2X2AS7)   0.16     16.85 f
-  u_alu/u_divider/ctmTdsLR_1_1511/O (AOI12X1AS7)   0.24     17.08 r
-  u_alu/u_divider/U1317/O (OAI12X2AS7)             0.17     17.26 f
-  u_alu/u_divider/ctmTdsLR_2_1448/O (INVX2AS7)     0.15     17.40 r
-  u_alu/u_divider/ctmTdsLR_2_2778/O (NAND2X4AS7)   0.15     17.55 f
-  u_alu/u_divider/ctmTdsLR_2_1094/O (OAI12X1AS7)   0.29     17.84 r
-  u_alu/u_divider/ctmTdsLR_2_3087/O (NOR2X2AS7)    0.12     17.96 f
-  u_alu/u_divider/U692/O (NOR2X2AS7)               0.23     18.19 r
-  u_alu/u_divider/U752/O (AOI12X4AS7)              0.17     18.36 f
-  u_alu/u_divider/U751/O (OAI12X4AS7)              0.31     18.67 r
-  u_alu/u_divider/U2181/O (AOI12X1AS7)             0.18     18.84 f
-  u_alu/u_divider/ctmTdsLR_1_2697/O (NOR2X1AS7)    0.19     19.03 r
-  u_alu/u_divider/ctmTdsLR_2_2698/O (AOI12X1AS7)   0.07     19.10 f
-  u_alu/u_divider/ctmTdsLR_3_2699/O (NAND2B1X1AS7)
-                                                   0.14     19.24 r
-  u_alu/u_divider/U1532/O (NAND2X2AS7)             0.08     19.33 f
-  u_alu/u_a3/U8/O (NAND2X2AS7)                     0.13     19.45 r
-  u_alu/u_b1/ctmTdsLR_2_720/O (OAI22B2X2AS7)       0.09     19.54 f
-  u_alu/u_c0/ctmTdsLR_1_1773/O (OAI12B2X2AS7)      0.22     19.76 f
-  u_alu/ctmTdsLR_1_2899/O (OR4X2AS7)               0.60     20.36 f
-  u_alu/ctmTdsLR_4_100/O (NOR3X1AS7)               0.35     20.71 r
-  ZINV_4_inst_3760/O (CLKINVX2AS7)                 0.11     20.82 f
-  U77/O (NOR2X2AS7)                                0.13     20.95 r
-  z_out_reg/D (SFFQX4AS7)                          0.00     20.95 r
-  data arrival time                                         20.95
+  b_reg_reg[9]/CK (SFFQX1AS7)                      0.00      3.20 r
+  b_reg_reg[9]/Q (SFFQX1AS7)                       0.77      3.97 r
+  u_alu/u_divider/U14/O (INVX1AS7)                 0.58      4.54 f
+  u_alu/u_divider/U43/O (NAND2X1AS7)               0.32      4.87 r
+  u_alu/u_divider/ctmTdsLR_1_927/O (OR4X1AS7)      0.18      5.05 r
+  u_alu/u_divider/U51/O (NOR2X1AS7)                0.07      5.12 f
+  u_alu/u_divider/U26/O (NAND2X1AS7)               0.19      5.31 r
+  u_alu/u_divider/ctmTdsLR_2_675/O (AOI12B2X1AS7)
+                                                   0.42      5.73 r
+  u_alu/u_divider/U64/O (NOR2X2AS7)                0.06      5.79 f
+  u_alu/u_divider/U67/O (OAI12X1AS7)               0.26      6.05 r
+  u_alu/u_divider/ctmTdsLR_1_817/O (AOI22B2X1AS7)
+                                                   0.13      6.17 f
+  u_alu/u_divider/U74/O (NOR2X2AS7)                0.17      6.34 r
+  u_alu/u_divider/U75/O (NAND2X2AS7)               0.15      6.49 f
+  u_alu/u_divider/U89/O (OAI12X2AS7)               0.28      6.77 r
+  u_alu/u_divider/U90/O (NOR2X1AS7)                0.10      6.87 f
+  u_alu/u_divider/U93/O (OAI12X1AS7)               0.43      7.29 r
+  u_alu/u_divider/U97/O (AOI12X1AS7)               0.14      7.43 f
+  u_alu/u_divider/U98/O (NOR2X2AS7)                0.18      7.61 r
+  u_alu/u_divider/U99/O (NAND2X2AS7)               0.19      7.80 f
+  u_alu/u_divider/U115/O (NOR2X1AS7)               0.25      8.05 r
+  u_alu/u_divider/U116/O (AOI12X1AS7)              0.12      8.17 f
+  u_alu/u_divider/U117/O (NOR2X1AS7)               0.36      8.54 r
+  u_alu/u_divider/U128/O (OAI12X1AS7)              0.10      8.63 f
+  u_alu/u_divider/U129/O (AOI12X1AS7)              0.23      8.86 r
+  u_alu/u_divider/ctmTdsLR_1_930/O (OAI22B2X1AS7)
+                                                   0.13      8.99 f
+  u_alu/u_divider/U136/O (NAND2X2AS7)              0.24      9.23 r
+  u_alu/u_divider/ctmTdsLR_2_1062/O (MUX2X1AS7)    0.39      9.62 f
+  u_alu/u_divider/U159/O (NOR2X1AS7)               0.24      9.86 r
+  u_alu/u_divider/U162/O (OAI12X1AS7)              0.14     10.00 f
+  u_alu/u_divider/U166/O (AOI12X1AS7)              0.38     10.39 r
+  u_alu/u_divider/ctmTdsLR_1_736/O (OAI22B2X1AS7)
+                                                   0.13     10.52 f
+  u_alu/u_divider/U183/O (NAND2X2AS7)              0.27     10.79 r
+  u_alu/u_divider/ctmTdsLR_2_851/O (MUX2X1AS7)     0.40     11.19 f
+  u_alu/u_divider/U205/O (NOR2X1AS7)               0.28     11.46 r
+  u_alu/u_divider/U208/O (OAI12X2AS7)              0.12     11.58 f
+  u_alu/u_divider/U212/O (AOI12X1AS7)              0.35     11.93 r
+  u_alu/u_divider/U239/O (OAI12X1AS7)              0.12     12.05 f
+  u_alu/u_divider/U240/O (NAND2X2AS7)              0.28     12.33 r
+  u_alu/u_divider/U241/O (CLKINVX1AS7)             0.28     12.61 f
+  u_alu/u_divider/ctmTdsLR_1_644/O (NOR2B1X1AS7)   0.35     12.96 r
+  u_alu/u_divider/U297/O (NOR2X1AS7)               0.10     13.07 f
+  u_alu/u_divider/U298/O (NOR2X1AS7)               0.26     13.33 r
+  u_alu/u_divider/U299/O (NAND2X1AS7)              0.09     13.42 f
+  u_alu/u_divider/U21/O (OAI12X1AS7)               0.28     13.70 r
+  u_alu/u_divider/U307/O (NAND2X2AS7)              0.30     14.00 f
+  u_alu/u_divider/ctmTdsLR_1_1008/O (MUX2X1AS7)    0.43     14.43 f
+  u_alu/u_divider/U356/O (NOR2X1AS7)               0.33     14.76 r
+  u_alu/u_divider/U379/O (OAI12X1AS7)              0.18     14.94 f
+  u_alu/u_divider/U383/O (AOI12X1AS7)              0.24     15.18 r
+  u_alu/u_divider/U384/O (OAI12X1AS7)              0.17     15.35 f
+  u_alu/u_divider/ctmTdsLR_1_681/O (AOI22B2X2AS7)
+                                                   0.66     16.01 r
+  u_alu/u_divider/U423/O (AOI12X1AS7)              0.32     16.33 f
+  u_alu/u_divider/U424/O (NOR2X1AS7)               0.41     16.74 r
+  u_alu/u_divider/U435/O (OAI12X1AS7)              0.12     16.86 f
+  u_alu/u_divider/U436/O (AOI12X1AS7)              0.30     17.16 r
+  u_alu/u_divider/U20/O (OAI12X2AS7)               0.17     17.33 f
+  u_alu/u_divider/ctmTdsLR_1_1037/O (AOI22B2X2AS7)
+                                                   0.74     18.06 r
+  u_alu/u_divider/ctmTdsLR_2_1090/O (OAI22B2X1AS7)
+                                                   0.27     18.33 f
+  u_alu/u_divider/U564/O (NOR2X1AS7)               0.43     18.77 r
+  u_alu/u_divider/U573/O (NOR2X1AS7)               0.10     18.87 f
+  u_alu/u_divider/U581/O (AOI12X1AS7)              0.26     19.13 r
+  u_alu/u_divider/U582/O (OAI12X2AS7)              0.19     19.32 f
+  u_alu/u_divider/ctmTdsLR_1_831/O (AOI22B2X2AS7)
+                                                   0.78     20.11 r
+  u_alu/u_divider/ctmTdsLR_1_952/O (MUX2X1AS7)     0.60     20.71 f
+  u_alu/u_divider/U690/O (NAND2X1AS7)              0.20     20.92 r
+  u_alu/u_divider/U692/O (OAI12X1AS7)              0.18     21.10 f
+  u_alu/u_divider/U696/O (AOI12X1AS7)              0.30     21.40 r
+  u_alu/u_divider/U19/O (OAI12X2AS7)               0.21     21.60 f
+  u_alu/u_divider/ctmTdsLR_1_658/O (AOI22B2X2AS7)
+                                                   0.96     22.57 r
+  u_alu/u_divider/ctmTdsLR_1_757/O (OAI22B2X1AS7)
+                                                   0.27     22.84 f
+  u_alu/u_divider/U774/O (NOR2X1AS7)               0.42     23.26 r
+  u_alu/u_divider/U785/O (OAI12X1AS7)              0.10     23.37 f
+  u_alu/u_divider/U786/O (AOI12X1AS7)              0.39     23.76 r
+  u_alu/u_divider/U829/O (OAI12X1AS7)              0.35     24.10 f
+  u_alu/u_divider/U841/O (AOI12X2AS7)              1.12     25.23 r
+  u_alu/u_divider/ctmTdsLR_1_1108/O (MUX2X1AS7)    0.63     25.86 r
+  u_alu/u_divider/U940/O (NOR2X1AS7)               0.09     25.96 f
+  u_alu/u_divider/U948/O (NOR2X1AS7)               0.35     26.30 r
+  u_alu/u_divider/U967/O (NAND2X1AS7)              0.12     26.42 f
+  u_alu/u_divider/U18/O (OAI12X1AS7)               0.92     27.34 r
+  u_alu/u_divider/U987/O (AOI12X4AS7)              0.35     27.68 f
+  u_alu/u_divider/ctmTdsLR_3_966/O (OAI22B2X1AS7)
+                                                   0.38     28.07 f
+  u_alu/u_divider/U1019/O (NOR2X1AS7)              0.30     28.37 r
+  u_alu/u_divider/U1022/O (OAI12X1AS7)             0.15     28.52 f
+  u_alu/u_divider/U1026/O (AOI12X1AS7)             0.43     28.94 r
+  u_alu/u_divider/U4/O (OAI12X2AS7)                0.32     29.26 f
+  u_alu/u_divider/U3/O (AOI12X4AS7)                0.70     29.96 r
+  u_alu/u_divider/U1157/O (MUX2X1AS7)              0.54     30.50 r
+  u_alu/u_divider/U1275/O (NAND2X1AS7)             0.17     30.67 f
+  u_alu/u_divider/U1277/O (OAI12X1AS7)             0.41     31.08 r
+  u_alu/u_divider/U1281/O (AOI12X1AS7)             0.27     31.36 f
+  u_alu/u_divider/U1289/O (OAI12X1AS7)             0.31     31.66 r
+  u_alu/u_divider/U1290/O (AOI12X1AS7)             0.07     31.74 f
+  u_alu/u_divider/U5/O (INVX1AS7)                  1.14     32.88 r
+  u_alu/u_divider/U1361/O (NAND2X1AS7)             0.12     33.00 f
+  u_alu/u_divider/U1362/O (OAI112X1AS7)            0.17     33.17 r
+  u_alu/u_a3/U10/O (AND2X1AS7)                     0.25     33.42 r
+  u_alu/u_b1/U10/O (MUX2X1AS7)                     0.24     33.66 r
+  u_alu/u_c0/U10/O (MUX2X1AS7)                     0.30     33.96 r
+  u_alu/U8/O (NOR4X1AS7)                           0.11     34.07 f
+  u_alu/U11/O (AND4X1AS7)                          0.21     34.28 f
+  U61/O (AND2X1AS7)                                0.17     34.45 f
+  z_out_reg/D (SFFQX1AS7)                          0.00     34.45 f
+  data arrival time                                         34.45
 
-  clock clk (rise edge)                           20.00     20.00
-  clock network delay (ideal)                      0.20     20.20
-  z_out_reg/CK (SFFQX4AS7)                         0.00     20.20 r
-  clock uncertainty                               -2.00     18.20
-  library setup time                              -0.27     17.93
-  data required time                                        17.93
+  clock clk (rise edge)                           40.00     40.00
+  clock network delay (ideal)                      0.00     40.00
+  z_out_reg/CK (SFFQX1AS7)                         0.00     40.00 r
+  clock uncertainty                               -4.00     36.00
+  library setup time                              -1.53     34.47
+  data required time                                        34.47
   ------------------------------------------------------------------------
-  data required time                                        17.93
-  data arrival time                                        -20.95
+  data required time                                        34.47
+  data arrival time                                        -34.45
   ------------------------------------------------------------------------
-  slack (VIOLATED)                                          -3.02
+  slack (MET)                                                0.02
 
 
 
-  Startpoint: a_reg_reg[14] (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: result_out_reg[2] (rising edge-triggered flip-flop clocked by clk)
-  Mode: default
-  Corner: default
-  Scenario: default
-  Path Group: clk
-  Path Type: max
-
-  Point                                            Incr      Path  
-  ------------------------------------------------------------------------
-  clock clk (rise edge)                            0.00      0.00
-  clock network delay (ideal)                      1.60      1.60
-
-  a_reg_reg[14]/CK (SFFQX2AS7)                     0.00      1.60 r
-  a_reg_reg[14]/Q (SFFQX2AS7)                      0.52      2.12 r
-  u_alu/u_divider/ctmTdsLR_1_2750/O (NAND2B1X1AS7)
-                                                   0.18      2.30 r
-  u_alu/u_divider/ctmTdsLR_1_1662/O (NAND3X2AS7)   0.15      2.45 f
-  u_alu/u_divider/U1356/O (NOR2X4AS7)              0.17      2.62 r
-  u_alu/u_divider/U383/O (NAND3X4AS7)              0.14      2.76 f
-  u_alu/u_divider/U710/O (NAND2X2AS7)              0.11      2.88 r
-  u_alu/u_divider/ctmTdsLR_2_1504/O (NAND2X2AS7)   0.10      2.98 f
-  u_alu/u_divider/ctmTdsLR_1_1829/O (NAND2X2AS7)   0.12      3.10 r
-  u_alu/u_divider/ctmTdsLR_2_1129/O (NAND2X4AS7)   0.10      3.20 f
-  u_alu/u_divider/ctmTdsLR_1_1805/O (AOI12X2AS7)   0.20      3.40 r
-  u_alu/u_divider/ctmTdsLR_1_2862/O (OAI12B2X2AS7)
-                                                   0.27      3.67 r
-  u_alu/u_divider/U940/O (NAND2X2AS7)              0.11      3.78 f
-  u_alu/u_divider/U938/O (NAND2X4AS7)              0.15      3.94 r
-  u_alu/u_divider/U1104/O (NAND2X2AS7)             0.18      4.12 f
-  u_alu/u_divider/ctmTdsLR_2_2208/O (OAI12B2X1AS7)
-                                                   0.15      4.27 r
-  u_alu/u_divider/ctmTdsLR_1_2207/O (NAND2X2AS7)   0.12      4.40 f
-  u_alu/u_divider/ctmTdsLR_1_2087/O (NAND2X1AS7)   0.14      4.53 r
-  u_alu/u_divider/ctmTdsLR_2_2088/O (NAND2B1X2AS7)
-                                                   0.09      4.63 f
-  u_alu/u_divider/ctmTdsLR_2_2189/O (NAND4X2AS7)   0.16      4.78 r
-  u_alu/u_divider/ctmTdsLR_2_1631/O (NAND3X4AS7)   0.16      4.95 f
-  u_alu/u_divider/ctmTdsLR_1_1038/O (AOI12B2X2AS7)
-                                                   0.33      5.28 f
-  u_alu/u_divider/U1109/O (AOI12X4AS7)             0.22      5.50 r
-  u_alu/u_divider/ctmTdsLR_1_1174/O (NAND2X1AS7)   0.12      5.62 f
-  u_alu/u_divider/ctmTdsLR_1_868/O (NAND2B1X2AS7)
-                                                   0.13      5.75 r
-  u_alu/u_divider/ctmTdsLR_1_2693/O (NAND2B1X2AS7)
-                                                   0.11      5.87 f
-  u_alu/u_divider/ctmTdsLR_2_1653/O (OAI112X2AS7)
-                                                   0.18      6.05 r
-  u_alu/u_divider/ctmTdsLR_1_1652/O (INVX2AS7)     0.09      6.14 f
-  u_alu/u_divider/ctmTdsLR_1_2171/O (NOR2X2AS7)    0.18      6.32 r
-  u_alu/u_divider/U1294/O (AOI12X2AS7)             0.12      6.44 f
-  u_alu/u_divider/U1290/O (OAI12X4AS7)             0.26      6.70 r
-  u_alu/u_divider/U1311/O (NAND2X4AS7)             0.20      6.90 f
-  u_alu/u_divider/U1415/O (NAND2X1AS7)             0.17      7.07 r
-  u_alu/u_divider/ctmTdsLR_1_756/O (OAI12X1AS7)    0.14      7.22 f
-  u_alu/u_divider/ctmTdsLR_1_83/O (OAI12B2X2AS7)   0.17      7.38 r
-  u_alu/u_divider/ctmTdsLR_1_3073/O (OAI12B2X4AS7)
-                                                   0.11      7.49 f
-  u_alu/u_divider/U930/O (AOI12X4AS7)              0.26      7.75 r
-  u_alu/u_divider/U1726/O (OAI12X1AS7)             0.13      7.88 f
-  u_alu/u_divider/ctmTdsLR_1_3017/O (OAI22B2X1AS7)
-                                                   0.24      8.12 f
-  u_alu/u_divider/U1580/O (NAND2X2AS7)             0.19      8.31 r
-  u_alu/u_divider/ctmTdsLR_1_3065/O (NAND2X1AS7)   0.13      8.44 f
-  u_alu/u_divider/ctmTdsLR_2_3066/O (NAND3X2AS7)   0.14      8.59 r
-  u_alu/u_divider/ctmTdsLR_3_3067/O (NAND2X2AS7)   0.10      8.68 f
-  u_alu/u_divider/U1660/O (AOI12X2AS7)             0.23      8.91 r
-  u_alu/u_divider/U1110/O (OAI12X2AS7)             0.13      9.04 f
-  u_alu/u_divider/ctmTdsLR_1_32/O (NAND2X2AS7)     0.13      9.17 r
-  u_alu/u_divider/U697/O (NAND2X4AS7)              0.16      9.34 f
-  u_alu/u_divider/U1231/O (INVX8AS7)               0.16      9.50 r
-  u_alu/u_divider/U413/O (NAND2X2AS7)              0.10      9.60 f
-  u_alu/u_divider/U729/O (NAND3X1AS7)              0.14      9.74 r
-  u_alu/u_divider/U728/O (CLKINVX2AS7)             0.12      9.85 f
-  u_alu/u_divider/ctmTdsLR_1_3068/O (NAND3B1X2AS7)
-                                                   0.28     10.14 f
-  u_alu/u_divider/U468/O (NAND2X4AS7)              0.18     10.31 r
-  u_alu/u_divider/ctmTdsLR_1_1218/O (NAND2X2AS7)   0.11     10.42 f
-  u_alu/u_divider/U639/O (NAND3X4AS7)              0.16     10.58 r
-  u_alu/u_divider/ctmTdsLR_1_751/O (NAND3B1X1AS7)
-                                                   0.18     10.76 f
-  u_alu/u_divider/U757/O (NAND2X2AS7)              0.18     10.94 r
-  u_alu/u_divider/U1323/O (NAND2X1AS7)             0.11     11.05 f
-  u_alu/u_divider/U1321/O (OAI12X2AS7)             0.18     11.23 r
-  u_alu/u_divider/ZINV_4_inst_3759/O (INVX2AS7)    0.08     11.31 f
-  u_alu/u_divider/U934/O (NAND2X4AS7)              0.15     11.46 r
-  u_alu/u_divider/ctmTdsLR_1_1456/O (NAND3X2AS7)   0.14     11.61 f
-  u_alu/u_divider/ctmTdsLR_1_1410/O (NAND3X4AS7)   0.13     11.73 r
-  u_alu/u_divider/ctmTdsLR_1_3092/O (NAND2B1X4AS7)
-                                                   0.15     11.88 f
-  u_alu/u_divider/ctmTdsLR_1_1403/O (OAI12B2X1AS7)
-                                                   0.22     12.10 f
-  u_alu/u_divider/ctmTdsLR_3_1405/O (NAND2X2AS7)   0.15     12.24 r
-  u_alu/u_divider/U1183/O (NAND2X2AS7)             0.11     12.36 f
-  u_alu/u_divider/U634/O (OAI12X2AS7)              0.23     12.59 r
-  u_alu/u_divider/ctmTdsLR_1_3069/O (INVX2AS7)     0.08     12.66 f
-  u_alu/u_divider/ctmTdsLR_2_1521/O (NAND2X4AS7)   0.12     12.78 r
-  u_alu/u_divider/ctmTdsLR_1_2179/O (NAND3X2AS7)   0.14     12.93 f
-  u_alu/u_divider/ctmTdsLR_2_1709/O (NAND3X4AS7)   0.14     13.06 r
-  u_alu/u_divider/ctmTdsLR_1_1708/O (NAND2X4AS7)   0.17     13.23 f
-  u_alu/u_divider/ctmTdsLR_3_181/O (OAI12B2X1AS7)
-                                                   0.22     13.45 f
-  u_alu/u_divider/U582/O (NAND2X2AS7)              0.17     13.63 r
-  u_alu/u_divider/U150/O (NOR2X2AS7)               0.08     13.71 f
-  u_alu/u_divider/U689/O (NOR2X2AS7)               0.26     13.97 r
-  u_alu/u_divider/U562/O (AOI12X4AS7)              0.12     14.09 f
-  u_alu/u_divider/U1270/O (OAI12X2AS7)             0.39     14.48 r
-  u_alu/u_divider/U1983/O (XOR2X1AS7)              0.41     14.88 f
-  u_alu/u_divider/U1590/O (AOI12X4AS7)             0.22     15.11 r
-  u_alu/u_divider/U106/O (NAND2X2AS7)              0.17     15.27 f
-  u_alu/u_divider/ctmTdsLR_1_147/O (OAI12X2AS7)    0.24     15.51 r
-  u_alu/u_divider/U1335/O (AOI12X2AS7)             0.13     15.63 f
-  u_alu/u_divider/ctmTdsLR_2_1104/O (NOR2X1AS7)    0.30     15.93 r
-  u_alu/u_divider/ctmTdsLR_1_1103/O (NOR2B1X4AS7)
-                                                   0.08     16.02 f
-  u_alu/u_divider/U81/O (OAI12B2X1AS7)             0.23     16.25 f
-  u_alu/u_divider/U389/O (NAND2X2AS7)              0.18     16.42 r
-  u_alu/u_divider/ctmTdsLR_1_2852/O (NOR2X1AS7)    0.08     16.50 f
-  u_alu/u_divider/ctmTdsLR_1_1197/O (AOI12B2X2AS7)
-                                                   0.24     16.75 r
-  u_alu/u_divider/U1353/O (AOI12X4AS7)             0.17     16.91 f
-  u_alu/u_divider/U605/O (OAI12X4AS7)              0.33     17.24 r
-  u_alu/u_divider/ctmTdsLR_2_2966/O (OAI12B2X1AS7)
-                                                   0.26     17.50 r
-  u_alu/u_divider/ctmTdsLR_4_891/O (NAND2X1AS7)    0.10     17.60 f
-  u_alu/u_divider/ctmTdsLR_2_1832/O (OAI112X1AS7)
-                                                   0.16     17.76 r
-  u_alu/u_divider/ctmTdsLR_2_2176/O (AND3X2AS7)    0.37     18.14 r
-  u_alu/u_divider/U1228/O (OAI12X2AS7)             0.14     18.27 f
-  u_alu/u_divider/ctmTdsLR_1_1994/O (NAND2X1AS7)   0.14     18.41 r
-  u_alu/u_divider/ctmTdsLR_3_1996/O (NAND2X2AS7)   0.12     18.53 f
-  u_alu/u_divider/ctmTdsLR_2_1639/O (AOI12X4AS7)   0.20     18.73 r
-  u_alu/u_divider/ctmTdsLR_3_1640/O (NAND2X4AS7)   0.14     18.87 f
-  u_alu/u_divider/U1718/O (INVX12AS7)              0.17     19.04 r
-  u_alu/u_divider/U1275/O (CLKINVX2AS7)            0.12     19.16 f
-  u_alu/u_divider/ctmTdsLR_1_3078/O (OAI12B2X1AS7)
-                                                   0.18     19.34 f
-  u_alu/u_a3/ctmTdsLR_1_2842/O (AND2X1AS7)         0.16     19.50 f
-  u_alu/u_b1/ctmTdsLR_1_102/O (OAI12B2X1AS7)       0.17     19.68 f
-  u_alu/u_c0/ctmTdsLR_1_202/O (OAI12B2X2AS7)       0.22     19.89 f
-  U73/O (AND2X1AS7)                                0.17     20.07 f
-  result_out_reg[2]/D (SFFQX1AS7)                  0.00     20.07 f
-  data arrival time                                         20.07
-
-  clock clk (rise edge)                           20.00     20.00
-  clock network delay (ideal)                      0.16     20.16
-  result_out_reg[2]/CK (SFFQX1AS7)                 0.00     20.16 r
-  clock uncertainty                               -2.00     18.16
-  library setup time                              -0.97     17.19
-  data required time                                        17.19
-  ------------------------------------------------------------------------
-  data required time                                        17.19
-  data arrival time                                        -20.07
-  ------------------------------------------------------------------------
-  slack (VIOLATED)                                          -2.87
-
-
-
-  Startpoint: a_reg_reg[14] (rising edge-triggered flip-flop clocked by clk)
+  Startpoint: b_reg_reg[9] (rising edge-triggered flip-flop clocked by clk)
   Endpoint: result_out_reg[11] (rising edge-triggered flip-flop clocked by clk)
   Mode: default
   Corner: default
@@ -341,951 +163,136 @@ Date   : Mon Nov  2 19:00:20 2026
   Point                                            Incr      Path  
   ------------------------------------------------------------------------
   clock clk (rise edge)                            0.00      0.00
-  clock network delay (ideal)                      1.60      1.60
+  clock network delay (ideal)                      3.20      3.20
 
-  a_reg_reg[14]/CK (SFFQX2AS7)                     0.00      1.60 r
-  a_reg_reg[14]/Q (SFFQX2AS7)                      0.52      2.12 r
-  u_alu/u_divider/ctmTdsLR_1_2750/O (NAND2B1X1AS7)
-                                                   0.18      2.30 r
-  u_alu/u_divider/ctmTdsLR_1_1662/O (NAND3X2AS7)   0.15      2.45 f
-  u_alu/u_divider/U1356/O (NOR2X4AS7)              0.17      2.62 r
-  u_alu/u_divider/U383/O (NAND3X4AS7)              0.14      2.76 f
-  u_alu/u_divider/U710/O (NAND2X2AS7)              0.11      2.88 r
-  u_alu/u_divider/ctmTdsLR_2_1504/O (NAND2X2AS7)   0.10      2.98 f
-  u_alu/u_divider/ctmTdsLR_1_1829/O (NAND2X2AS7)   0.12      3.10 r
-  u_alu/u_divider/ctmTdsLR_2_1129/O (NAND2X4AS7)   0.10      3.20 f
-  u_alu/u_divider/ctmTdsLR_1_1805/O (AOI12X2AS7)   0.20      3.40 r
-  u_alu/u_divider/ctmTdsLR_1_2862/O (OAI12B2X2AS7)
-                                                   0.27      3.67 r
-  u_alu/u_divider/U940/O (NAND2X2AS7)              0.11      3.78 f
-  u_alu/u_divider/U938/O (NAND2X4AS7)              0.15      3.94 r
-  u_alu/u_divider/U1104/O (NAND2X2AS7)             0.18      4.12 f
-  u_alu/u_divider/ctmTdsLR_2_2208/O (OAI12B2X1AS7)
-                                                   0.15      4.27 r
-  u_alu/u_divider/ctmTdsLR_1_2207/O (NAND2X2AS7)   0.12      4.40 f
-  u_alu/u_divider/ctmTdsLR_1_2087/O (NAND2X1AS7)   0.14      4.53 r
-  u_alu/u_divider/ctmTdsLR_2_2088/O (NAND2B1X2AS7)
-                                                   0.09      4.63 f
-  u_alu/u_divider/ctmTdsLR_2_2189/O (NAND4X2AS7)   0.16      4.78 r
-  u_alu/u_divider/ctmTdsLR_2_1631/O (NAND3X4AS7)   0.16      4.95 f
-  u_alu/u_divider/ctmTdsLR_1_1038/O (AOI12B2X2AS7)
-                                                   0.33      5.28 f
-  u_alu/u_divider/U1109/O (AOI12X4AS7)             0.22      5.50 r
-  u_alu/u_divider/ctmTdsLR_1_1174/O (NAND2X1AS7)   0.12      5.62 f
-  u_alu/u_divider/ctmTdsLR_1_868/O (NAND2B1X2AS7)
-                                                   0.13      5.75 r
-  u_alu/u_divider/ctmTdsLR_1_2693/O (NAND2B1X2AS7)
-                                                   0.11      5.87 f
-  u_alu/u_divider/ctmTdsLR_2_1653/O (OAI112X2AS7)
-                                                   0.18      6.05 r
-  u_alu/u_divider/ctmTdsLR_1_1652/O (INVX2AS7)     0.09      6.14 f
-  u_alu/u_divider/ctmTdsLR_1_2171/O (NOR2X2AS7)    0.18      6.32 r
-  u_alu/u_divider/U1294/O (AOI12X2AS7)             0.12      6.44 f
-  u_alu/u_divider/U1290/O (OAI12X4AS7)             0.26      6.70 r
-  u_alu/u_divider/U1311/O (NAND2X4AS7)             0.20      6.90 f
-  u_alu/u_divider/U1415/O (NAND2X1AS7)             0.17      7.07 r
-  u_alu/u_divider/ctmTdsLR_1_756/O (OAI12X1AS7)    0.14      7.22 f
-  u_alu/u_divider/ctmTdsLR_1_83/O (OAI12B2X2AS7)   0.17      7.38 r
-  u_alu/u_divider/ctmTdsLR_1_3073/O (OAI12B2X4AS7)
-                                                   0.11      7.49 f
-  u_alu/u_divider/U930/O (AOI12X4AS7)              0.26      7.75 r
-  u_alu/u_divider/U1726/O (OAI12X1AS7)             0.13      7.88 f
-  u_alu/u_divider/ctmTdsLR_1_3017/O (OAI22B2X1AS7)
-                                                   0.24      8.12 f
-  u_alu/u_divider/U1580/O (NAND2X2AS7)             0.19      8.31 r
-  u_alu/u_divider/ctmTdsLR_1_3065/O (NAND2X1AS7)   0.13      8.44 f
-  u_alu/u_divider/ctmTdsLR_2_3066/O (NAND3X2AS7)   0.14      8.59 r
-  u_alu/u_divider/ctmTdsLR_3_3067/O (NAND2X2AS7)   0.10      8.68 f
-  u_alu/u_divider/U1660/O (AOI12X2AS7)             0.23      8.91 r
-  u_alu/u_divider/U1110/O (OAI12X2AS7)             0.13      9.04 f
-  u_alu/u_divider/ctmTdsLR_1_32/O (NAND2X2AS7)     0.13      9.17 r
-  u_alu/u_divider/U697/O (NAND2X4AS7)              0.16      9.34 f
-  u_alu/u_divider/U1231/O (INVX8AS7)               0.16      9.50 r
-  u_alu/u_divider/U413/O (NAND2X2AS7)              0.10      9.60 f
-  u_alu/u_divider/U729/O (NAND3X1AS7)              0.14      9.74 r
-  u_alu/u_divider/U728/O (CLKINVX2AS7)             0.12      9.85 f
-  u_alu/u_divider/ctmTdsLR_1_3068/O (NAND3B1X2AS7)
-                                                   0.28     10.14 f
-  u_alu/u_divider/U468/O (NAND2X4AS7)              0.18     10.31 r
-  u_alu/u_divider/ctmTdsLR_1_1218/O (NAND2X2AS7)   0.11     10.42 f
-  u_alu/u_divider/U639/O (NAND3X4AS7)              0.16     10.58 r
-  u_alu/u_divider/ctmTdsLR_1_751/O (NAND3B1X1AS7)
-                                                   0.18     10.76 f
-  u_alu/u_divider/U757/O (NAND2X2AS7)              0.18     10.94 r
-  u_alu/u_divider/U1323/O (NAND2X1AS7)             0.11     11.05 f
-  u_alu/u_divider/U1321/O (OAI12X2AS7)             0.18     11.23 r
-  u_alu/u_divider/ZINV_4_inst_3759/O (INVX2AS7)    0.08     11.31 f
-  u_alu/u_divider/U934/O (NAND2X4AS7)              0.15     11.46 r
-  u_alu/u_divider/ctmTdsLR_1_1456/O (NAND3X2AS7)   0.14     11.61 f
-  u_alu/u_divider/ctmTdsLR_1_1410/O (NAND3X4AS7)   0.13     11.73 r
-  u_alu/u_divider/ctmTdsLR_1_3092/O (NAND2B1X4AS7)
-                                                   0.15     11.88 f
-  u_alu/u_divider/ctmTdsLR_1_1403/O (OAI12B2X1AS7)
-                                                   0.22     12.10 f
-  u_alu/u_divider/ctmTdsLR_3_1405/O (NAND2X2AS7)   0.15     12.24 r
-  u_alu/u_divider/U1183/O (NAND2X2AS7)             0.11     12.36 f
-  u_alu/u_divider/U634/O (OAI12X2AS7)              0.23     12.59 r
-  u_alu/u_divider/ctmTdsLR_1_3069/O (INVX2AS7)     0.08     12.66 f
-  u_alu/u_divider/ctmTdsLR_2_1521/O (NAND2X4AS7)   0.12     12.78 r
-  u_alu/u_divider/ctmTdsLR_1_2179/O (NAND3X2AS7)   0.14     12.93 f
-  u_alu/u_divider/ctmTdsLR_2_1709/O (NAND3X4AS7)   0.14     13.06 r
-  u_alu/u_divider/ctmTdsLR_1_1708/O (NAND2X4AS7)   0.17     13.23 f
-  u_alu/u_divider/ctmTdsLR_3_181/O (OAI12B2X1AS7)
-                                                   0.22     13.45 f
-  u_alu/u_divider/U582/O (NAND2X2AS7)              0.17     13.63 r
-  u_alu/u_divider/U150/O (NOR2X2AS7)               0.08     13.71 f
-  u_alu/u_divider/U689/O (NOR2X2AS7)               0.26     13.97 r
-  u_alu/u_divider/U562/O (AOI12X4AS7)              0.12     14.09 f
-  u_alu/u_divider/U1270/O (OAI12X2AS7)             0.39     14.48 r
-  u_alu/u_divider/U1983/O (XOR2X1AS7)              0.41     14.88 f
-  u_alu/u_divider/U1590/O (AOI12X4AS7)             0.22     15.11 r
-  u_alu/u_divider/U106/O (NAND2X2AS7)              0.17     15.27 f
-  u_alu/u_divider/ctmTdsLR_1_147/O (OAI12X2AS7)    0.24     15.51 r
-  u_alu/u_divider/U1335/O (AOI12X2AS7)             0.13     15.63 f
-  u_alu/u_divider/ctmTdsLR_2_1104/O (NOR2X1AS7)    0.30     15.93 r
-  u_alu/u_divider/ctmTdsLR_1_1103/O (NOR2B1X4AS7)
-                                                   0.08     16.02 f
-  u_alu/u_divider/U81/O (OAI12B2X1AS7)             0.23     16.25 f
-  u_alu/u_divider/U389/O (NAND2X2AS7)              0.18     16.42 r
-  u_alu/u_divider/ctmTdsLR_1_2852/O (NOR2X1AS7)    0.08     16.50 f
-  u_alu/u_divider/ctmTdsLR_1_1197/O (AOI12B2X2AS7)
-                                                   0.24     16.75 r
-  u_alu/u_divider/U1353/O (AOI12X4AS7)             0.17     16.91 f
-  u_alu/u_divider/U605/O (OAI12X4AS7)              0.33     17.24 r
-  u_alu/u_divider/ctmTdsLR_2_2966/O (OAI12B2X1AS7)
-                                                   0.26     17.50 r
-  u_alu/u_divider/ctmTdsLR_4_891/O (NAND2X1AS7)    0.10     17.60 f
-  u_alu/u_divider/ctmTdsLR_2_1832/O (OAI112X1AS7)
-                                                   0.16     17.76 r
-  u_alu/u_divider/ctmTdsLR_2_2176/O (AND3X2AS7)    0.37     18.14 r
-  u_alu/u_divider/U1228/O (OAI12X2AS7)             0.14     18.27 f
-  u_alu/u_divider/ctmTdsLR_1_1994/O (NAND2X1AS7)   0.14     18.41 r
-  u_alu/u_divider/ctmTdsLR_3_1996/O (NAND2X2AS7)   0.12     18.53 f
-  u_alu/u_divider/ctmTdsLR_2_1639/O (AOI12X4AS7)   0.20     18.73 r
-  u_alu/u_divider/ctmTdsLR_3_1640/O (NAND2X4AS7)   0.14     18.87 f
-  u_alu/u_divider/U1718/O (INVX12AS7)              0.17     19.04 r
-  u_alu/u_divider/U1619/O (CLKINVX2AS7)            0.09     19.13 f
-  u_alu/u_divider/ctmTdsLR_1_2802/O (INVX1AS7)     0.11     19.25 r
-  u_alu/u_divider/ctmTdsLR_3_2804/O (OAI112X2AS7)
-                                                   0.13     19.37 f
-  u_alu/u_a3/U11/O (NAND2X2AS7)                    0.17     19.54 r
-  u_alu/u_b1/ctmTdsLR_1_3075/O (OAI22B2X2AS7)      0.09     19.63 f
-  u_alu/u_c0/ctmTdsLR_1_1771/O (OAI12B2X1AS7)      0.21     19.84 f
-  U64/O (AND2X1AS7)                                0.19     20.03 f
-  result_out_reg[11]/D (SFFQX1AS7)                 0.00     20.03 f
-  data arrival time                                         20.03
+  b_reg_reg[9]/CK (SFFQX1AS7)                      0.00      3.20 r
+  b_reg_reg[9]/Q (SFFQX1AS7)                       0.77      3.97 r
+  u_alu/u_divider/U14/O (INVX1AS7)                 0.58      4.54 f
+  u_alu/u_divider/U43/O (NAND2X1AS7)               0.32      4.87 r
+  u_alu/u_divider/ctmTdsLR_1_927/O (OR4X1AS7)      0.18      5.05 r
+  u_alu/u_divider/U51/O (NOR2X1AS7)                0.07      5.12 f
+  u_alu/u_divider/U26/O (NAND2X1AS7)               0.19      5.31 r
+  u_alu/u_divider/ctmTdsLR_2_675/O (AOI12B2X1AS7)
+                                                   0.42      5.73 r
+  u_alu/u_divider/U64/O (NOR2X2AS7)                0.06      5.79 f
+  u_alu/u_divider/U67/O (OAI12X1AS7)               0.26      6.05 r
+  u_alu/u_divider/ctmTdsLR_1_817/O (AOI22B2X1AS7)
+                                                   0.13      6.17 f
+  u_alu/u_divider/U74/O (NOR2X2AS7)                0.17      6.34 r
+  u_alu/u_divider/U75/O (NAND2X2AS7)               0.15      6.49 f
+  u_alu/u_divider/U89/O (OAI12X2AS7)               0.28      6.77 r
+  u_alu/u_divider/U90/O (NOR2X1AS7)                0.10      6.87 f
+  u_alu/u_divider/U93/O (OAI12X1AS7)               0.43      7.29 r
+  u_alu/u_divider/U97/O (AOI12X1AS7)               0.14      7.43 f
+  u_alu/u_divider/U98/O (NOR2X2AS7)                0.18      7.61 r
+  u_alu/u_divider/U99/O (NAND2X2AS7)               0.19      7.80 f
+  u_alu/u_divider/U115/O (NOR2X1AS7)               0.25      8.05 r
+  u_alu/u_divider/U116/O (AOI12X1AS7)              0.12      8.17 f
+  u_alu/u_divider/U117/O (NOR2X1AS7)               0.36      8.54 r
+  u_alu/u_divider/U128/O (OAI12X1AS7)              0.10      8.63 f
+  u_alu/u_divider/U129/O (AOI12X1AS7)              0.23      8.86 r
+  u_alu/u_divider/ctmTdsLR_1_930/O (OAI22B2X1AS7)
+                                                   0.13      8.99 f
+  u_alu/u_divider/U136/O (NAND2X2AS7)              0.24      9.23 r
+  u_alu/u_divider/ctmTdsLR_2_1062/O (MUX2X1AS7)    0.39      9.62 f
+  u_alu/u_divider/U159/O (NOR2X1AS7)               0.24      9.86 r
+  u_alu/u_divider/U162/O (OAI12X1AS7)              0.14     10.00 f
+  u_alu/u_divider/U166/O (AOI12X1AS7)              0.38     10.39 r
+  u_alu/u_divider/ctmTdsLR_1_736/O (OAI22B2X1AS7)
+                                                   0.13     10.52 f
+  u_alu/u_divider/U183/O (NAND2X2AS7)              0.27     10.79 r
+  u_alu/u_divider/ctmTdsLR_2_851/O (MUX2X1AS7)     0.40     11.19 f
+  u_alu/u_divider/U205/O (NOR2X1AS7)               0.28     11.46 r
+  u_alu/u_divider/U208/O (OAI12X2AS7)              0.12     11.58 f
+  u_alu/u_divider/U212/O (AOI12X1AS7)              0.35     11.93 r
+  u_alu/u_divider/U239/O (OAI12X1AS7)              0.12     12.05 f
+  u_alu/u_divider/U240/O (NAND2X2AS7)              0.28     12.33 r
+  u_alu/u_divider/U241/O (CLKINVX1AS7)             0.28     12.61 f
+  u_alu/u_divider/ctmTdsLR_1_644/O (NOR2B1X1AS7)   0.35     12.96 r
+  u_alu/u_divider/U297/O (NOR2X1AS7)               0.10     13.07 f
+  u_alu/u_divider/U298/O (NOR2X1AS7)               0.26     13.33 r
+  u_alu/u_divider/U299/O (NAND2X1AS7)              0.09     13.42 f
+  u_alu/u_divider/U21/O (OAI12X1AS7)               0.28     13.70 r
+  u_alu/u_divider/U307/O (NAND2X2AS7)              0.30     14.00 f
+  u_alu/u_divider/ctmTdsLR_1_1008/O (MUX2X1AS7)    0.43     14.43 f
+  u_alu/u_divider/U356/O (NOR2X1AS7)               0.33     14.76 r
+  u_alu/u_divider/U379/O (OAI12X1AS7)              0.18     14.94 f
+  u_alu/u_divider/U383/O (AOI12X1AS7)              0.24     15.18 r
+  u_alu/u_divider/U384/O (OAI12X1AS7)              0.17     15.35 f
+  u_alu/u_divider/ctmTdsLR_1_681/O (AOI22B2X2AS7)
+                                                   0.66     16.01 r
+  u_alu/u_divider/U423/O (AOI12X1AS7)              0.32     16.33 f
+  u_alu/u_divider/U424/O (NOR2X1AS7)               0.41     16.74 r
+  u_alu/u_divider/U435/O (OAI12X1AS7)              0.12     16.86 f
+  u_alu/u_divider/U436/O (AOI12X1AS7)              0.30     17.16 r
+  u_alu/u_divider/U20/O (OAI12X2AS7)               0.17     17.33 f
+  u_alu/u_divider/ctmTdsLR_1_1037/O (AOI22B2X2AS7)
+                                                   0.74     18.06 r
+  u_alu/u_divider/ctmTdsLR_2_1090/O (OAI22B2X1AS7)
+                                                   0.27     18.33 f
+  u_alu/u_divider/U564/O (NOR2X1AS7)               0.43     18.77 r
+  u_alu/u_divider/U573/O (NOR2X1AS7)               0.10     18.87 f
+  u_alu/u_divider/U581/O (AOI12X1AS7)              0.26     19.13 r
+  u_alu/u_divider/U582/O (OAI12X2AS7)              0.19     19.32 f
+  u_alu/u_divider/ctmTdsLR_1_831/O (AOI22B2X2AS7)
+                                                   0.78     20.11 r
+  u_alu/u_divider/ctmTdsLR_1_952/O (MUX2X1AS7)     0.60     20.71 f
+  u_alu/u_divider/U690/O (NAND2X1AS7)              0.20     20.92 r
+  u_alu/u_divider/U692/O (OAI12X1AS7)              0.18     21.10 f
+  u_alu/u_divider/U696/O (AOI12X1AS7)              0.30     21.40 r
+  u_alu/u_divider/U19/O (OAI12X2AS7)               0.21     21.60 f
+  u_alu/u_divider/ctmTdsLR_1_658/O (AOI22B2X2AS7)
+                                                   0.96     22.57 r
+  u_alu/u_divider/ctmTdsLR_1_757/O (OAI22B2X1AS7)
+                                                   0.27     22.84 f
+  u_alu/u_divider/U774/O (NOR2X1AS7)               0.42     23.26 r
+  u_alu/u_divider/U785/O (OAI12X1AS7)              0.10     23.37 f
+  u_alu/u_divider/U786/O (AOI12X1AS7)              0.39     23.76 r
+  u_alu/u_divider/U829/O (OAI12X1AS7)              0.35     24.10 f
+  u_alu/u_divider/U841/O (AOI12X2AS7)              1.12     25.23 r
+  u_alu/u_divider/ctmTdsLR_1_1108/O (MUX2X1AS7)    0.63     25.86 r
+  u_alu/u_divider/U940/O (NOR2X1AS7)               0.09     25.96 f
+  u_alu/u_divider/U948/O (NOR2X1AS7)               0.35     26.30 r
+  u_alu/u_divider/U967/O (NAND2X1AS7)              0.12     26.42 f
+  u_alu/u_divider/U18/O (OAI12X1AS7)               0.92     27.34 r
+  u_alu/u_divider/U987/O (AOI12X4AS7)              0.35     27.68 f
+  u_alu/u_divider/ctmTdsLR_3_966/O (OAI22B2X1AS7)
+                                                   0.38     28.07 f
+  u_alu/u_divider/U1019/O (NOR2X1AS7)              0.30     28.37 r
+  u_alu/u_divider/U1022/O (OAI12X1AS7)             0.15     28.52 f
+  u_alu/u_divider/U1026/O (AOI12X1AS7)             0.43     28.94 r
+  u_alu/u_divider/U4/O (OAI12X2AS7)                0.32     29.26 f
+  u_alu/u_divider/U3/O (AOI12X4AS7)                0.70     29.96 r
+  u_alu/u_divider/U1157/O (MUX2X1AS7)              0.54     30.50 r
+  u_alu/u_divider/U1275/O (NAND2X1AS7)             0.17     30.67 f
+  u_alu/u_divider/U1277/O (OAI12X1AS7)             0.41     31.08 r
+  u_alu/u_divider/U1281/O (AOI12X1AS7)             0.27     31.36 f
+  u_alu/u_divider/U1289/O (OAI12X1AS7)             0.31     31.66 r
+  u_alu/u_divider/U1290/O (AOI12X1AS7)             0.07     31.74 f
+  u_alu/u_divider/U5/O (INVX1AS7)                  1.14     32.88 r
+  u_alu/u_divider/U1380/O (OAI112X1AS7)            0.09     32.97 f
+  u_alu/u_a3/U13/O (AND2X1AS7)                     0.24     33.21 f
+  u_alu/u_b1/U12/O (MUX2X1AS7)                     0.34     33.54 f
+  u_alu/u_c0/U12/O (MUX2X1AS7)                     0.34     33.88 f
+  U74/O (AND2X1AS7)                                0.18     34.06 f
+  result_out_reg[11]/D (SFFQX1AS7)                 0.00     34.07 f
+  data arrival time                                         34.07
 
-  clock clk (rise edge)                           20.00     20.00
-  clock network delay (ideal)                      0.16     20.16
-  result_out_reg[11]/CK (SFFQX1AS7)                0.00     20.16 r
-  clock uncertainty                               -2.00     18.16
-  library setup time                              -0.97     17.19
-  data required time                                        17.19
+  clock clk (rise edge)                           40.00     40.00
+  clock network delay (ideal)                      0.00     40.00
+  result_out_reg[11]/CK (SFFQX1AS7)                0.00     40.00 r
+  clock uncertainty                               -4.00     36.00
+  library setup time                              -1.52     34.48
+  data required time                                        34.48
   ------------------------------------------------------------------------
-  data required time                                        17.19
-  data arrival time                                        -20.03
+  data required time                                        34.48
+  data arrival time                                        -34.07
   ------------------------------------------------------------------------
-  slack (VIOLATED)                                          -2.84
+  slack (MET)                                                0.41
 
 
 
-  Startpoint: a_reg_reg[14] (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: result_out_reg[13] (rising edge-triggered flip-flop clocked by clk)
-  Mode: default
-  Corner: default
-  Scenario: default
-  Path Group: clk
-  Path Type: max
-
-  Point                                            Incr      Path  
-  ------------------------------------------------------------------------
-  clock clk (rise edge)                            0.00      0.00
-  clock network delay (ideal)                      1.60      1.60
-
-  a_reg_reg[14]/CK (SFFQX2AS7)                     0.00      1.60 r
-  a_reg_reg[14]/Q (SFFQX2AS7)                      0.52      2.12 r
-  u_alu/u_divider/ctmTdsLR_1_2750/O (NAND2B1X1AS7)
-                                                   0.18      2.30 r
-  u_alu/u_divider/ctmTdsLR_1_1662/O (NAND3X2AS7)   0.15      2.45 f
-  u_alu/u_divider/U1356/O (NOR2X4AS7)              0.17      2.62 r
-  u_alu/u_divider/U383/O (NAND3X4AS7)              0.14      2.76 f
-  u_alu/u_divider/U710/O (NAND2X2AS7)              0.11      2.88 r
-  u_alu/u_divider/ctmTdsLR_2_1504/O (NAND2X2AS7)   0.10      2.98 f
-  u_alu/u_divider/ctmTdsLR_1_1829/O (NAND2X2AS7)   0.12      3.10 r
-  u_alu/u_divider/ctmTdsLR_2_1129/O (NAND2X4AS7)   0.10      3.20 f
-  u_alu/u_divider/ctmTdsLR_1_1805/O (AOI12X2AS7)   0.20      3.40 r
-  u_alu/u_divider/ctmTdsLR_1_2862/O (OAI12B2X2AS7)
-                                                   0.27      3.67 r
-  u_alu/u_divider/U940/O (NAND2X2AS7)              0.11      3.78 f
-  u_alu/u_divider/U938/O (NAND2X4AS7)              0.15      3.94 r
-  u_alu/u_divider/U1104/O (NAND2X2AS7)             0.18      4.12 f
-  u_alu/u_divider/ctmTdsLR_2_2208/O (OAI12B2X1AS7)
-                                                   0.15      4.27 r
-  u_alu/u_divider/ctmTdsLR_1_2207/O (NAND2X2AS7)   0.12      4.40 f
-  u_alu/u_divider/ctmTdsLR_1_2087/O (NAND2X1AS7)   0.14      4.53 r
-  u_alu/u_divider/ctmTdsLR_2_2088/O (NAND2B1X2AS7)
-                                                   0.09      4.63 f
-  u_alu/u_divider/ctmTdsLR_2_2189/O (NAND4X2AS7)   0.16      4.78 r
-  u_alu/u_divider/ctmTdsLR_2_1631/O (NAND3X4AS7)   0.16      4.95 f
-  u_alu/u_divider/ctmTdsLR_1_1038/O (AOI12B2X2AS7)
-                                                   0.33      5.28 f
-  u_alu/u_divider/U1109/O (AOI12X4AS7)             0.22      5.50 r
-  u_alu/u_divider/ctmTdsLR_1_1174/O (NAND2X1AS7)   0.12      5.62 f
-  u_alu/u_divider/ctmTdsLR_1_868/O (NAND2B1X2AS7)
-                                                   0.13      5.75 r
-  u_alu/u_divider/ctmTdsLR_1_2693/O (NAND2B1X2AS7)
-                                                   0.11      5.87 f
-  u_alu/u_divider/ctmTdsLR_2_1653/O (OAI112X2AS7)
-                                                   0.18      6.05 r
-  u_alu/u_divider/ctmTdsLR_1_1652/O (INVX2AS7)     0.09      6.14 f
-  u_alu/u_divider/ctmTdsLR_1_2171/O (NOR2X2AS7)    0.18      6.32 r
-  u_alu/u_divider/U1294/O (AOI12X2AS7)             0.12      6.44 f
-  u_alu/u_divider/U1290/O (OAI12X4AS7)             0.26      6.70 r
-  u_alu/u_divider/U1311/O (NAND2X4AS7)             0.20      6.90 f
-  u_alu/u_divider/U1415/O (NAND2X1AS7)             0.17      7.07 r
-  u_alu/u_divider/ctmTdsLR_1_756/O (OAI12X1AS7)    0.14      7.22 f
-  u_alu/u_divider/ctmTdsLR_1_83/O (OAI12B2X2AS7)   0.17      7.38 r
-  u_alu/u_divider/ctmTdsLR_1_3073/O (OAI12B2X4AS7)
-                                                   0.11      7.49 f
-  u_alu/u_divider/U930/O (AOI12X4AS7)              0.26      7.75 r
-  u_alu/u_divider/U1726/O (OAI12X1AS7)             0.13      7.88 f
-  u_alu/u_divider/ctmTdsLR_1_3017/O (OAI22B2X1AS7)
-                                                   0.24      8.12 f
-  u_alu/u_divider/U1580/O (NAND2X2AS7)             0.19      8.31 r
-  u_alu/u_divider/ctmTdsLR_1_3065/O (NAND2X1AS7)   0.13      8.44 f
-  u_alu/u_divider/ctmTdsLR_2_3066/O (NAND3X2AS7)   0.14      8.59 r
-  u_alu/u_divider/ctmTdsLR_3_3067/O (NAND2X2AS7)   0.10      8.68 f
-  u_alu/u_divider/U1660/O (AOI12X2AS7)             0.23      8.91 r
-  u_alu/u_divider/U1110/O (OAI12X2AS7)             0.13      9.04 f
-  u_alu/u_divider/ctmTdsLR_1_32/O (NAND2X2AS7)     0.13      9.17 r
-  u_alu/u_divider/U697/O (NAND2X4AS7)              0.16      9.34 f
-  u_alu/u_divider/U1231/O (INVX8AS7)               0.16      9.50 r
-  u_alu/u_divider/U413/O (NAND2X2AS7)              0.10      9.60 f
-  u_alu/u_divider/U729/O (NAND3X1AS7)              0.14      9.74 r
-  u_alu/u_divider/U728/O (CLKINVX2AS7)             0.12      9.85 f
-  u_alu/u_divider/ctmTdsLR_1_3068/O (NAND3B1X2AS7)
-                                                   0.28     10.14 f
-  u_alu/u_divider/U468/O (NAND2X4AS7)              0.18     10.31 r
-  u_alu/u_divider/ctmTdsLR_1_1218/O (NAND2X2AS7)   0.11     10.42 f
-  u_alu/u_divider/U639/O (NAND3X4AS7)              0.16     10.58 r
-  u_alu/u_divider/ctmTdsLR_1_751/O (NAND3B1X1AS7)
-                                                   0.18     10.76 f
-  u_alu/u_divider/U757/O (NAND2X2AS7)              0.18     10.94 r
-  u_alu/u_divider/U1323/O (NAND2X1AS7)             0.11     11.05 f
-  u_alu/u_divider/U1321/O (OAI12X2AS7)             0.18     11.23 r
-  u_alu/u_divider/ZINV_4_inst_3759/O (INVX2AS7)    0.08     11.31 f
-  u_alu/u_divider/U934/O (NAND2X4AS7)              0.15     11.46 r
-  u_alu/u_divider/ctmTdsLR_1_1456/O (NAND3X2AS7)   0.14     11.61 f
-  u_alu/u_divider/ctmTdsLR_1_1410/O (NAND3X4AS7)   0.13     11.73 r
-  u_alu/u_divider/ctmTdsLR_1_3092/O (NAND2B1X4AS7)
-                                                   0.15     11.88 f
-  u_alu/u_divider/ctmTdsLR_1_1403/O (OAI12B2X1AS7)
-                                                   0.22     12.10 f
-  u_alu/u_divider/ctmTdsLR_3_1405/O (NAND2X2AS7)   0.15     12.24 r
-  u_alu/u_divider/U1183/O (NAND2X2AS7)             0.11     12.36 f
-  u_alu/u_divider/U634/O (OAI12X2AS7)              0.23     12.59 r
-  u_alu/u_divider/ctmTdsLR_1_3069/O (INVX2AS7)     0.08     12.66 f
-  u_alu/u_divider/ctmTdsLR_2_1521/O (NAND2X4AS7)   0.12     12.78 r
-  u_alu/u_divider/ctmTdsLR_1_2179/O (NAND3X2AS7)   0.14     12.93 f
-  u_alu/u_divider/ctmTdsLR_2_1709/O (NAND3X4AS7)   0.14     13.06 r
-  u_alu/u_divider/ctmTdsLR_1_1708/O (NAND2X4AS7)   0.17     13.23 f
-  u_alu/u_divider/ctmTdsLR_3_181/O (OAI12B2X1AS7)
-                                                   0.22     13.45 f
-  u_alu/u_divider/U582/O (NAND2X2AS7)              0.17     13.63 r
-  u_alu/u_divider/U150/O (NOR2X2AS7)               0.08     13.71 f
-  u_alu/u_divider/U689/O (NOR2X2AS7)               0.26     13.97 r
-  u_alu/u_divider/U562/O (AOI12X4AS7)              0.12     14.09 f
-  u_alu/u_divider/U921/O (OAI12X2AS7)              0.27     14.36 r
-  u_alu/u_divider/U1151/O (NAND2X4AS7)             0.15     14.50 f
-  u_alu/u_divider/ctmTdsLR_1_735/O (NAND2X2AS7)    0.15     14.65 r
-  u_alu/u_divider/ctmTdsLR_2_736/O (INVX3AS7)      0.10     14.75 f
-  u_alu/u_divider/ctmTdsLR_1_1320/O (NAND2X1AS7)   0.13     14.88 r
-  u_alu/u_divider/U1686/O (NAND3X2AS7)             0.14     15.01 f
-  u_alu/u_divider/U109/O (NAND2X2AS7)              0.14     15.15 r
-  u_alu/u_divider/ctmTdsLR_1_146/O (NAND2X2AS7)    0.13     15.28 f
-  u_alu/u_divider/U624/O (AOI12X4AS7)              0.31     15.59 r
-  u_alu/u_divider/U100/O (INVX3AS7)                0.10     15.68 f
-  u_alu/u_divider/U1562/O (AOI12X1AS7)             0.29     15.97 r
-  u_alu/u_divider/ctmTdsLR_1_1009/O (NAND2X1AS7)   0.11     16.08 f
-  u_alu/u_divider/ctmTdsLR_2_1010/O (OAI12X1AS7)   0.16     16.25 r
-  u_alu/u_divider/ctmTdsLR_2_2673/O (INVX1AS7)     0.08     16.32 f
-  u_alu/u_divider/ctmTdsLR_1_2672/O (OAI12B2X1AS7)
-                                                   0.23     16.55 f
-  u_alu/u_divider/ctmTdsLR_2_1384/O (NAND3X2AS7)   0.13     16.68 r
-  u_alu/u_divider/ctmTdsLR_3_1385/O (NAND2X2AS7)   0.16     16.85 f
-  u_alu/u_divider/ctmTdsLR_1_1006/O (AOI12X1AS7)   0.21     17.05 r
-  u_alu/u_divider/ctmTdsLR_2_1860/O (AOI12B2X2AS7)
-                                                   0.31     17.36 r
-  u_alu/u_divider/ctmTdsLR_2_1807/O (NAND2X4AS7)   0.14     17.50 f
-  u_alu/u_divider/U416/O (INVX8AS7)                0.12     17.63 r
-  u_alu/u_divider/ctmTdsLR_1_2151/O (OAI12B2X2AS7)
-                                                   0.27     17.90 r
-  u_alu/u_divider/U1472/O (NAND2X2AS7)             0.14     18.04 f
-  u_alu/u_divider/ctmTdsLR_2_3080/O (OAI12X4AS7)   0.28     18.32 r
-  u_alu/u_divider/U1024/O (AOI12X2AS7)             0.15     18.47 f
-  u_alu/u_divider/U2185/O (OAI12X2AS7)             0.21     18.68 r
-  u_alu/u_divider/ctmTdsLR_1_3090/OB (MUX2BX1AS7)
-                                                   0.29     18.97 r
-  u_alu/u_divider/ctmTdsLR_1_3098/O (NAND3X2AS7)   0.15     19.12 f
-  u_alu/u_divider/ctmTdsLR_2_1045/O (OAI12B2X1AS7)
-                                                   0.21     19.33 f
-  u_alu/u_a3/U29/O (AND2X2AS7)                     0.18     19.51 f
-  u_alu/u_b1/ctmTdsLR_1_60/O (OAI12B2X1AS7)        0.17     19.68 f
-  u_alu/u_c0/ctmTdsLR_1_1770/O (OAI12B2X1AS7)      0.20     19.88 f
-  ctmTdsLR_1_1314/O (CLKINVX1AS7)                  0.09     19.98 r
-  ctmTdsLR_2_1315/O (NOR2B1X1AS7)                  0.06     20.04 f
-  result_out_reg[13]/D (SFFQX2AS7)                 0.00     20.04 f
-  data arrival time                                         20.04
-
-  clock clk (rise edge)                           20.00     20.00
-  clock network delay (ideal)                      0.16     20.16
-  result_out_reg[13]/CK (SFFQX2AS7)                0.00     20.16 r
-  clock uncertainty                               -2.00     18.16
-  library setup time                              -0.95     17.21
-  data required time                                        17.21
-  ------------------------------------------------------------------------
-  data required time                                        17.21
-  data arrival time                                        -20.04
-  ------------------------------------------------------------------------
-  slack (VIOLATED)                                          -2.83
-
-
-
-  Startpoint: a_reg_reg[14] (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: result_out_reg[5] (rising edge-triggered flip-flop clocked by clk)
-  Mode: default
-  Corner: default
-  Scenario: default
-  Path Group: clk
-  Path Type: max
-
-  Point                                            Incr      Path  
-  ------------------------------------------------------------------------
-  clock clk (rise edge)                            0.00      0.00
-  clock network delay (ideal)                      1.60      1.60
-
-  a_reg_reg[14]/CK (SFFQX2AS7)                     0.00      1.60 r
-  a_reg_reg[14]/Q (SFFQX2AS7)                      0.52      2.12 r
-  u_alu/u_divider/ctmTdsLR_1_2750/O (NAND2B1X1AS7)
-                                                   0.18      2.30 r
-  u_alu/u_divider/ctmTdsLR_1_1662/O (NAND3X2AS7)   0.15      2.45 f
-  u_alu/u_divider/U1356/O (NOR2X4AS7)              0.17      2.62 r
-  u_alu/u_divider/U383/O (NAND3X4AS7)              0.14      2.76 f
-  u_alu/u_divider/U710/O (NAND2X2AS7)              0.11      2.88 r
-  u_alu/u_divider/ctmTdsLR_2_1504/O (NAND2X2AS7)   0.10      2.98 f
-  u_alu/u_divider/ctmTdsLR_1_1829/O (NAND2X2AS7)   0.12      3.10 r
-  u_alu/u_divider/ctmTdsLR_2_1129/O (NAND2X4AS7)   0.10      3.20 f
-  u_alu/u_divider/ctmTdsLR_1_1805/O (AOI12X2AS7)   0.20      3.40 r
-  u_alu/u_divider/ctmTdsLR_1_2862/O (OAI12B2X2AS7)
-                                                   0.27      3.67 r
-  u_alu/u_divider/U940/O (NAND2X2AS7)              0.11      3.78 f
-  u_alu/u_divider/U938/O (NAND2X4AS7)              0.15      3.94 r
-  u_alu/u_divider/U1104/O (NAND2X2AS7)             0.18      4.12 f
-  u_alu/u_divider/ctmTdsLR_2_2208/O (OAI12B2X1AS7)
-                                                   0.15      4.27 r
-  u_alu/u_divider/ctmTdsLR_1_2207/O (NAND2X2AS7)   0.12      4.40 f
-  u_alu/u_divider/ctmTdsLR_1_2087/O (NAND2X1AS7)   0.14      4.53 r
-  u_alu/u_divider/ctmTdsLR_2_2088/O (NAND2B1X2AS7)
-                                                   0.09      4.63 f
-  u_alu/u_divider/ctmTdsLR_2_2189/O (NAND4X2AS7)   0.16      4.78 r
-  u_alu/u_divider/ctmTdsLR_2_1631/O (NAND3X4AS7)   0.16      4.95 f
-  u_alu/u_divider/ctmTdsLR_1_1038/O (AOI12B2X2AS7)
-                                                   0.33      5.28 f
-  u_alu/u_divider/U1109/O (AOI12X4AS7)             0.22      5.50 r
-  u_alu/u_divider/ctmTdsLR_1_1174/O (NAND2X1AS7)   0.12      5.62 f
-  u_alu/u_divider/ctmTdsLR_1_868/O (NAND2B1X2AS7)
-                                                   0.13      5.75 r
-  u_alu/u_divider/ctmTdsLR_1_2693/O (NAND2B1X2AS7)
-                                                   0.11      5.87 f
-  u_alu/u_divider/ctmTdsLR_2_1653/O (OAI112X2AS7)
-                                                   0.18      6.05 r
-  u_alu/u_divider/ctmTdsLR_1_1652/O (INVX2AS7)     0.09      6.14 f
-  u_alu/u_divider/ctmTdsLR_1_2171/O (NOR2X2AS7)    0.18      6.32 r
-  u_alu/u_divider/U1294/O (AOI12X2AS7)             0.12      6.44 f
-  u_alu/u_divider/U1290/O (OAI12X4AS7)             0.26      6.70 r
-  u_alu/u_divider/U1311/O (NAND2X4AS7)             0.20      6.90 f
-  u_alu/u_divider/U1415/O (NAND2X1AS7)             0.17      7.07 r
-  u_alu/u_divider/ctmTdsLR_1_756/O (OAI12X1AS7)    0.14      7.22 f
-  u_alu/u_divider/ctmTdsLR_1_83/O (OAI12B2X2AS7)   0.17      7.38 r
-  u_alu/u_divider/ctmTdsLR_1_3073/O (OAI12B2X4AS7)
-                                                   0.11      7.49 f
-  u_alu/u_divider/U930/O (AOI12X4AS7)              0.26      7.75 r
-  u_alu/u_divider/U1726/O (OAI12X1AS7)             0.13      7.88 f
-  u_alu/u_divider/ctmTdsLR_1_3017/O (OAI22B2X1AS7)
-                                                   0.24      8.12 f
-  u_alu/u_divider/U1580/O (NAND2X2AS7)             0.19      8.31 r
-  u_alu/u_divider/ctmTdsLR_1_3065/O (NAND2X1AS7)   0.13      8.44 f
-  u_alu/u_divider/ctmTdsLR_2_3066/O (NAND3X2AS7)   0.14      8.59 r
-  u_alu/u_divider/ctmTdsLR_3_3067/O (NAND2X2AS7)   0.10      8.68 f
-  u_alu/u_divider/U1660/O (AOI12X2AS7)             0.23      8.91 r
-  u_alu/u_divider/U1110/O (OAI12X2AS7)             0.13      9.04 f
-  u_alu/u_divider/ctmTdsLR_1_32/O (NAND2X2AS7)     0.13      9.17 r
-  u_alu/u_divider/U697/O (NAND2X4AS7)              0.16      9.34 f
-  u_alu/u_divider/U1231/O (INVX8AS7)               0.16      9.50 r
-  u_alu/u_divider/U413/O (NAND2X2AS7)              0.10      9.60 f
-  u_alu/u_divider/U729/O (NAND3X1AS7)              0.14      9.74 r
-  u_alu/u_divider/U728/O (CLKINVX2AS7)             0.12      9.85 f
-  u_alu/u_divider/ctmTdsLR_1_3068/O (NAND3B1X2AS7)
-                                                   0.28     10.14 f
-  u_alu/u_divider/U468/O (NAND2X4AS7)              0.18     10.31 r
-  u_alu/u_divider/ctmTdsLR_1_1218/O (NAND2X2AS7)   0.11     10.42 f
-  u_alu/u_divider/U639/O (NAND3X4AS7)              0.16     10.58 r
-  u_alu/u_divider/ctmTdsLR_1_751/O (NAND3B1X1AS7)
-                                                   0.18     10.76 f
-  u_alu/u_divider/U757/O (NAND2X2AS7)              0.18     10.94 r
-  u_alu/u_divider/U1323/O (NAND2X1AS7)             0.11     11.05 f
-  u_alu/u_divider/U1321/O (OAI12X2AS7)             0.18     11.23 r
-  u_alu/u_divider/ZINV_4_inst_3759/O (INVX2AS7)    0.08     11.31 f
-  u_alu/u_divider/U934/O (NAND2X4AS7)              0.15     11.46 r
-  u_alu/u_divider/ctmTdsLR_1_1456/O (NAND3X2AS7)   0.14     11.61 f
-  u_alu/u_divider/ctmTdsLR_1_1410/O (NAND3X4AS7)   0.13     11.73 r
-  u_alu/u_divider/ctmTdsLR_1_3092/O (NAND2B1X4AS7)
-                                                   0.15     11.88 f
-  u_alu/u_divider/ctmTdsLR_1_1403/O (OAI12B2X1AS7)
-                                                   0.22     12.10 f
-  u_alu/u_divider/ctmTdsLR_3_1405/O (NAND2X2AS7)   0.15     12.24 r
-  u_alu/u_divider/U1183/O (NAND2X2AS7)             0.11     12.36 f
-  u_alu/u_divider/U634/O (OAI12X2AS7)              0.23     12.59 r
-  u_alu/u_divider/ctmTdsLR_1_3069/O (INVX2AS7)     0.08     12.66 f
-  u_alu/u_divider/ctmTdsLR_2_1521/O (NAND2X4AS7)   0.12     12.78 r
-  u_alu/u_divider/ctmTdsLR_1_2179/O (NAND3X2AS7)   0.14     12.93 f
-  u_alu/u_divider/ctmTdsLR_2_1709/O (NAND3X4AS7)   0.14     13.06 r
-  u_alu/u_divider/ctmTdsLR_1_1708/O (NAND2X4AS7)   0.17     13.23 f
-  u_alu/u_divider/ctmTdsLR_3_181/O (OAI12B2X1AS7)
-                                                   0.22     13.45 f
-  u_alu/u_divider/U582/O (NAND2X2AS7)              0.17     13.63 r
-  u_alu/u_divider/U150/O (NOR2X2AS7)               0.08     13.71 f
-  u_alu/u_divider/U689/O (NOR2X2AS7)               0.26     13.97 r
-  u_alu/u_divider/U562/O (AOI12X4AS7)              0.12     14.09 f
-  u_alu/u_divider/U921/O (OAI12X2AS7)              0.27     14.36 r
-  u_alu/u_divider/U1151/O (NAND2X4AS7)             0.15     14.50 f
-  u_alu/u_divider/ctmTdsLR_1_735/O (NAND2X2AS7)    0.15     14.65 r
-  u_alu/u_divider/ctmTdsLR_2_736/O (INVX3AS7)      0.10     14.75 f
-  u_alu/u_divider/ctmTdsLR_1_1320/O (NAND2X1AS7)   0.13     14.88 r
-  u_alu/u_divider/U1686/O (NAND3X2AS7)             0.14     15.01 f
-  u_alu/u_divider/U109/O (NAND2X2AS7)              0.14     15.15 r
-  u_alu/u_divider/ctmTdsLR_1_146/O (NAND2X2AS7)    0.13     15.28 f
-  u_alu/u_divider/U624/O (AOI12X4AS7)              0.31     15.59 r
-  u_alu/u_divider/U100/O (INVX3AS7)                0.10     15.68 f
-  u_alu/u_divider/U1562/O (AOI12X1AS7)             0.29     15.97 r
-  u_alu/u_divider/ctmTdsLR_1_1009/O (NAND2X1AS7)   0.11     16.08 f
-  u_alu/u_divider/ctmTdsLR_2_1010/O (OAI12X1AS7)   0.16     16.25 r
-  u_alu/u_divider/ctmTdsLR_2_2673/O (INVX1AS7)     0.08     16.32 f
-  u_alu/u_divider/ctmTdsLR_1_2672/O (OAI12B2X1AS7)
-                                                   0.23     16.55 f
-  u_alu/u_divider/ctmTdsLR_2_1384/O (NAND3X2AS7)   0.13     16.68 r
-  u_alu/u_divider/ctmTdsLR_3_1385/O (NAND2X2AS7)   0.16     16.85 f
-  u_alu/u_divider/ctmTdsLR_1_1006/O (AOI12X1AS7)   0.21     17.05 r
-  u_alu/u_divider/ctmTdsLR_2_1860/O (AOI12B2X2AS7)
-                                                   0.31     17.36 r
-  u_alu/u_divider/ctmTdsLR_2_1807/O (NAND2X4AS7)   0.14     17.50 f
-  u_alu/u_divider/U416/O (INVX8AS7)                0.12     17.63 r
-  u_alu/u_divider/ctmTdsLR_1_2151/O (OAI12B2X2AS7)
-                                                   0.27     17.90 r
-  u_alu/u_divider/U1472/O (NAND2X2AS7)             0.14     18.04 f
-  u_alu/u_divider/ctmTdsLR_2_3080/O (OAI12X4AS7)   0.28     18.32 r
-  u_alu/u_divider/ctmTdsLR_1_2092/O (NAND2X2AS7)   0.10     18.42 f
-  u_alu/u_divider/ctmTdsLR_2_2093/O (NAND2X2AS7)   0.15     18.57 r
-  u_alu/u_divider/ctmTdsLR_2_1639/O (AOI12X4AS7)   0.12     18.68 f
-  u_alu/u_divider/ctmTdsLR_3_1640/O (NAND2X4AS7)   0.19     18.87 r
-  u_alu/u_divider/U1718/O (INVX12AS7)              0.10     18.97 f
-  u_alu/u_divider/ctmTdsLR_1_222/O (NAND2X1AS7)    0.11     19.09 r
-  u_alu/u_divider/ctmTdsLR_2_223/O (OAI112X1AS7)   0.14     19.23 f
-  u_alu/u_a3/ctmTdsLR_1_2825/O (AND2X1AS7)         0.19     19.42 f
-  u_alu/u_b1/ctmTdsLR_1_221/O (OAI12B2X1AS7)       0.17     19.59 f
-  u_alu/u_c0/ctmTdsLR_1_1772/O (OAI12B2X2AS7)      0.22     19.81 f
-  U70/O (AND2X1AS7)                                0.19     20.00 f
-  result_out_reg[5]/D (SFFQX1AS7)                  0.00     20.00 f
-  data arrival time                                         20.00
-
-  clock clk (rise edge)                           20.00     20.00
-  clock network delay (ideal)                      0.16     20.16
-  result_out_reg[5]/CK (SFFQX1AS7)                 0.00     20.16 r
-  clock uncertainty                               -2.00     18.16
-  library setup time                              -0.97     17.19
-  data required time                                        17.19
-  ------------------------------------------------------------------------
-  data required time                                        17.19
-  data arrival time                                        -20.00
-  ------------------------------------------------------------------------
-  slack (VIOLATED)                                          -2.81
-
-
-
-  Startpoint: a_reg_reg[14] (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: result_out_reg[0] (rising edge-triggered flip-flop clocked by clk)
-  Mode: default
-  Corner: default
-  Scenario: default
-  Path Group: clk
-  Path Type: max
-
-  Point                                            Incr      Path  
-  ------------------------------------------------------------------------
-  clock clk (rise edge)                            0.00      0.00
-  clock network delay (ideal)                      1.60      1.60
-
-  a_reg_reg[14]/CK (SFFQX2AS7)                     0.00      1.60 r
-  a_reg_reg[14]/Q (SFFQX2AS7)                      0.52      2.12 r
-  u_alu/u_divider/ctmTdsLR_1_2750/O (NAND2B1X1AS7)
-                                                   0.18      2.30 r
-  u_alu/u_divider/ctmTdsLR_1_1662/O (NAND3X2AS7)   0.15      2.45 f
-  u_alu/u_divider/U1356/O (NOR2X4AS7)              0.17      2.62 r
-  u_alu/u_divider/U383/O (NAND3X4AS7)              0.14      2.76 f
-  u_alu/u_divider/U710/O (NAND2X2AS7)              0.11      2.88 r
-  u_alu/u_divider/ctmTdsLR_2_1504/O (NAND2X2AS7)   0.10      2.98 f
-  u_alu/u_divider/ctmTdsLR_1_1829/O (NAND2X2AS7)   0.12      3.10 r
-  u_alu/u_divider/ctmTdsLR_2_1129/O (NAND2X4AS7)   0.10      3.20 f
-  u_alu/u_divider/ctmTdsLR_1_1805/O (AOI12X2AS7)   0.20      3.40 r
-  u_alu/u_divider/ctmTdsLR_1_2862/O (OAI12B2X2AS7)
-                                                   0.27      3.67 r
-  u_alu/u_divider/U940/O (NAND2X2AS7)              0.11      3.78 f
-  u_alu/u_divider/U938/O (NAND2X4AS7)              0.15      3.94 r
-  u_alu/u_divider/U1104/O (NAND2X2AS7)             0.18      4.12 f
-  u_alu/u_divider/ctmTdsLR_2_2208/O (OAI12B2X1AS7)
-                                                   0.15      4.27 r
-  u_alu/u_divider/ctmTdsLR_1_2207/O (NAND2X2AS7)   0.12      4.40 f
-  u_alu/u_divider/ctmTdsLR_1_2087/O (NAND2X1AS7)   0.14      4.53 r
-  u_alu/u_divider/ctmTdsLR_2_2088/O (NAND2B1X2AS7)
-                                                   0.09      4.63 f
-  u_alu/u_divider/ctmTdsLR_2_2189/O (NAND4X2AS7)   0.16      4.78 r
-  u_alu/u_divider/ctmTdsLR_2_1631/O (NAND3X4AS7)   0.16      4.95 f
-  u_alu/u_divider/ctmTdsLR_1_1038/O (AOI12B2X2AS7)
-                                                   0.33      5.28 f
-  u_alu/u_divider/U1109/O (AOI12X4AS7)             0.22      5.50 r
-  u_alu/u_divider/ctmTdsLR_1_1174/O (NAND2X1AS7)   0.12      5.62 f
-  u_alu/u_divider/ctmTdsLR_1_868/O (NAND2B1X2AS7)
-                                                   0.13      5.75 r
-  u_alu/u_divider/ctmTdsLR_1_2693/O (NAND2B1X2AS7)
-                                                   0.11      5.87 f
-  u_alu/u_divider/ctmTdsLR_2_1653/O (OAI112X2AS7)
-                                                   0.18      6.05 r
-  u_alu/u_divider/ctmTdsLR_1_1652/O (INVX2AS7)     0.09      6.14 f
-  u_alu/u_divider/ctmTdsLR_1_2171/O (NOR2X2AS7)    0.18      6.32 r
-  u_alu/u_divider/U1294/O (AOI12X2AS7)             0.12      6.44 f
-  u_alu/u_divider/U1290/O (OAI12X4AS7)             0.26      6.70 r
-  u_alu/u_divider/U1311/O (NAND2X4AS7)             0.20      6.90 f
-  u_alu/u_divider/U1415/O (NAND2X1AS7)             0.17      7.07 r
-  u_alu/u_divider/ctmTdsLR_1_756/O (OAI12X1AS7)    0.14      7.22 f
-  u_alu/u_divider/ctmTdsLR_1_83/O (OAI12B2X2AS7)   0.17      7.38 r
-  u_alu/u_divider/ctmTdsLR_1_3073/O (OAI12B2X4AS7)
-                                                   0.11      7.49 f
-  u_alu/u_divider/U930/O (AOI12X4AS7)              0.26      7.75 r
-  u_alu/u_divider/U1726/O (OAI12X1AS7)             0.13      7.88 f
-  u_alu/u_divider/ctmTdsLR_1_3017/O (OAI22B2X1AS7)
-                                                   0.24      8.12 f
-  u_alu/u_divider/U1580/O (NAND2X2AS7)             0.19      8.31 r
-  u_alu/u_divider/ctmTdsLR_1_3065/O (NAND2X1AS7)   0.13      8.44 f
-  u_alu/u_divider/ctmTdsLR_2_3066/O (NAND3X2AS7)   0.14      8.59 r
-  u_alu/u_divider/ctmTdsLR_3_3067/O (NAND2X2AS7)   0.10      8.68 f
-  u_alu/u_divider/U1660/O (AOI12X2AS7)             0.23      8.91 r
-  u_alu/u_divider/U1110/O (OAI12X2AS7)             0.13      9.04 f
-  u_alu/u_divider/ctmTdsLR_1_32/O (NAND2X2AS7)     0.13      9.17 r
-  u_alu/u_divider/U697/O (NAND2X4AS7)              0.16      9.34 f
-  u_alu/u_divider/U1231/O (INVX8AS7)               0.16      9.50 r
-  u_alu/u_divider/U413/O (NAND2X2AS7)              0.10      9.60 f
-  u_alu/u_divider/U729/O (NAND3X1AS7)              0.14      9.74 r
-  u_alu/u_divider/U728/O (CLKINVX2AS7)             0.12      9.85 f
-  u_alu/u_divider/ctmTdsLR_1_3068/O (NAND3B1X2AS7)
-                                                   0.28     10.14 f
-  u_alu/u_divider/U468/O (NAND2X4AS7)              0.18     10.31 r
-  u_alu/u_divider/ctmTdsLR_1_1218/O (NAND2X2AS7)   0.11     10.42 f
-  u_alu/u_divider/U639/O (NAND3X4AS7)              0.16     10.58 r
-  u_alu/u_divider/ctmTdsLR_1_751/O (NAND3B1X1AS7)
-                                                   0.18     10.76 f
-  u_alu/u_divider/U757/O (NAND2X2AS7)              0.18     10.94 r
-  u_alu/u_divider/U1323/O (NAND2X1AS7)             0.11     11.05 f
-  u_alu/u_divider/U1321/O (OAI12X2AS7)             0.18     11.23 r
-  u_alu/u_divider/ZINV_4_inst_3759/O (INVX2AS7)    0.08     11.31 f
-  u_alu/u_divider/U934/O (NAND2X4AS7)              0.15     11.46 r
-  u_alu/u_divider/ctmTdsLR_1_1456/O (NAND3X2AS7)   0.14     11.61 f
-  u_alu/u_divider/ctmTdsLR_1_1410/O (NAND3X4AS7)   0.13     11.73 r
-  u_alu/u_divider/ctmTdsLR_1_3092/O (NAND2B1X4AS7)
-                                                   0.15     11.88 f
-  u_alu/u_divider/ctmTdsLR_1_1403/O (OAI12B2X1AS7)
-                                                   0.22     12.10 f
-  u_alu/u_divider/ctmTdsLR_3_1405/O (NAND2X2AS7)   0.15     12.24 r
-  u_alu/u_divider/U1183/O (NAND2X2AS7)             0.11     12.36 f
-  u_alu/u_divider/U634/O (OAI12X2AS7)              0.23     12.59 r
-  u_alu/u_divider/ctmTdsLR_1_3069/O (INVX2AS7)     0.08     12.66 f
-  u_alu/u_divider/ctmTdsLR_2_1521/O (NAND2X4AS7)   0.12     12.78 r
-  u_alu/u_divider/ctmTdsLR_1_2179/O (NAND3X2AS7)   0.14     12.93 f
-  u_alu/u_divider/ctmTdsLR_2_1709/O (NAND3X4AS7)   0.14     13.06 r
-  u_alu/u_divider/ctmTdsLR_1_1708/O (NAND2X4AS7)   0.17     13.23 f
-  u_alu/u_divider/ctmTdsLR_3_181/O (OAI12B2X1AS7)
-                                                   0.22     13.45 f
-  u_alu/u_divider/U582/O (NAND2X2AS7)              0.17     13.63 r
-  u_alu/u_divider/U150/O (NOR2X2AS7)               0.08     13.71 f
-  u_alu/u_divider/U689/O (NOR2X2AS7)               0.26     13.97 r
-  u_alu/u_divider/U562/O (AOI12X4AS7)              0.12     14.09 f
-  u_alu/u_divider/U1270/O (OAI12X2AS7)             0.39     14.48 r
-  u_alu/u_divider/U1983/O (XOR2X1AS7)              0.41     14.88 f
-  u_alu/u_divider/U1590/O (AOI12X4AS7)             0.22     15.11 r
-  u_alu/u_divider/U106/O (NAND2X2AS7)              0.17     15.27 f
-  u_alu/u_divider/ctmTdsLR_1_147/O (OAI12X2AS7)    0.24     15.51 r
-  u_alu/u_divider/U1335/O (AOI12X2AS7)             0.13     15.63 f
-  u_alu/u_divider/ctmTdsLR_2_1104/O (NOR2X1AS7)    0.30     15.93 r
-  u_alu/u_divider/ctmTdsLR_1_1103/O (NOR2B1X4AS7)
-                                                   0.08     16.02 f
-  u_alu/u_divider/U81/O (OAI12B2X1AS7)             0.23     16.25 f
-  u_alu/u_divider/U389/O (NAND2X2AS7)              0.18     16.42 r
-  u_alu/u_divider/ctmTdsLR_1_2852/O (NOR2X1AS7)    0.08     16.50 f
-  u_alu/u_divider/ctmTdsLR_1_1197/O (AOI12B2X2AS7)
-                                                   0.24     16.75 r
-  u_alu/u_divider/U1353/O (AOI12X4AS7)             0.17     16.91 f
-  u_alu/u_divider/U605/O (OAI12X4AS7)              0.33     17.24 r
-  u_alu/u_divider/ctmTdsLR_2_2966/O (OAI12B2X1AS7)
-                                                   0.26     17.50 r
-  u_alu/u_divider/ctmTdsLR_4_891/O (NAND2X1AS7)    0.10     17.60 f
-  u_alu/u_divider/ctmTdsLR_2_1832/O (OAI112X1AS7)
-                                                   0.16     17.76 r
-  u_alu/u_divider/ctmTdsLR_2_2176/O (AND3X2AS7)    0.37     18.14 r
-  u_alu/u_divider/U1228/O (OAI12X2AS7)             0.14     18.27 f
-  u_alu/u_divider/ctmTdsLR_1_1994/O (NAND2X1AS7)   0.14     18.41 r
-  u_alu/u_divider/ctmTdsLR_3_1996/O (NAND2X2AS7)   0.12     18.53 f
-  u_alu/u_divider/ctmTdsLR_2_1639/O (AOI12X4AS7)   0.20     18.73 r
-  u_alu/u_divider/ctmTdsLR_3_1640/O (NAND2X4AS7)   0.14     18.87 f
-  u_alu/u_divider/U1718/O (INVX12AS7)              0.17     19.04 r
-  u_alu/u_divider/U1275/O (CLKINVX2AS7)            0.12     19.16 f
-  u_alu/u_a2/U1/O (AND2X1AS7)                      0.16     19.32 f
-  u_alu/u_b1/U6/O (NAND2X1AS7)                     0.14     19.45 r
-  u_alu/u_b1/ctmTdsLR_2_3059/O (OAI12X2AS7)        0.11     19.57 f
-  u_alu/u_c0/ctmTdsLR_1_1917/O (OAI12B2X2AS7)      0.23     19.80 f
-  U60/O (AND2X1AS7)                                0.18     19.98 f
-  result_out_reg[0]/D (SFFQX1AS7)                  0.00     19.98 f
-  data arrival time                                         19.98
-
-  clock clk (rise edge)                           20.00     20.00
-  clock network delay (ideal)                      0.14     20.14
-  result_out_reg[0]/CK (SFFQX1AS7)                 0.00     20.14 r
-  clock uncertainty                               -2.00     18.14
-  library setup time                              -0.97     17.17
-  data required time                                        17.17
-  ------------------------------------------------------------------------
-  data required time                                        17.17
-  data arrival time                                        -19.98
-  ------------------------------------------------------------------------
-  slack (VIOLATED)                                          -2.80
-
-
-
-  Startpoint: a_reg_reg[14] (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: result_out_reg[3] (rising edge-triggered flip-flop clocked by clk)
-  Mode: default
-  Corner: default
-  Scenario: default
-  Path Group: clk
-  Path Type: max
-
-  Point                                            Incr      Path  
-  ------------------------------------------------------------------------
-  clock clk (rise edge)                            0.00      0.00
-  clock network delay (ideal)                      1.60      1.60
-
-  a_reg_reg[14]/CK (SFFQX2AS7)                     0.00      1.60 r
-  a_reg_reg[14]/Q (SFFQX2AS7)                      0.52      2.12 r
-  u_alu/u_divider/ctmTdsLR_1_2750/O (NAND2B1X1AS7)
-                                                   0.18      2.30 r
-  u_alu/u_divider/ctmTdsLR_1_1662/O (NAND3X2AS7)   0.15      2.45 f
-  u_alu/u_divider/U1356/O (NOR2X4AS7)              0.17      2.62 r
-  u_alu/u_divider/U383/O (NAND3X4AS7)              0.14      2.76 f
-  u_alu/u_divider/U710/O (NAND2X2AS7)              0.11      2.88 r
-  u_alu/u_divider/ctmTdsLR_2_1504/O (NAND2X2AS7)   0.10      2.98 f
-  u_alu/u_divider/ctmTdsLR_1_1829/O (NAND2X2AS7)   0.12      3.10 r
-  u_alu/u_divider/ctmTdsLR_2_1129/O (NAND2X4AS7)   0.10      3.20 f
-  u_alu/u_divider/ctmTdsLR_1_1805/O (AOI12X2AS7)   0.20      3.40 r
-  u_alu/u_divider/ctmTdsLR_1_2862/O (OAI12B2X2AS7)
-                                                   0.27      3.67 r
-  u_alu/u_divider/U940/O (NAND2X2AS7)              0.11      3.78 f
-  u_alu/u_divider/U938/O (NAND2X4AS7)              0.15      3.94 r
-  u_alu/u_divider/U1104/O (NAND2X2AS7)             0.18      4.12 f
-  u_alu/u_divider/ctmTdsLR_2_2208/O (OAI12B2X1AS7)
-                                                   0.15      4.27 r
-  u_alu/u_divider/ctmTdsLR_1_2207/O (NAND2X2AS7)   0.12      4.40 f
-  u_alu/u_divider/ctmTdsLR_1_2087/O (NAND2X1AS7)   0.14      4.53 r
-  u_alu/u_divider/ctmTdsLR_2_2088/O (NAND2B1X2AS7)
-                                                   0.09      4.63 f
-  u_alu/u_divider/ctmTdsLR_2_2189/O (NAND4X2AS7)   0.16      4.78 r
-  u_alu/u_divider/ctmTdsLR_2_1631/O (NAND3X4AS7)   0.16      4.95 f
-  u_alu/u_divider/ctmTdsLR_1_1038/O (AOI12B2X2AS7)
-                                                   0.33      5.28 f
-  u_alu/u_divider/U1109/O (AOI12X4AS7)             0.22      5.50 r
-  u_alu/u_divider/ctmTdsLR_1_1174/O (NAND2X1AS7)   0.12      5.62 f
-  u_alu/u_divider/ctmTdsLR_1_868/O (NAND2B1X2AS7)
-                                                   0.13      5.75 r
-  u_alu/u_divider/ctmTdsLR_1_2693/O (NAND2B1X2AS7)
-                                                   0.11      5.87 f
-  u_alu/u_divider/ctmTdsLR_2_1653/O (OAI112X2AS7)
-                                                   0.18      6.05 r
-  u_alu/u_divider/ctmTdsLR_1_1652/O (INVX2AS7)     0.09      6.14 f
-  u_alu/u_divider/ctmTdsLR_1_2171/O (NOR2X2AS7)    0.18      6.32 r
-  u_alu/u_divider/U1294/O (AOI12X2AS7)             0.12      6.44 f
-  u_alu/u_divider/U1290/O (OAI12X4AS7)             0.26      6.70 r
-  u_alu/u_divider/U1311/O (NAND2X4AS7)             0.20      6.90 f
-  u_alu/u_divider/U1415/O (NAND2X1AS7)             0.17      7.07 r
-  u_alu/u_divider/ctmTdsLR_1_756/O (OAI12X1AS7)    0.14      7.22 f
-  u_alu/u_divider/ctmTdsLR_1_83/O (OAI12B2X2AS7)   0.17      7.38 r
-  u_alu/u_divider/ctmTdsLR_1_3073/O (OAI12B2X4AS7)
-                                                   0.11      7.49 f
-  u_alu/u_divider/U930/O (AOI12X4AS7)              0.26      7.75 r
-  u_alu/u_divider/U1726/O (OAI12X1AS7)             0.13      7.88 f
-  u_alu/u_divider/ctmTdsLR_1_3017/O (OAI22B2X1AS7)
-                                                   0.24      8.12 f
-  u_alu/u_divider/U1580/O (NAND2X2AS7)             0.19      8.31 r
-  u_alu/u_divider/ctmTdsLR_1_3065/O (NAND2X1AS7)   0.13      8.44 f
-  u_alu/u_divider/ctmTdsLR_2_3066/O (NAND3X2AS7)   0.14      8.59 r
-  u_alu/u_divider/ctmTdsLR_3_3067/O (NAND2X2AS7)   0.10      8.68 f
-  u_alu/u_divider/U1660/O (AOI12X2AS7)             0.23      8.91 r
-  u_alu/u_divider/U1110/O (OAI12X2AS7)             0.13      9.04 f
-  u_alu/u_divider/ctmTdsLR_1_32/O (NAND2X2AS7)     0.13      9.17 r
-  u_alu/u_divider/U697/O (NAND2X4AS7)              0.16      9.34 f
-  u_alu/u_divider/U1231/O (INVX8AS7)               0.16      9.50 r
-  u_alu/u_divider/U413/O (NAND2X2AS7)              0.10      9.60 f
-  u_alu/u_divider/U729/O (NAND3X1AS7)              0.14      9.74 r
-  u_alu/u_divider/U728/O (CLKINVX2AS7)             0.12      9.85 f
-  u_alu/u_divider/ctmTdsLR_1_3068/O (NAND3B1X2AS7)
-                                                   0.28     10.14 f
-  u_alu/u_divider/U468/O (NAND2X4AS7)              0.18     10.31 r
-  u_alu/u_divider/ctmTdsLR_1_1218/O (NAND2X2AS7)   0.11     10.42 f
-  u_alu/u_divider/U639/O (NAND3X4AS7)              0.16     10.58 r
-  u_alu/u_divider/ctmTdsLR_1_751/O (NAND3B1X1AS7)
-                                                   0.18     10.76 f
-  u_alu/u_divider/U757/O (NAND2X2AS7)              0.18     10.94 r
-  u_alu/u_divider/U1323/O (NAND2X1AS7)             0.11     11.05 f
-  u_alu/u_divider/U1321/O (OAI12X2AS7)             0.18     11.23 r
-  u_alu/u_divider/ZINV_4_inst_3759/O (INVX2AS7)    0.08     11.31 f
-  u_alu/u_divider/U934/O (NAND2X4AS7)              0.15     11.46 r
-  u_alu/u_divider/ctmTdsLR_1_1456/O (NAND3X2AS7)   0.14     11.61 f
-  u_alu/u_divider/ctmTdsLR_1_1410/O (NAND3X4AS7)   0.13     11.73 r
-  u_alu/u_divider/ctmTdsLR_1_3092/O (NAND2B1X4AS7)
-                                                   0.15     11.88 f
-  u_alu/u_divider/ctmTdsLR_1_1403/O (OAI12B2X1AS7)
-                                                   0.22     12.10 f
-  u_alu/u_divider/ctmTdsLR_3_1405/O (NAND2X2AS7)   0.15     12.24 r
-  u_alu/u_divider/U1183/O (NAND2X2AS7)             0.11     12.36 f
-  u_alu/u_divider/U634/O (OAI12X2AS7)              0.23     12.59 r
-  u_alu/u_divider/ctmTdsLR_1_3069/O (INVX2AS7)     0.08     12.66 f
-  u_alu/u_divider/ctmTdsLR_2_1521/O (NAND2X4AS7)   0.12     12.78 r
-  u_alu/u_divider/ctmTdsLR_1_2179/O (NAND3X2AS7)   0.14     12.93 f
-  u_alu/u_divider/ctmTdsLR_2_1709/O (NAND3X4AS7)   0.14     13.06 r
-  u_alu/u_divider/ctmTdsLR_1_1708/O (NAND2X4AS7)   0.17     13.23 f
-  u_alu/u_divider/ctmTdsLR_3_181/O (OAI12B2X1AS7)
-                                                   0.22     13.45 f
-  u_alu/u_divider/U582/O (NAND2X2AS7)              0.17     13.63 r
-  u_alu/u_divider/U150/O (NOR2X2AS7)               0.08     13.71 f
-  u_alu/u_divider/U689/O (NOR2X2AS7)               0.26     13.97 r
-  u_alu/u_divider/U562/O (AOI12X4AS7)              0.12     14.09 f
-  u_alu/u_divider/U1270/O (OAI12X2AS7)             0.39     14.48 r
-  u_alu/u_divider/U1983/O (XOR2X1AS7)              0.41     14.88 f
-  u_alu/u_divider/U1590/O (AOI12X4AS7)             0.22     15.11 r
-  u_alu/u_divider/U106/O (NAND2X2AS7)              0.17     15.27 f
-  u_alu/u_divider/ctmTdsLR_1_147/O (OAI12X2AS7)    0.24     15.51 r
-  u_alu/u_divider/U1335/O (AOI12X2AS7)             0.13     15.63 f
-  u_alu/u_divider/ctmTdsLR_2_1104/O (NOR2X1AS7)    0.30     15.93 r
-  u_alu/u_divider/ctmTdsLR_1_1103/O (NOR2B1X4AS7)
-                                                   0.08     16.02 f
-  u_alu/u_divider/U81/O (OAI12B2X1AS7)             0.23     16.25 f
-  u_alu/u_divider/U389/O (NAND2X2AS7)              0.18     16.42 r
-  u_alu/u_divider/ctmTdsLR_1_2852/O (NOR2X1AS7)    0.08     16.50 f
-  u_alu/u_divider/ctmTdsLR_1_1197/O (AOI12B2X2AS7)
-                                                   0.24     16.75 r
-  u_alu/u_divider/U1353/O (AOI12X4AS7)             0.17     16.91 f
-  u_alu/u_divider/U605/O (OAI12X4AS7)              0.33     17.24 r
-  u_alu/u_divider/ctmTdsLR_2_2966/O (OAI12B2X1AS7)
-                                                   0.26     17.50 r
-  u_alu/u_divider/ctmTdsLR_4_891/O (NAND2X1AS7)    0.10     17.60 f
-  u_alu/u_divider/ctmTdsLR_2_1832/O (OAI112X1AS7)
-                                                   0.16     17.76 r
-  u_alu/u_divider/ctmTdsLR_2_2176/O (AND3X2AS7)    0.37     18.14 r
-  u_alu/u_divider/U1228/O (OAI12X2AS7)             0.14     18.27 f
-  u_alu/u_divider/ctmTdsLR_1_1994/O (NAND2X1AS7)   0.14     18.41 r
-  u_alu/u_divider/ctmTdsLR_3_1996/O (NAND2X2AS7)   0.12     18.53 f
-  u_alu/u_divider/ctmTdsLR_2_1639/O (AOI12X4AS7)   0.20     18.73 r
-  u_alu/u_divider/ctmTdsLR_3_1640/O (NAND2X4AS7)   0.14     18.87 f
-  u_alu/u_divider/U1718/O (INVX12AS7)              0.17     19.04 r
-  u_alu/u_divider/U1275/O (CLKINVX2AS7)            0.12     19.16 f
-  u_alu/u_divider/ctmTdsLR_3_1776/O (OAI12B2X1AS7)
-                                                   0.21     19.36 f
-  u_alu/u_a3/ctmTdsLR_1_1919/O (NAND2X2AS7)        0.11     19.47 r
-  u_alu/u_b1/ctmTdsLR_2_2684/O (OAI12X2AS7)        0.09     19.56 f
-  u_alu/u_c0/ctmTdsLR_1_1769/O (OAI12B2X2AS7)      0.24     19.80 f
-  U72/O (AND2X1AS7)                                0.18     19.98 f
-  result_out_reg[3]/D (SFFQX1AS7)                  0.00     19.98 f
-  data arrival time                                         19.98
-
-  clock clk (rise edge)                           20.00     20.00
-  clock network delay (ideal)                      0.16     20.16
-  result_out_reg[3]/CK (SFFQX1AS7)                 0.00     20.16 r
-  clock uncertainty                               -2.00     18.16
-  library setup time                              -0.97     17.19
-  data required time                                        17.19
-  ------------------------------------------------------------------------
-  data required time                                        17.19
-  data arrival time                                        -19.98
-  ------------------------------------------------------------------------
-  slack (VIOLATED)                                          -2.78
-
-
-
-  Startpoint: a_reg_reg[14] (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: result_out_reg[9] (rising edge-triggered flip-flop clocked by clk)
-  Mode: default
-  Corner: default
-  Scenario: default
-  Path Group: clk
-  Path Type: max
-
-  Point                                            Incr      Path  
-  ------------------------------------------------------------------------
-  clock clk (rise edge)                            0.00      0.00
-  clock network delay (ideal)                      1.60      1.60
-
-  a_reg_reg[14]/CK (SFFQX2AS7)                     0.00      1.60 r
-  a_reg_reg[14]/Q (SFFQX2AS7)                      0.52      2.12 r
-  u_alu/u_divider/ctmTdsLR_1_2750/O (NAND2B1X1AS7)
-                                                   0.18      2.30 r
-  u_alu/u_divider/ctmTdsLR_1_1662/O (NAND3X2AS7)   0.15      2.45 f
-  u_alu/u_divider/U1356/O (NOR2X4AS7)              0.17      2.62 r
-  u_alu/u_divider/U383/O (NAND3X4AS7)              0.14      2.76 f
-  u_alu/u_divider/U710/O (NAND2X2AS7)              0.11      2.88 r
-  u_alu/u_divider/ctmTdsLR_2_1504/O (NAND2X2AS7)   0.10      2.98 f
-  u_alu/u_divider/ctmTdsLR_1_1829/O (NAND2X2AS7)   0.12      3.10 r
-  u_alu/u_divider/ctmTdsLR_2_1129/O (NAND2X4AS7)   0.10      3.20 f
-  u_alu/u_divider/ctmTdsLR_1_1805/O (AOI12X2AS7)   0.20      3.40 r
-  u_alu/u_divider/ctmTdsLR_1_2862/O (OAI12B2X2AS7)
-                                                   0.27      3.67 r
-  u_alu/u_divider/U940/O (NAND2X2AS7)              0.11      3.78 f
-  u_alu/u_divider/U938/O (NAND2X4AS7)              0.15      3.94 r
-  u_alu/u_divider/U1104/O (NAND2X2AS7)             0.18      4.12 f
-  u_alu/u_divider/ctmTdsLR_2_2208/O (OAI12B2X1AS7)
-                                                   0.15      4.27 r
-  u_alu/u_divider/ctmTdsLR_1_2207/O (NAND2X2AS7)   0.12      4.40 f
-  u_alu/u_divider/ctmTdsLR_1_2087/O (NAND2X1AS7)   0.14      4.53 r
-  u_alu/u_divider/ctmTdsLR_2_2088/O (NAND2B1X2AS7)
-                                                   0.09      4.63 f
-  u_alu/u_divider/ctmTdsLR_2_2189/O (NAND4X2AS7)   0.16      4.78 r
-  u_alu/u_divider/ctmTdsLR_2_1631/O (NAND3X4AS7)   0.16      4.95 f
-  u_alu/u_divider/ctmTdsLR_1_1038/O (AOI12B2X2AS7)
-                                                   0.33      5.28 f
-  u_alu/u_divider/U1109/O (AOI12X4AS7)             0.22      5.50 r
-  u_alu/u_divider/ctmTdsLR_1_1174/O (NAND2X1AS7)   0.12      5.62 f
-  u_alu/u_divider/ctmTdsLR_1_868/O (NAND2B1X2AS7)
-                                                   0.13      5.75 r
-  u_alu/u_divider/ctmTdsLR_1_2693/O (NAND2B1X2AS7)
-                                                   0.11      5.87 f
-  u_alu/u_divider/ctmTdsLR_2_1653/O (OAI112X2AS7)
-                                                   0.18      6.05 r
-  u_alu/u_divider/ctmTdsLR_1_1652/O (INVX2AS7)     0.09      6.14 f
-  u_alu/u_divider/ctmTdsLR_1_2171/O (NOR2X2AS7)    0.18      6.32 r
-  u_alu/u_divider/U1294/O (AOI12X2AS7)             0.12      6.44 f
-  u_alu/u_divider/U1290/O (OAI12X4AS7)             0.26      6.70 r
-  u_alu/u_divider/U1311/O (NAND2X4AS7)             0.20      6.90 f
-  u_alu/u_divider/U1415/O (NAND2X1AS7)             0.17      7.07 r
-  u_alu/u_divider/ctmTdsLR_1_756/O (OAI12X1AS7)    0.14      7.22 f
-  u_alu/u_divider/ctmTdsLR_1_83/O (OAI12B2X2AS7)   0.17      7.38 r
-  u_alu/u_divider/ctmTdsLR_1_3073/O (OAI12B2X4AS7)
-                                                   0.11      7.49 f
-  u_alu/u_divider/U930/O (AOI12X4AS7)              0.26      7.75 r
-  u_alu/u_divider/U1726/O (OAI12X1AS7)             0.13      7.88 f
-  u_alu/u_divider/ctmTdsLR_1_3017/O (OAI22B2X1AS7)
-                                                   0.24      8.12 f
-  u_alu/u_divider/U1580/O (NAND2X2AS7)             0.19      8.31 r
-  u_alu/u_divider/ctmTdsLR_1_3065/O (NAND2X1AS7)   0.13      8.44 f
-  u_alu/u_divider/ctmTdsLR_2_3066/O (NAND3X2AS7)   0.14      8.59 r
-  u_alu/u_divider/ctmTdsLR_3_3067/O (NAND2X2AS7)   0.10      8.68 f
-  u_alu/u_divider/U1660/O (AOI12X2AS7)             0.23      8.91 r
-  u_alu/u_divider/U1110/O (OAI12X2AS7)             0.13      9.04 f
-  u_alu/u_divider/ctmTdsLR_1_32/O (NAND2X2AS7)     0.13      9.17 r
-  u_alu/u_divider/U697/O (NAND2X4AS7)              0.16      9.34 f
-  u_alu/u_divider/U1231/O (INVX8AS7)               0.16      9.50 r
-  u_alu/u_divider/U413/O (NAND2X2AS7)              0.10      9.60 f
-  u_alu/u_divider/U729/O (NAND3X1AS7)              0.14      9.74 r
-  u_alu/u_divider/U728/O (CLKINVX2AS7)             0.12      9.85 f
-  u_alu/u_divider/ctmTdsLR_1_3068/O (NAND3B1X2AS7)
-                                                   0.28     10.14 f
-  u_alu/u_divider/U468/O (NAND2X4AS7)              0.18     10.31 r
-  u_alu/u_divider/ctmTdsLR_1_1218/O (NAND2X2AS7)   0.11     10.42 f
-  u_alu/u_divider/U639/O (NAND3X4AS7)              0.16     10.58 r
-  u_alu/u_divider/ctmTdsLR_1_751/O (NAND3B1X1AS7)
-                                                   0.18     10.76 f
-  u_alu/u_divider/U757/O (NAND2X2AS7)              0.18     10.94 r
-  u_alu/u_divider/U1323/O (NAND2X1AS7)             0.11     11.05 f
-  u_alu/u_divider/U1321/O (OAI12X2AS7)             0.18     11.23 r
-  u_alu/u_divider/ZINV_4_inst_3759/O (INVX2AS7)    0.08     11.31 f
-  u_alu/u_divider/U934/O (NAND2X4AS7)              0.15     11.46 r
-  u_alu/u_divider/ctmTdsLR_1_1456/O (NAND3X2AS7)   0.14     11.61 f
-  u_alu/u_divider/ctmTdsLR_1_1410/O (NAND3X4AS7)   0.13     11.73 r
-  u_alu/u_divider/ctmTdsLR_1_3092/O (NAND2B1X4AS7)
-                                                   0.15     11.88 f
-  u_alu/u_divider/ctmTdsLR_1_1403/O (OAI12B2X1AS7)
-                                                   0.22     12.10 f
-  u_alu/u_divider/ctmTdsLR_3_1405/O (NAND2X2AS7)   0.15     12.24 r
-  u_alu/u_divider/U1183/O (NAND2X2AS7)             0.11     12.36 f
-  u_alu/u_divider/U634/O (OAI12X2AS7)              0.23     12.59 r
-  u_alu/u_divider/ctmTdsLR_1_3069/O (INVX2AS7)     0.08     12.66 f
-  u_alu/u_divider/ctmTdsLR_2_1521/O (NAND2X4AS7)   0.12     12.78 r
-  u_alu/u_divider/ctmTdsLR_1_2179/O (NAND3X2AS7)   0.14     12.93 f
-  u_alu/u_divider/ctmTdsLR_2_1709/O (NAND3X4AS7)   0.14     13.06 r
-  u_alu/u_divider/ctmTdsLR_1_1708/O (NAND2X4AS7)   0.17     13.23 f
-  u_alu/u_divider/ctmTdsLR_3_181/O (OAI12B2X1AS7)
-                                                   0.22     13.45 f
-  u_alu/u_divider/U582/O (NAND2X2AS7)              0.17     13.63 r
-  u_alu/u_divider/U150/O (NOR2X2AS7)               0.08     13.71 f
-  u_alu/u_divider/U689/O (NOR2X2AS7)               0.26     13.97 r
-  u_alu/u_divider/U562/O (AOI12X4AS7)              0.12     14.09 f
-  u_alu/u_divider/U1270/O (OAI12X2AS7)             0.39     14.48 r
-  u_alu/u_divider/U1983/O (XOR2X1AS7)              0.41     14.88 f
-  u_alu/u_divider/U1590/O (AOI12X4AS7)             0.22     15.11 r
-  u_alu/u_divider/U106/O (NAND2X2AS7)              0.17     15.27 f
-  u_alu/u_divider/ctmTdsLR_1_147/O (OAI12X2AS7)    0.24     15.51 r
-  u_alu/u_divider/U1335/O (AOI12X2AS7)             0.13     15.63 f
-  u_alu/u_divider/ctmTdsLR_2_1104/O (NOR2X1AS7)    0.30     15.93 r
-  u_alu/u_divider/ctmTdsLR_1_1103/O (NOR2B1X4AS7)
-                                                   0.08     16.02 f
-  u_alu/u_divider/U81/O (OAI12B2X1AS7)             0.23     16.25 f
-  u_alu/u_divider/U389/O (NAND2X2AS7)              0.18     16.42 r
-  u_alu/u_divider/ctmTdsLR_1_2852/O (NOR2X1AS7)    0.08     16.50 f
-  u_alu/u_divider/ctmTdsLR_1_1197/O (AOI12B2X2AS7)
-                                                   0.24     16.75 r
-  u_alu/u_divider/U1353/O (AOI12X4AS7)             0.17     16.91 f
-  u_alu/u_divider/U605/O (OAI12X4AS7)              0.33     17.24 r
-  u_alu/u_divider/ctmTdsLR_2_2966/O (OAI12B2X1AS7)
-                                                   0.26     17.50 r
-  u_alu/u_divider/ctmTdsLR_4_891/O (NAND2X1AS7)    0.10     17.60 f
-  u_alu/u_divider/ctmTdsLR_2_1832/O (OAI112X1AS7)
-                                                   0.16     17.76 r
-  u_alu/u_divider/ctmTdsLR_2_2176/O (AND3X2AS7)    0.37     18.14 r
-  u_alu/u_divider/U1228/O (OAI12X2AS7)             0.14     18.27 f
-  u_alu/u_divider/ctmTdsLR_1_1994/O (NAND2X1AS7)   0.14     18.41 r
-  u_alu/u_divider/ctmTdsLR_3_1996/O (NAND2X2AS7)   0.12     18.53 f
-  u_alu/u_divider/ctmTdsLR_2_1639/O (AOI12X4AS7)   0.20     18.73 r
-  u_alu/u_divider/ctmTdsLR_3_1640/O (NAND2X4AS7)   0.14     18.87 f
-  u_alu/u_divider/U1718/O (INVX12AS7)              0.17     19.04 r
-  u_alu/u_divider/ctmTdsLR_1_881/O (CLKINVX1AS7)   0.10     19.13 f
-  u_alu/u_divider/ctmTdsLR_2_882/O (OAI12B2X1AS7)
-                                                   0.20     19.34 f
-  u_alu/u_a3/U9/O (NAND2X2AS7)                     0.13     19.47 r
-  u_alu/u_b1/ctmTdsLR_1_2691/O (OAI22B2X2AS7)      0.09     19.56 f
-  u_alu/u_c0/ctmTdsLR_1_12/O (OAI12B2X2AS7)        0.23     19.79 f
-  U66/O (AND2X1AS7)                                0.18     19.97 f
-  result_out_reg[9]/D (SFFQX1AS7)                  0.00     19.97 f
-  data arrival time                                         19.97
-
-  clock clk (rise edge)                           20.00     20.00
-  clock network delay (ideal)                      0.16     20.16
-  result_out_reg[9]/CK (SFFQX1AS7)                 0.00     20.16 r
-  clock uncertainty                               -2.00     18.16
-  library setup time                              -0.97     17.19
-  data required time                                        17.19
-  ------------------------------------------------------------------------
-  data required time                                        17.19
-  data arrival time                                        -19.97
-  ------------------------------------------------------------------------
-  slack (VIOLATED)                                          -2.78
-
-
-
-  Startpoint: a_reg_reg[14] (rising edge-triggered flip-flop clocked by clk)
+  Startpoint: b_reg_reg[9] (rising edge-triggered flip-flop clocked by clk)
   Endpoint: result_out_reg[10] (rising edge-triggered flip-flop clocked by clk)
   Mode: default
   Corner: default
@@ -1296,155 +303,137 @@ Date   : Mon Nov  2 19:00:20 2026
   Point                                            Incr      Path  
   ------------------------------------------------------------------------
   clock clk (rise edge)                            0.00      0.00
-  clock network delay (ideal)                      1.60      1.60
+  clock network delay (ideal)                      3.20      3.20
 
-  a_reg_reg[14]/CK (SFFQX2AS7)                     0.00      1.60 r
-  a_reg_reg[14]/Q (SFFQX2AS7)                      0.52      2.12 r
-  u_alu/u_divider/ctmTdsLR_1_2750/O (NAND2B1X1AS7)
-                                                   0.18      2.30 r
-  u_alu/u_divider/ctmTdsLR_1_1662/O (NAND3X2AS7)   0.15      2.45 f
-  u_alu/u_divider/U1356/O (NOR2X4AS7)              0.17      2.62 r
-  u_alu/u_divider/U383/O (NAND3X4AS7)              0.14      2.76 f
-  u_alu/u_divider/U710/O (NAND2X2AS7)              0.11      2.88 r
-  u_alu/u_divider/ctmTdsLR_2_1504/O (NAND2X2AS7)   0.10      2.98 f
-  u_alu/u_divider/ctmTdsLR_1_1829/O (NAND2X2AS7)   0.12      3.10 r
-  u_alu/u_divider/ctmTdsLR_2_1129/O (NAND2X4AS7)   0.10      3.20 f
-  u_alu/u_divider/ctmTdsLR_1_1805/O (AOI12X2AS7)   0.20      3.40 r
-  u_alu/u_divider/ctmTdsLR_1_2862/O (OAI12B2X2AS7)
-                                                   0.27      3.67 r
-  u_alu/u_divider/U940/O (NAND2X2AS7)              0.11      3.78 f
-  u_alu/u_divider/U938/O (NAND2X4AS7)              0.15      3.94 r
-  u_alu/u_divider/U1104/O (NAND2X2AS7)             0.18      4.12 f
-  u_alu/u_divider/ctmTdsLR_2_2208/O (OAI12B2X1AS7)
-                                                   0.15      4.27 r
-  u_alu/u_divider/ctmTdsLR_1_2207/O (NAND2X2AS7)   0.12      4.40 f
-  u_alu/u_divider/ctmTdsLR_1_2087/O (NAND2X1AS7)   0.14      4.53 r
-  u_alu/u_divider/ctmTdsLR_2_2088/O (NAND2B1X2AS7)
-                                                   0.09      4.63 f
-  u_alu/u_divider/ctmTdsLR_2_2189/O (NAND4X2AS7)   0.16      4.78 r
-  u_alu/u_divider/ctmTdsLR_2_1631/O (NAND3X4AS7)   0.16      4.95 f
-  u_alu/u_divider/ctmTdsLR_1_1038/O (AOI12B2X2AS7)
-                                                   0.33      5.28 f
-  u_alu/u_divider/U1109/O (AOI12X4AS7)             0.22      5.50 r
-  u_alu/u_divider/ctmTdsLR_1_1174/O (NAND2X1AS7)   0.12      5.62 f
-  u_alu/u_divider/ctmTdsLR_1_868/O (NAND2B1X2AS7)
-                                                   0.13      5.75 r
-  u_alu/u_divider/ctmTdsLR_1_2693/O (NAND2B1X2AS7)
-                                                   0.11      5.87 f
-  u_alu/u_divider/ctmTdsLR_2_1653/O (OAI112X2AS7)
-                                                   0.18      6.05 r
-  u_alu/u_divider/ctmTdsLR_1_1652/O (INVX2AS7)     0.09      6.14 f
-  u_alu/u_divider/ctmTdsLR_1_2171/O (NOR2X2AS7)    0.18      6.32 r
-  u_alu/u_divider/U1294/O (AOI12X2AS7)             0.12      6.44 f
-  u_alu/u_divider/U1290/O (OAI12X4AS7)             0.26      6.70 r
-  u_alu/u_divider/U1311/O (NAND2X4AS7)             0.20      6.90 f
-  u_alu/u_divider/U1415/O (NAND2X1AS7)             0.17      7.07 r
-  u_alu/u_divider/ctmTdsLR_1_756/O (OAI12X1AS7)    0.14      7.22 f
-  u_alu/u_divider/ctmTdsLR_1_83/O (OAI12B2X2AS7)   0.17      7.38 r
-  u_alu/u_divider/ctmTdsLR_1_3073/O (OAI12B2X4AS7)
-                                                   0.11      7.49 f
-  u_alu/u_divider/U930/O (AOI12X4AS7)              0.26      7.75 r
-  u_alu/u_divider/U1726/O (OAI12X1AS7)             0.13      7.88 f
-  u_alu/u_divider/ctmTdsLR_1_3017/O (OAI22B2X1AS7)
-                                                   0.24      8.12 f
-  u_alu/u_divider/U1580/O (NAND2X2AS7)             0.19      8.31 r
-  u_alu/u_divider/ctmTdsLR_1_3065/O (NAND2X1AS7)   0.13      8.44 f
-  u_alu/u_divider/ctmTdsLR_2_3066/O (NAND3X2AS7)   0.14      8.59 r
-  u_alu/u_divider/ctmTdsLR_3_3067/O (NAND2X2AS7)   0.10      8.68 f
-  u_alu/u_divider/U1660/O (AOI12X2AS7)             0.23      8.91 r
-  u_alu/u_divider/U1110/O (OAI12X2AS7)             0.13      9.04 f
-  u_alu/u_divider/ctmTdsLR_1_32/O (NAND2X2AS7)     0.13      9.17 r
-  u_alu/u_divider/U697/O (NAND2X4AS7)              0.16      9.34 f
-  u_alu/u_divider/U1231/O (INVX8AS7)               0.16      9.50 r
-  u_alu/u_divider/U413/O (NAND2X2AS7)              0.10      9.60 f
-  u_alu/u_divider/U729/O (NAND3X1AS7)              0.14      9.74 r
-  u_alu/u_divider/U728/O (CLKINVX2AS7)             0.12      9.85 f
-  u_alu/u_divider/ctmTdsLR_1_3068/O (NAND3B1X2AS7)
-                                                   0.28     10.14 f
-  u_alu/u_divider/U468/O (NAND2X4AS7)              0.18     10.31 r
-  u_alu/u_divider/ctmTdsLR_1_1218/O (NAND2X2AS7)   0.11     10.42 f
-  u_alu/u_divider/U639/O (NAND3X4AS7)              0.16     10.58 r
-  u_alu/u_divider/ctmTdsLR_1_751/O (NAND3B1X1AS7)
-                                                   0.18     10.76 f
-  u_alu/u_divider/U757/O (NAND2X2AS7)              0.18     10.94 r
-  u_alu/u_divider/U1323/O (NAND2X1AS7)             0.11     11.05 f
-  u_alu/u_divider/U1321/O (OAI12X2AS7)             0.18     11.23 r
-  u_alu/u_divider/ZINV_4_inst_3759/O (INVX2AS7)    0.08     11.31 f
-  u_alu/u_divider/U934/O (NAND2X4AS7)              0.15     11.46 r
-  u_alu/u_divider/ctmTdsLR_1_1456/O (NAND3X2AS7)   0.14     11.61 f
-  u_alu/u_divider/ctmTdsLR_1_1410/O (NAND3X4AS7)   0.13     11.73 r
-  u_alu/u_divider/ctmTdsLR_1_3092/O (NAND2B1X4AS7)
-                                                   0.15     11.88 f
-  u_alu/u_divider/ctmTdsLR_1_1403/O (OAI12B2X1AS7)
-                                                   0.22     12.10 f
-  u_alu/u_divider/ctmTdsLR_3_1405/O (NAND2X2AS7)   0.15     12.24 r
-  u_alu/u_divider/U1183/O (NAND2X2AS7)             0.11     12.36 f
-  u_alu/u_divider/U634/O (OAI12X2AS7)              0.23     12.59 r
-  u_alu/u_divider/ctmTdsLR_1_3069/O (INVX2AS7)     0.08     12.66 f
-  u_alu/u_divider/ctmTdsLR_2_1521/O (NAND2X4AS7)   0.12     12.78 r
-  u_alu/u_divider/ctmTdsLR_1_2179/O (NAND3X2AS7)   0.14     12.93 f
-  u_alu/u_divider/ctmTdsLR_2_1709/O (NAND3X4AS7)   0.14     13.06 r
-  u_alu/u_divider/ctmTdsLR_1_1708/O (NAND2X4AS7)   0.17     13.23 f
-  u_alu/u_divider/ctmTdsLR_3_181/O (OAI12B2X1AS7)
-                                                   0.22     13.45 f
-  u_alu/u_divider/U582/O (NAND2X2AS7)              0.17     13.63 r
-  u_alu/u_divider/U150/O (NOR2X2AS7)               0.08     13.71 f
-  u_alu/u_divider/U689/O (NOR2X2AS7)               0.26     13.97 r
-  u_alu/u_divider/U562/O (AOI12X4AS7)              0.12     14.09 f
-  u_alu/u_divider/U1270/O (OAI12X2AS7)             0.39     14.48 r
-  u_alu/u_divider/U1983/O (XOR2X1AS7)              0.41     14.88 f
-  u_alu/u_divider/U1590/O (AOI12X4AS7)             0.22     15.11 r
-  u_alu/u_divider/U106/O (NAND2X2AS7)              0.17     15.27 f
-  u_alu/u_divider/ctmTdsLR_1_147/O (OAI12X2AS7)    0.24     15.51 r
-  u_alu/u_divider/U1335/O (AOI12X2AS7)             0.13     15.63 f
-  u_alu/u_divider/ctmTdsLR_2_1104/O (NOR2X1AS7)    0.30     15.93 r
-  u_alu/u_divider/ctmTdsLR_1_1103/O (NOR2B1X4AS7)
-                                                   0.08     16.02 f
-  u_alu/u_divider/U81/O (OAI12B2X1AS7)             0.23     16.25 f
-  u_alu/u_divider/U389/O (NAND2X2AS7)              0.18     16.42 r
-  u_alu/u_divider/ctmTdsLR_1_2852/O (NOR2X1AS7)    0.08     16.50 f
-  u_alu/u_divider/ctmTdsLR_1_1197/O (AOI12B2X2AS7)
-                                                   0.24     16.75 r
-  u_alu/u_divider/U1353/O (AOI12X4AS7)             0.17     16.91 f
-  u_alu/u_divider/U605/O (OAI12X4AS7)              0.33     17.24 r
-  u_alu/u_divider/ctmTdsLR_2_2966/O (OAI12B2X1AS7)
-                                                   0.26     17.50 r
-  u_alu/u_divider/ctmTdsLR_4_891/O (NAND2X1AS7)    0.10     17.60 f
-  u_alu/u_divider/ctmTdsLR_2_1832/O (OAI112X1AS7)
-                                                   0.16     17.76 r
-  u_alu/u_divider/ctmTdsLR_2_2176/O (AND3X2AS7)    0.37     18.14 r
-  u_alu/u_divider/U1228/O (OAI12X2AS7)             0.14     18.27 f
-  u_alu/u_divider/ctmTdsLR_1_1994/O (NAND2X1AS7)   0.14     18.41 r
-  u_alu/u_divider/ctmTdsLR_3_1996/O (NAND2X2AS7)   0.12     18.53 f
-  u_alu/u_divider/ctmTdsLR_2_1639/O (AOI12X4AS7)   0.20     18.73 r
-  u_alu/u_divider/ctmTdsLR_3_1640/O (NAND2X4AS7)   0.14     18.87 f
-  u_alu/u_divider/U1718/O (INVX12AS7)              0.17     19.04 r
-  u_alu/u_divider/U1619/O (CLKINVX2AS7)            0.09     19.13 f
-  u_alu/u_divider/ctmTdsLR_1_3056/O (NAND2X1AS7)   0.13     19.26 r
-  u_alu/u_divider/ctmTdsLR_2_3057/O (NAND2X2AS7)   0.10     19.36 f
-  u_alu/u_a3/U1/O (NAND2X2AS7)                     0.12     19.48 r
-  u_alu/u_b1/ctmTdsLR_2_710/O (OAI22B2X2AS7)       0.09     19.57 f
-  u_alu/u_c0/ctmTdsLR_1_200/O (OAI12B2X2AS7)       0.22     19.79 f
-  U65/O (AND2X1AS7)                                0.17     19.95 f
-  result_out_reg[10]/D (SFFQX1AS7)                 0.00     19.95 f
-  data arrival time                                         19.95
+  b_reg_reg[9]/CK (SFFQX1AS7)                      0.00      3.20 r
+  b_reg_reg[9]/Q (SFFQX1AS7)                       0.77      3.97 r
+  u_alu/u_divider/U14/O (INVX1AS7)                 0.58      4.54 f
+  u_alu/u_divider/U43/O (NAND2X1AS7)               0.32      4.87 r
+  u_alu/u_divider/ctmTdsLR_1_927/O (OR4X1AS7)      0.18      5.05 r
+  u_alu/u_divider/U51/O (NOR2X1AS7)                0.07      5.12 f
+  u_alu/u_divider/U26/O (NAND2X1AS7)               0.19      5.31 r
+  u_alu/u_divider/ctmTdsLR_2_675/O (AOI12B2X1AS7)
+                                                   0.42      5.73 r
+  u_alu/u_divider/U64/O (NOR2X2AS7)                0.06      5.79 f
+  u_alu/u_divider/U67/O (OAI12X1AS7)               0.26      6.05 r
+  u_alu/u_divider/ctmTdsLR_1_817/O (AOI22B2X1AS7)
+                                                   0.13      6.17 f
+  u_alu/u_divider/U74/O (NOR2X2AS7)                0.17      6.34 r
+  u_alu/u_divider/U75/O (NAND2X2AS7)               0.15      6.49 f
+  u_alu/u_divider/U89/O (OAI12X2AS7)               0.28      6.77 r
+  u_alu/u_divider/U90/O (NOR2X1AS7)                0.10      6.87 f
+  u_alu/u_divider/U93/O (OAI12X1AS7)               0.43      7.29 r
+  u_alu/u_divider/U97/O (AOI12X1AS7)               0.14      7.43 f
+  u_alu/u_divider/U98/O (NOR2X2AS7)                0.18      7.61 r
+  u_alu/u_divider/U99/O (NAND2X2AS7)               0.19      7.80 f
+  u_alu/u_divider/U115/O (NOR2X1AS7)               0.25      8.05 r
+  u_alu/u_divider/U116/O (AOI12X1AS7)              0.12      8.17 f
+  u_alu/u_divider/U117/O (NOR2X1AS7)               0.36      8.54 r
+  u_alu/u_divider/U128/O (OAI12X1AS7)              0.10      8.63 f
+  u_alu/u_divider/U129/O (AOI12X1AS7)              0.23      8.86 r
+  u_alu/u_divider/ctmTdsLR_1_930/O (OAI22B2X1AS7)
+                                                   0.13      8.99 f
+  u_alu/u_divider/U136/O (NAND2X2AS7)              0.24      9.23 r
+  u_alu/u_divider/ctmTdsLR_2_1062/O (MUX2X1AS7)    0.39      9.62 f
+  u_alu/u_divider/U159/O (NOR2X1AS7)               0.24      9.86 r
+  u_alu/u_divider/U162/O (OAI12X1AS7)              0.14     10.00 f
+  u_alu/u_divider/U166/O (AOI12X1AS7)              0.38     10.39 r
+  u_alu/u_divider/ctmTdsLR_1_736/O (OAI22B2X1AS7)
+                                                   0.13     10.52 f
+  u_alu/u_divider/U183/O (NAND2X2AS7)              0.27     10.79 r
+  u_alu/u_divider/ctmTdsLR_2_851/O (MUX2X1AS7)     0.40     11.19 f
+  u_alu/u_divider/U205/O (NOR2X1AS7)               0.28     11.46 r
+  u_alu/u_divider/U208/O (OAI12X2AS7)              0.12     11.58 f
+  u_alu/u_divider/U212/O (AOI12X1AS7)              0.35     11.93 r
+  u_alu/u_divider/U239/O (OAI12X1AS7)              0.12     12.05 f
+  u_alu/u_divider/U240/O (NAND2X2AS7)              0.28     12.33 r
+  u_alu/u_divider/U241/O (CLKINVX1AS7)             0.28     12.61 f
+  u_alu/u_divider/ctmTdsLR_1_644/O (NOR2B1X1AS7)   0.35     12.96 r
+  u_alu/u_divider/U297/O (NOR2X1AS7)               0.10     13.07 f
+  u_alu/u_divider/U298/O (NOR2X1AS7)               0.26     13.33 r
+  u_alu/u_divider/U299/O (NAND2X1AS7)              0.09     13.42 f
+  u_alu/u_divider/U21/O (OAI12X1AS7)               0.28     13.70 r
+  u_alu/u_divider/U307/O (NAND2X2AS7)              0.30     14.00 f
+  u_alu/u_divider/ctmTdsLR_1_1008/O (MUX2X1AS7)    0.43     14.43 f
+  u_alu/u_divider/U356/O (NOR2X1AS7)               0.33     14.76 r
+  u_alu/u_divider/U379/O (OAI12X1AS7)              0.18     14.94 f
+  u_alu/u_divider/U383/O (AOI12X1AS7)              0.24     15.18 r
+  u_alu/u_divider/U384/O (OAI12X1AS7)              0.17     15.35 f
+  u_alu/u_divider/ctmTdsLR_1_681/O (AOI22B2X2AS7)
+                                                   0.66     16.01 r
+  u_alu/u_divider/U423/O (AOI12X1AS7)              0.32     16.33 f
+  u_alu/u_divider/U424/O (NOR2X1AS7)               0.41     16.74 r
+  u_alu/u_divider/U435/O (OAI12X1AS7)              0.12     16.86 f
+  u_alu/u_divider/U436/O (AOI12X1AS7)              0.30     17.16 r
+  u_alu/u_divider/U20/O (OAI12X2AS7)               0.17     17.33 f
+  u_alu/u_divider/ctmTdsLR_1_1037/O (AOI22B2X2AS7)
+                                                   0.74     18.06 r
+  u_alu/u_divider/ctmTdsLR_2_1090/O (OAI22B2X1AS7)
+                                                   0.27     18.33 f
+  u_alu/u_divider/U564/O (NOR2X1AS7)               0.43     18.77 r
+  u_alu/u_divider/U573/O (NOR2X1AS7)               0.10     18.87 f
+  u_alu/u_divider/U581/O (AOI12X1AS7)              0.26     19.13 r
+  u_alu/u_divider/U582/O (OAI12X2AS7)              0.19     19.32 f
+  u_alu/u_divider/ctmTdsLR_1_831/O (AOI22B2X2AS7)
+                                                   0.78     20.11 r
+  u_alu/u_divider/ctmTdsLR_1_952/O (MUX2X1AS7)     0.60     20.71 f
+  u_alu/u_divider/U690/O (NAND2X1AS7)              0.20     20.92 r
+  u_alu/u_divider/U692/O (OAI12X1AS7)              0.18     21.10 f
+  u_alu/u_divider/U696/O (AOI12X1AS7)              0.30     21.40 r
+  u_alu/u_divider/U19/O (OAI12X2AS7)               0.21     21.60 f
+  u_alu/u_divider/ctmTdsLR_1_658/O (AOI22B2X2AS7)
+                                                   0.96     22.57 r
+  u_alu/u_divider/ctmTdsLR_1_757/O (OAI22B2X1AS7)
+                                                   0.27     22.84 f
+  u_alu/u_divider/U774/O (NOR2X1AS7)               0.42     23.26 r
+  u_alu/u_divider/U785/O (OAI12X1AS7)              0.10     23.37 f
+  u_alu/u_divider/U786/O (AOI12X1AS7)              0.39     23.76 r
+  u_alu/u_divider/U829/O (OAI12X1AS7)              0.35     24.10 f
+  u_alu/u_divider/U841/O (AOI12X2AS7)              1.12     25.23 r
+  u_alu/u_divider/ctmTdsLR_1_1108/O (MUX2X1AS7)    0.63     25.86 r
+  u_alu/u_divider/U940/O (NOR2X1AS7)               0.09     25.96 f
+  u_alu/u_divider/U948/O (NOR2X1AS7)               0.35     26.30 r
+  u_alu/u_divider/U967/O (NAND2X1AS7)              0.12     26.42 f
+  u_alu/u_divider/U18/O (OAI12X1AS7)               0.92     27.34 r
+  u_alu/u_divider/U987/O (AOI12X4AS7)              0.35     27.68 f
+  u_alu/u_divider/ctmTdsLR_3_966/O (OAI22B2X1AS7)
+                                                   0.38     28.07 f
+  u_alu/u_divider/U1019/O (NOR2X1AS7)              0.30     28.37 r
+  u_alu/u_divider/U1022/O (OAI12X1AS7)             0.15     28.52 f
+  u_alu/u_divider/U1026/O (AOI12X1AS7)             0.43     28.94 r
+  u_alu/u_divider/U4/O (OAI12X2AS7)                0.32     29.26 f
+  u_alu/u_divider/U3/O (AOI12X4AS7)                0.70     29.96 r
+  u_alu/u_divider/U1157/O (MUX2X1AS7)              0.54     30.50 r
+  u_alu/u_divider/U1275/O (NAND2X1AS7)             0.17     30.67 f
+  u_alu/u_divider/U1277/O (OAI12X1AS7)             0.41     31.08 r
+  u_alu/u_divider/U1281/O (AOI12X1AS7)             0.27     31.36 f
+  u_alu/u_divider/U1289/O (OAI12X1AS7)             0.31     31.66 r
+  u_alu/u_divider/U1290/O (AOI12X1AS7)             0.07     31.74 f
+  u_alu/u_divider/U5/O (INVX1AS7)                  1.14     32.88 r
+  u_alu/u_divider/U1369/O (OAI112X1AS7)            0.06     32.94 f
+  u_alu/u_a3/U12/O (AND2X1AS7)                     0.24     33.18 f
+  u_alu/u_b1/U11/O (MUX2X1AS7)                     0.35     33.53 f
+  u_alu/u_c0/U11/O (MUX2X1AS7)                     0.34     33.87 f
+  U70/O (AND2X1AS7)                                0.18     34.05 f
+  result_out_reg[10]/D (SFFQX1AS7)                 0.00     34.05 f
+  data arrival time                                         34.05
 
-  clock clk (rise edge)                           20.00     20.00
-  clock network delay (ideal)                      0.16     20.16
-  result_out_reg[10]/CK (SFFQX1AS7)                0.00     20.16 r
-  clock uncertainty                               -2.00     18.16
-  library setup time                              -0.97     17.19
-  data required time                                        17.19
+  clock clk (rise edge)                           40.00     40.00
+  clock network delay (ideal)                      0.00     40.00
+  result_out_reg[10]/CK (SFFQX1AS7)                0.00     40.00 r
+  clock uncertainty                               -4.00     36.00
+  library setup time                              -1.52     34.48
+  data required time                                        34.48
   ------------------------------------------------------------------------
-  data required time                                        17.19
-  data arrival time                                        -19.95
+  data required time                                        34.48
+  data arrival time                                        -34.05
   ------------------------------------------------------------------------
-  slack (VIOLATED)                                          -2.76
+  slack (MET)                                                0.43
 
 
 
-  Startpoint: a_reg_reg[14] (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: result_out_reg[12] (rising edge-triggered flip-flop clocked by clk)
+  Startpoint: b_reg_reg[9] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: result_out_reg[9] (rising edge-triggered flip-flop clocked by clk)
   Mode: default
   Corner: default
   Scenario: default
@@ -1454,152 +443,972 @@ Date   : Mon Nov  2 19:00:20 2026
   Point                                            Incr      Path  
   ------------------------------------------------------------------------
   clock clk (rise edge)                            0.00      0.00
-  clock network delay (ideal)                      1.60      1.60
+  clock network delay (ideal)                      3.20      3.20
 
-  a_reg_reg[14]/CK (SFFQX2AS7)                     0.00      1.60 r
-  a_reg_reg[14]/Q (SFFQX2AS7)                      0.52      2.12 r
-  u_alu/u_divider/ctmTdsLR_1_2750/O (NAND2B1X1AS7)
-                                                   0.18      2.30 r
-  u_alu/u_divider/ctmTdsLR_1_1662/O (NAND3X2AS7)   0.15      2.45 f
-  u_alu/u_divider/U1356/O (NOR2X4AS7)              0.17      2.62 r
-  u_alu/u_divider/U383/O (NAND3X4AS7)              0.14      2.76 f
-  u_alu/u_divider/U710/O (NAND2X2AS7)              0.11      2.88 r
-  u_alu/u_divider/ctmTdsLR_2_1504/O (NAND2X2AS7)   0.10      2.98 f
-  u_alu/u_divider/ctmTdsLR_1_1829/O (NAND2X2AS7)   0.12      3.10 r
-  u_alu/u_divider/ctmTdsLR_2_1129/O (NAND2X4AS7)   0.10      3.20 f
-  u_alu/u_divider/ctmTdsLR_1_1805/O (AOI12X2AS7)   0.20      3.40 r
-  u_alu/u_divider/ctmTdsLR_1_2862/O (OAI12B2X2AS7)
-                                                   0.27      3.67 r
-  u_alu/u_divider/U940/O (NAND2X2AS7)              0.11      3.78 f
-  u_alu/u_divider/U938/O (NAND2X4AS7)              0.15      3.94 r
-  u_alu/u_divider/U1104/O (NAND2X2AS7)             0.18      4.12 f
-  u_alu/u_divider/ctmTdsLR_2_2208/O (OAI12B2X1AS7)
-                                                   0.15      4.27 r
-  u_alu/u_divider/ctmTdsLR_1_2207/O (NAND2X2AS7)   0.12      4.40 f
-  u_alu/u_divider/ctmTdsLR_1_2087/O (NAND2X1AS7)   0.14      4.53 r
-  u_alu/u_divider/ctmTdsLR_2_2088/O (NAND2B1X2AS7)
-                                                   0.09      4.63 f
-  u_alu/u_divider/ctmTdsLR_2_2189/O (NAND4X2AS7)   0.16      4.78 r
-  u_alu/u_divider/ctmTdsLR_2_1631/O (NAND3X4AS7)   0.16      4.95 f
-  u_alu/u_divider/ctmTdsLR_1_1038/O (AOI12B2X2AS7)
-                                                   0.33      5.28 f
-  u_alu/u_divider/U1109/O (AOI12X4AS7)             0.22      5.50 r
-  u_alu/u_divider/ctmTdsLR_1_1174/O (NAND2X1AS7)   0.12      5.62 f
-  u_alu/u_divider/ctmTdsLR_1_868/O (NAND2B1X2AS7)
-                                                   0.13      5.75 r
-  u_alu/u_divider/ctmTdsLR_1_2693/O (NAND2B1X2AS7)
-                                                   0.11      5.87 f
-  u_alu/u_divider/ctmTdsLR_2_1653/O (OAI112X2AS7)
-                                                   0.18      6.05 r
-  u_alu/u_divider/ctmTdsLR_1_1652/O (INVX2AS7)     0.09      6.14 f
-  u_alu/u_divider/ctmTdsLR_1_2171/O (NOR2X2AS7)    0.18      6.32 r
-  u_alu/u_divider/U1294/O (AOI12X2AS7)             0.12      6.44 f
-  u_alu/u_divider/U1290/O (OAI12X4AS7)             0.26      6.70 r
-  u_alu/u_divider/U1311/O (NAND2X4AS7)             0.20      6.90 f
-  u_alu/u_divider/U1415/O (NAND2X1AS7)             0.17      7.07 r
-  u_alu/u_divider/ctmTdsLR_1_756/O (OAI12X1AS7)    0.14      7.22 f
-  u_alu/u_divider/ctmTdsLR_1_83/O (OAI12B2X2AS7)   0.17      7.38 r
-  u_alu/u_divider/ctmTdsLR_1_3073/O (OAI12B2X4AS7)
-                                                   0.11      7.49 f
-  u_alu/u_divider/U930/O (AOI12X4AS7)              0.26      7.75 r
-  u_alu/u_divider/U1726/O (OAI12X1AS7)             0.13      7.88 f
-  u_alu/u_divider/ctmTdsLR_1_3017/O (OAI22B2X1AS7)
-                                                   0.24      8.12 f
-  u_alu/u_divider/U1580/O (NAND2X2AS7)             0.19      8.31 r
-  u_alu/u_divider/ctmTdsLR_1_3065/O (NAND2X1AS7)   0.13      8.44 f
-  u_alu/u_divider/ctmTdsLR_2_3066/O (NAND3X2AS7)   0.14      8.59 r
-  u_alu/u_divider/ctmTdsLR_3_3067/O (NAND2X2AS7)   0.10      8.68 f
-  u_alu/u_divider/U1660/O (AOI12X2AS7)             0.23      8.91 r
-  u_alu/u_divider/U1110/O (OAI12X2AS7)             0.13      9.04 f
-  u_alu/u_divider/ctmTdsLR_1_32/O (NAND2X2AS7)     0.13      9.17 r
-  u_alu/u_divider/U697/O (NAND2X4AS7)              0.16      9.34 f
-  u_alu/u_divider/U1231/O (INVX8AS7)               0.16      9.50 r
-  u_alu/u_divider/U413/O (NAND2X2AS7)              0.10      9.60 f
-  u_alu/u_divider/U729/O (NAND3X1AS7)              0.14      9.74 r
-  u_alu/u_divider/U728/O (CLKINVX2AS7)             0.12      9.85 f
-  u_alu/u_divider/ctmTdsLR_1_3068/O (NAND3B1X2AS7)
-                                                   0.28     10.14 f
-  u_alu/u_divider/U468/O (NAND2X4AS7)              0.18     10.31 r
-  u_alu/u_divider/ctmTdsLR_1_1218/O (NAND2X2AS7)   0.11     10.42 f
-  u_alu/u_divider/U639/O (NAND3X4AS7)              0.16     10.58 r
-  u_alu/u_divider/ctmTdsLR_1_751/O (NAND3B1X1AS7)
-                                                   0.18     10.76 f
-  u_alu/u_divider/U757/O (NAND2X2AS7)              0.18     10.94 r
-  u_alu/u_divider/U1323/O (NAND2X1AS7)             0.11     11.05 f
-  u_alu/u_divider/U1321/O (OAI12X2AS7)             0.18     11.23 r
-  u_alu/u_divider/ZINV_4_inst_3759/O (INVX2AS7)    0.08     11.31 f
-  u_alu/u_divider/U934/O (NAND2X4AS7)              0.15     11.46 r
-  u_alu/u_divider/ctmTdsLR_1_1456/O (NAND3X2AS7)   0.14     11.61 f
-  u_alu/u_divider/ctmTdsLR_1_1410/O (NAND3X4AS7)   0.13     11.73 r
-  u_alu/u_divider/ctmTdsLR_1_3092/O (NAND2B1X4AS7)
-                                                   0.15     11.88 f
-  u_alu/u_divider/ctmTdsLR_1_1403/O (OAI12B2X1AS7)
-                                                   0.22     12.10 f
-  u_alu/u_divider/ctmTdsLR_3_1405/O (NAND2X2AS7)   0.15     12.24 r
-  u_alu/u_divider/U1183/O (NAND2X2AS7)             0.11     12.36 f
-  u_alu/u_divider/U634/O (OAI12X2AS7)              0.23     12.59 r
-  u_alu/u_divider/ctmTdsLR_1_3069/O (INVX2AS7)     0.08     12.66 f
-  u_alu/u_divider/ctmTdsLR_2_1521/O (NAND2X4AS7)   0.12     12.78 r
-  u_alu/u_divider/ctmTdsLR_1_2179/O (NAND3X2AS7)   0.14     12.93 f
-  u_alu/u_divider/ctmTdsLR_2_1709/O (NAND3X4AS7)   0.14     13.06 r
-  u_alu/u_divider/ctmTdsLR_1_1708/O (NAND2X4AS7)   0.17     13.23 f
-  u_alu/u_divider/ctmTdsLR_3_181/O (OAI12B2X1AS7)
-                                                   0.22     13.45 f
-  u_alu/u_divider/U582/O (NAND2X2AS7)              0.17     13.63 r
-  u_alu/u_divider/U150/O (NOR2X2AS7)               0.08     13.71 f
-  u_alu/u_divider/U689/O (NOR2X2AS7)               0.26     13.97 r
-  u_alu/u_divider/U562/O (AOI12X4AS7)              0.12     14.09 f
-  u_alu/u_divider/U921/O (OAI12X2AS7)              0.27     14.36 r
-  u_alu/u_divider/U1151/O (NAND2X4AS7)             0.15     14.50 f
-  u_alu/u_divider/ctmTdsLR_1_735/O (NAND2X2AS7)    0.15     14.65 r
-  u_alu/u_divider/ctmTdsLR_2_736/O (INVX3AS7)      0.10     14.75 f
-  u_alu/u_divider/ctmTdsLR_1_1320/O (NAND2X1AS7)   0.13     14.88 r
-  u_alu/u_divider/U1686/O (NAND3X2AS7)             0.14     15.01 f
-  u_alu/u_divider/U109/O (NAND2X2AS7)              0.14     15.15 r
-  u_alu/u_divider/ctmTdsLR_1_146/O (NAND2X2AS7)    0.13     15.28 f
-  u_alu/u_divider/U624/O (AOI12X4AS7)              0.31     15.59 r
-  u_alu/u_divider/U100/O (INVX3AS7)                0.10     15.68 f
-  u_alu/u_divider/U1562/O (AOI12X1AS7)             0.29     15.97 r
-  u_alu/u_divider/ctmTdsLR_1_1009/O (NAND2X1AS7)   0.11     16.08 f
-  u_alu/u_divider/ctmTdsLR_2_1010/O (OAI12X1AS7)   0.16     16.25 r
-  u_alu/u_divider/ctmTdsLR_2_2673/O (INVX1AS7)     0.08     16.32 f
-  u_alu/u_divider/ctmTdsLR_1_2672/O (OAI12B2X1AS7)
-                                                   0.23     16.55 f
-  u_alu/u_divider/ctmTdsLR_2_1384/O (NAND3X2AS7)   0.13     16.68 r
-  u_alu/u_divider/ctmTdsLR_3_1385/O (NAND2X2AS7)   0.16     16.85 f
-  u_alu/u_divider/ctmTdsLR_1_1511/O (AOI12X1AS7)   0.24     17.08 r
-  u_alu/u_divider/U1317/O (OAI12X2AS7)             0.17     17.26 f
-  u_alu/u_divider/ctmTdsLR_2_1448/O (INVX2AS7)     0.15     17.40 r
-  u_alu/u_divider/ctmTdsLR_2_2778/O (NAND2X4AS7)   0.15     17.55 f
-  u_alu/u_divider/ctmTdsLR_2_1094/O (OAI12X1AS7)   0.29     17.84 r
-  u_alu/u_divider/ctmTdsLR_2_3087/O (NOR2X2AS7)    0.12     17.96 f
-  u_alu/u_divider/U692/O (NOR2X2AS7)               0.23     18.19 r
-  u_alu/u_divider/U752/O (AOI12X4AS7)              0.17     18.36 f
-  u_alu/u_divider/U751/O (OAI12X4AS7)              0.31     18.67 r
-  u_alu/u_divider/U2181/O (AOI12X1AS7)             0.18     18.84 f
-  u_alu/u_divider/ctmTdsLR_1_2697/O (NOR2X1AS7)    0.19     19.03 r
-  u_alu/u_divider/ctmTdsLR_2_2698/O (AOI12X1AS7)   0.07     19.10 f
-  u_alu/u_divider/ctmTdsLR_3_2699/O (NAND2B1X1AS7)
-                                                   0.14     19.24 r
-  u_alu/u_divider/U1532/O (NAND2X2AS7)             0.08     19.33 f
-  u_alu/u_a3/U8/O (NAND2X2AS7)                     0.13     19.45 r
-  u_alu/u_b1/ctmTdsLR_2_720/O (OAI22B2X2AS7)       0.09     19.54 f
-  u_alu/u_c0/ctmTdsLR_1_1773/O (OAI12B2X2AS7)      0.22     19.76 f
-  U63/O (AND2X1AS7)                                0.19     19.95 f
-  result_out_reg[12]/D (SFFQX1AS7)                 0.00     19.95 f
-  data arrival time                                         19.95
+  b_reg_reg[9]/CK (SFFQX1AS7)                      0.00      3.20 r
+  b_reg_reg[9]/Q (SFFQX1AS7)                       0.77      3.97 r
+  u_alu/u_divider/U14/O (INVX1AS7)                 0.58      4.54 f
+  u_alu/u_divider/U43/O (NAND2X1AS7)               0.32      4.87 r
+  u_alu/u_divider/ctmTdsLR_1_927/O (OR4X1AS7)      0.18      5.05 r
+  u_alu/u_divider/U51/O (NOR2X1AS7)                0.07      5.12 f
+  u_alu/u_divider/U26/O (NAND2X1AS7)               0.19      5.31 r
+  u_alu/u_divider/ctmTdsLR_2_675/O (AOI12B2X1AS7)
+                                                   0.42      5.73 r
+  u_alu/u_divider/U64/O (NOR2X2AS7)                0.06      5.79 f
+  u_alu/u_divider/U67/O (OAI12X1AS7)               0.26      6.05 r
+  u_alu/u_divider/ctmTdsLR_1_817/O (AOI22B2X1AS7)
+                                                   0.13      6.17 f
+  u_alu/u_divider/U74/O (NOR2X2AS7)                0.17      6.34 r
+  u_alu/u_divider/U75/O (NAND2X2AS7)               0.15      6.49 f
+  u_alu/u_divider/U89/O (OAI12X2AS7)               0.28      6.77 r
+  u_alu/u_divider/U90/O (NOR2X1AS7)                0.10      6.87 f
+  u_alu/u_divider/U93/O (OAI12X1AS7)               0.43      7.29 r
+  u_alu/u_divider/U97/O (AOI12X1AS7)               0.14      7.43 f
+  u_alu/u_divider/U98/O (NOR2X2AS7)                0.18      7.61 r
+  u_alu/u_divider/U99/O (NAND2X2AS7)               0.19      7.80 f
+  u_alu/u_divider/U115/O (NOR2X1AS7)               0.25      8.05 r
+  u_alu/u_divider/U116/O (AOI12X1AS7)              0.12      8.17 f
+  u_alu/u_divider/U117/O (NOR2X1AS7)               0.36      8.54 r
+  u_alu/u_divider/U128/O (OAI12X1AS7)              0.10      8.63 f
+  u_alu/u_divider/U129/O (AOI12X1AS7)              0.23      8.86 r
+  u_alu/u_divider/ctmTdsLR_1_930/O (OAI22B2X1AS7)
+                                                   0.13      8.99 f
+  u_alu/u_divider/U136/O (NAND2X2AS7)              0.24      9.23 r
+  u_alu/u_divider/ctmTdsLR_2_1062/O (MUX2X1AS7)    0.39      9.62 f
+  u_alu/u_divider/U159/O (NOR2X1AS7)               0.24      9.86 r
+  u_alu/u_divider/U162/O (OAI12X1AS7)              0.14     10.00 f
+  u_alu/u_divider/U166/O (AOI12X1AS7)              0.38     10.39 r
+  u_alu/u_divider/ctmTdsLR_1_736/O (OAI22B2X1AS7)
+                                                   0.13     10.52 f
+  u_alu/u_divider/U183/O (NAND2X2AS7)              0.27     10.79 r
+  u_alu/u_divider/ctmTdsLR_2_851/O (MUX2X1AS7)     0.40     11.19 f
+  u_alu/u_divider/U205/O (NOR2X1AS7)               0.28     11.46 r
+  u_alu/u_divider/U208/O (OAI12X2AS7)              0.12     11.58 f
+  u_alu/u_divider/U212/O (AOI12X1AS7)              0.35     11.93 r
+  u_alu/u_divider/U239/O (OAI12X1AS7)              0.12     12.05 f
+  u_alu/u_divider/U240/O (NAND2X2AS7)              0.28     12.33 r
+  u_alu/u_divider/U241/O (CLKINVX1AS7)             0.28     12.61 f
+  u_alu/u_divider/ctmTdsLR_1_644/O (NOR2B1X1AS7)   0.35     12.96 r
+  u_alu/u_divider/U297/O (NOR2X1AS7)               0.10     13.07 f
+  u_alu/u_divider/U298/O (NOR2X1AS7)               0.26     13.33 r
+  u_alu/u_divider/U299/O (NAND2X1AS7)              0.09     13.42 f
+  u_alu/u_divider/U21/O (OAI12X1AS7)               0.28     13.70 r
+  u_alu/u_divider/U307/O (NAND2X2AS7)              0.30     14.00 f
+  u_alu/u_divider/ctmTdsLR_1_1008/O (MUX2X1AS7)    0.43     14.43 f
+  u_alu/u_divider/U356/O (NOR2X1AS7)               0.33     14.76 r
+  u_alu/u_divider/U379/O (OAI12X1AS7)              0.18     14.94 f
+  u_alu/u_divider/U383/O (AOI12X1AS7)              0.24     15.18 r
+  u_alu/u_divider/U384/O (OAI12X1AS7)              0.17     15.35 f
+  u_alu/u_divider/ctmTdsLR_1_681/O (AOI22B2X2AS7)
+                                                   0.66     16.01 r
+  u_alu/u_divider/U423/O (AOI12X1AS7)              0.32     16.33 f
+  u_alu/u_divider/U424/O (NOR2X1AS7)               0.41     16.74 r
+  u_alu/u_divider/U435/O (OAI12X1AS7)              0.12     16.86 f
+  u_alu/u_divider/U436/O (AOI12X1AS7)              0.30     17.16 r
+  u_alu/u_divider/U20/O (OAI12X2AS7)               0.17     17.33 f
+  u_alu/u_divider/ctmTdsLR_1_1037/O (AOI22B2X2AS7)
+                                                   0.74     18.06 r
+  u_alu/u_divider/ctmTdsLR_2_1090/O (OAI22B2X1AS7)
+                                                   0.27     18.33 f
+  u_alu/u_divider/U564/O (NOR2X1AS7)               0.43     18.77 r
+  u_alu/u_divider/U573/O (NOR2X1AS7)               0.10     18.87 f
+  u_alu/u_divider/U581/O (AOI12X1AS7)              0.26     19.13 r
+  u_alu/u_divider/U582/O (OAI12X2AS7)              0.19     19.32 f
+  u_alu/u_divider/ctmTdsLR_1_831/O (AOI22B2X2AS7)
+                                                   0.78     20.11 r
+  u_alu/u_divider/ctmTdsLR_1_952/O (MUX2X1AS7)     0.60     20.71 f
+  u_alu/u_divider/U690/O (NAND2X1AS7)              0.20     20.92 r
+  u_alu/u_divider/U692/O (OAI12X1AS7)              0.18     21.10 f
+  u_alu/u_divider/U696/O (AOI12X1AS7)              0.30     21.40 r
+  u_alu/u_divider/U19/O (OAI12X2AS7)               0.21     21.60 f
+  u_alu/u_divider/ctmTdsLR_1_658/O (AOI22B2X2AS7)
+                                                   0.96     22.57 r
+  u_alu/u_divider/ctmTdsLR_1_757/O (OAI22B2X1AS7)
+                                                   0.27     22.84 f
+  u_alu/u_divider/U774/O (NOR2X1AS7)               0.42     23.26 r
+  u_alu/u_divider/U785/O (OAI12X1AS7)              0.10     23.37 f
+  u_alu/u_divider/U786/O (AOI12X1AS7)              0.39     23.76 r
+  u_alu/u_divider/U829/O (OAI12X1AS7)              0.35     24.10 f
+  u_alu/u_divider/U841/O (AOI12X2AS7)              1.12     25.23 r
+  u_alu/u_divider/ctmTdsLR_1_1108/O (MUX2X1AS7)    0.63     25.86 r
+  u_alu/u_divider/U940/O (NOR2X1AS7)               0.09     25.96 f
+  u_alu/u_divider/U948/O (NOR2X1AS7)               0.35     26.30 r
+  u_alu/u_divider/U967/O (NAND2X1AS7)              0.12     26.42 f
+  u_alu/u_divider/U18/O (OAI12X1AS7)               0.92     27.34 r
+  u_alu/u_divider/U987/O (AOI12X4AS7)              0.35     27.68 f
+  u_alu/u_divider/ctmTdsLR_3_966/O (OAI22B2X1AS7)
+                                                   0.38     28.07 f
+  u_alu/u_divider/U1019/O (NOR2X1AS7)              0.30     28.37 r
+  u_alu/u_divider/U1022/O (OAI12X1AS7)             0.15     28.52 f
+  u_alu/u_divider/U1026/O (AOI12X1AS7)             0.43     28.94 r
+  u_alu/u_divider/U4/O (OAI12X2AS7)                0.32     29.26 f
+  u_alu/u_divider/U3/O (AOI12X4AS7)                0.70     29.96 r
+  u_alu/u_divider/U1157/O (MUX2X1AS7)              0.54     30.50 r
+  u_alu/u_divider/U1275/O (NAND2X1AS7)             0.17     30.67 f
+  u_alu/u_divider/U1277/O (OAI12X1AS7)             0.41     31.08 r
+  u_alu/u_divider/U1281/O (AOI12X1AS7)             0.27     31.36 f
+  u_alu/u_divider/U1289/O (OAI12X1AS7)             0.31     31.66 r
+  u_alu/u_divider/U1290/O (AOI12X1AS7)             0.07     31.74 f
+  u_alu/u_divider/U5/O (INVX1AS7)                  1.14     32.88 r
+  u_alu/u_divider/U1362/O (OAI112X1AS7)            0.04     32.92 f
+  u_alu/u_a3/U10/O (AND2X1AS7)                     0.24     33.16 f
+  u_alu/u_b1/U10/O (MUX2X1AS7)                     0.33     33.49 f
+  u_alu/u_c0/U10/O (MUX2X1AS7)                     0.38     33.86 f
+  U67/O (AND2X1AS7)                                0.18     34.04 f
+  result_out_reg[9]/D (SFFQX1AS7)                  0.00     34.04 f
+  data arrival time                                         34.04
 
-  clock clk (rise edge)                           20.00     20.00
-  clock network delay (ideal)                      0.16     20.16
-  result_out_reg[12]/CK (SFFQX1AS7)                0.00     20.16 r
-  clock uncertainty                               -2.00     18.16
-  library setup time                              -0.97     17.19
-  data required time                                        17.19
+  clock clk (rise edge)                           40.00     40.00
+  clock network delay (ideal)                      0.00     40.00
+  result_out_reg[9]/CK (SFFQX1AS7)                 0.00     40.00 r
+  clock uncertainty                               -4.00     36.00
+  library setup time                              -1.52     34.48
+  data required time                                        34.48
   ------------------------------------------------------------------------
-  data required time                                        17.19
-  data arrival time                                        -19.95
+  data required time                                        34.48
+  data arrival time                                        -34.04
   ------------------------------------------------------------------------
-  slack (VIOLATED)                                          -2.76
+  slack (MET)                                                0.44
+
+
+
+  Startpoint: b_reg_reg[9] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: result_out_reg[8] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      3.20      3.20
+
+  b_reg_reg[9]/CK (SFFQX1AS7)                      0.00      3.20 r
+  b_reg_reg[9]/Q (SFFQX1AS7)                       0.77      3.97 r
+  u_alu/u_divider/U14/O (INVX1AS7)                 0.58      4.54 f
+  u_alu/u_divider/U43/O (NAND2X1AS7)               0.32      4.87 r
+  u_alu/u_divider/ctmTdsLR_1_927/O (OR4X1AS7)      0.18      5.05 r
+  u_alu/u_divider/U51/O (NOR2X1AS7)                0.07      5.12 f
+  u_alu/u_divider/U26/O (NAND2X1AS7)               0.19      5.31 r
+  u_alu/u_divider/ctmTdsLR_2_675/O (AOI12B2X1AS7)
+                                                   0.42      5.73 r
+  u_alu/u_divider/U64/O (NOR2X2AS7)                0.06      5.79 f
+  u_alu/u_divider/U67/O (OAI12X1AS7)               0.26      6.05 r
+  u_alu/u_divider/ctmTdsLR_1_817/O (AOI22B2X1AS7)
+                                                   0.13      6.17 f
+  u_alu/u_divider/U74/O (NOR2X2AS7)                0.17      6.34 r
+  u_alu/u_divider/U75/O (NAND2X2AS7)               0.15      6.49 f
+  u_alu/u_divider/U89/O (OAI12X2AS7)               0.28      6.77 r
+  u_alu/u_divider/U90/O (NOR2X1AS7)                0.10      6.87 f
+  u_alu/u_divider/U93/O (OAI12X1AS7)               0.43      7.29 r
+  u_alu/u_divider/U97/O (AOI12X1AS7)               0.14      7.43 f
+  u_alu/u_divider/U98/O (NOR2X2AS7)                0.18      7.61 r
+  u_alu/u_divider/U99/O (NAND2X2AS7)               0.19      7.80 f
+  u_alu/u_divider/U115/O (NOR2X1AS7)               0.25      8.05 r
+  u_alu/u_divider/U116/O (AOI12X1AS7)              0.12      8.17 f
+  u_alu/u_divider/U117/O (NOR2X1AS7)               0.36      8.54 r
+  u_alu/u_divider/U128/O (OAI12X1AS7)              0.10      8.63 f
+  u_alu/u_divider/U129/O (AOI12X1AS7)              0.23      8.86 r
+  u_alu/u_divider/ctmTdsLR_1_930/O (OAI22B2X1AS7)
+                                                   0.13      8.99 f
+  u_alu/u_divider/U136/O (NAND2X2AS7)              0.24      9.23 r
+  u_alu/u_divider/ctmTdsLR_2_1062/O (MUX2X1AS7)    0.39      9.62 f
+  u_alu/u_divider/U159/O (NOR2X1AS7)               0.24      9.86 r
+  u_alu/u_divider/U162/O (OAI12X1AS7)              0.14     10.00 f
+  u_alu/u_divider/U166/O (AOI12X1AS7)              0.38     10.39 r
+  u_alu/u_divider/ctmTdsLR_1_736/O (OAI22B2X1AS7)
+                                                   0.13     10.52 f
+  u_alu/u_divider/U183/O (NAND2X2AS7)              0.27     10.79 r
+  u_alu/u_divider/ctmTdsLR_2_851/O (MUX2X1AS7)     0.40     11.19 f
+  u_alu/u_divider/U205/O (NOR2X1AS7)               0.28     11.46 r
+  u_alu/u_divider/U208/O (OAI12X2AS7)              0.12     11.58 f
+  u_alu/u_divider/U212/O (AOI12X1AS7)              0.35     11.93 r
+  u_alu/u_divider/U239/O (OAI12X1AS7)              0.12     12.05 f
+  u_alu/u_divider/U240/O (NAND2X2AS7)              0.28     12.33 r
+  u_alu/u_divider/U241/O (CLKINVX1AS7)             0.28     12.61 f
+  u_alu/u_divider/ctmTdsLR_1_644/O (NOR2B1X1AS7)   0.35     12.96 r
+  u_alu/u_divider/U297/O (NOR2X1AS7)               0.10     13.07 f
+  u_alu/u_divider/U298/O (NOR2X1AS7)               0.26     13.33 r
+  u_alu/u_divider/U299/O (NAND2X1AS7)              0.09     13.42 f
+  u_alu/u_divider/U21/O (OAI12X1AS7)               0.28     13.70 r
+  u_alu/u_divider/U307/O (NAND2X2AS7)              0.30     14.00 f
+  u_alu/u_divider/ctmTdsLR_1_1008/O (MUX2X1AS7)    0.43     14.43 f
+  u_alu/u_divider/U356/O (NOR2X1AS7)               0.33     14.76 r
+  u_alu/u_divider/U379/O (OAI12X1AS7)              0.18     14.94 f
+  u_alu/u_divider/U383/O (AOI12X1AS7)              0.24     15.18 r
+  u_alu/u_divider/U384/O (OAI12X1AS7)              0.17     15.35 f
+  u_alu/u_divider/ctmTdsLR_1_681/O (AOI22B2X2AS7)
+                                                   0.66     16.01 r
+  u_alu/u_divider/U423/O (AOI12X1AS7)              0.32     16.33 f
+  u_alu/u_divider/U424/O (NOR2X1AS7)               0.41     16.74 r
+  u_alu/u_divider/U435/O (OAI12X1AS7)              0.12     16.86 f
+  u_alu/u_divider/U436/O (AOI12X1AS7)              0.30     17.16 r
+  u_alu/u_divider/U20/O (OAI12X2AS7)               0.17     17.33 f
+  u_alu/u_divider/ctmTdsLR_1_1037/O (AOI22B2X2AS7)
+                                                   0.74     18.06 r
+  u_alu/u_divider/ctmTdsLR_2_1090/O (OAI22B2X1AS7)
+                                                   0.27     18.33 f
+  u_alu/u_divider/U564/O (NOR2X1AS7)               0.43     18.77 r
+  u_alu/u_divider/U573/O (NOR2X1AS7)               0.10     18.87 f
+  u_alu/u_divider/U581/O (AOI12X1AS7)              0.26     19.13 r
+  u_alu/u_divider/U582/O (OAI12X2AS7)              0.19     19.32 f
+  u_alu/u_divider/ctmTdsLR_1_831/O (AOI22B2X2AS7)
+                                                   0.78     20.11 r
+  u_alu/u_divider/ctmTdsLR_1_952/O (MUX2X1AS7)     0.60     20.71 f
+  u_alu/u_divider/U690/O (NAND2X1AS7)              0.20     20.92 r
+  u_alu/u_divider/U692/O (OAI12X1AS7)              0.18     21.10 f
+  u_alu/u_divider/U696/O (AOI12X1AS7)              0.30     21.40 r
+  u_alu/u_divider/U19/O (OAI12X2AS7)               0.21     21.60 f
+  u_alu/u_divider/ctmTdsLR_1_658/O (AOI22B2X2AS7)
+                                                   0.96     22.57 r
+  u_alu/u_divider/ctmTdsLR_1_757/O (OAI22B2X1AS7)
+                                                   0.27     22.84 f
+  u_alu/u_divider/U774/O (NOR2X1AS7)               0.42     23.26 r
+  u_alu/u_divider/U785/O (OAI12X1AS7)              0.10     23.37 f
+  u_alu/u_divider/U786/O (AOI12X1AS7)              0.39     23.76 r
+  u_alu/u_divider/U829/O (OAI12X1AS7)              0.35     24.10 f
+  u_alu/u_divider/U841/O (AOI12X2AS7)              1.12     25.23 r
+  u_alu/u_divider/ctmTdsLR_1_1108/O (MUX2X1AS7)    0.63     25.86 r
+  u_alu/u_divider/U940/O (NOR2X1AS7)               0.09     25.96 f
+  u_alu/u_divider/U948/O (NOR2X1AS7)               0.35     26.30 r
+  u_alu/u_divider/U967/O (NAND2X1AS7)              0.12     26.42 f
+  u_alu/u_divider/U18/O (OAI12X1AS7)               0.92     27.34 r
+  u_alu/u_divider/U987/O (AOI12X4AS7)              0.35     27.68 f
+  u_alu/u_divider/ctmTdsLR_3_966/O (OAI22B2X1AS7)
+                                                   0.38     28.07 f
+  u_alu/u_divider/U1019/O (NOR2X1AS7)              0.30     28.37 r
+  u_alu/u_divider/U1022/O (OAI12X1AS7)             0.15     28.52 f
+  u_alu/u_divider/U1026/O (AOI12X1AS7)             0.43     28.94 r
+  u_alu/u_divider/U4/O (OAI12X2AS7)                0.32     29.26 f
+  u_alu/u_divider/U3/O (AOI12X4AS7)                0.70     29.96 r
+  u_alu/u_divider/U1157/O (MUX2X1AS7)              0.54     30.50 r
+  u_alu/u_divider/U1275/O (NAND2X1AS7)             0.17     30.67 f
+  u_alu/u_divider/U1277/O (OAI12X1AS7)             0.41     31.08 r
+  u_alu/u_divider/U1281/O (AOI12X1AS7)             0.27     31.36 f
+  u_alu/u_divider/U1289/O (OAI12X1AS7)             0.31     31.66 r
+  u_alu/u_divider/U1290/O (AOI12X1AS7)             0.07     31.74 f
+  u_alu/u_divider/U5/O (INVX1AS7)                  1.14     32.88 r
+  u_alu/u_divider/U1354/O (OAI112X1AS7)            0.04     32.92 f
+  u_alu/u_a3/U9/O (AND2X1AS7)                      0.24     33.16 f
+  u_alu/u_b1/U9/O (MUX2X1AS7)                      0.31     33.48 f
+  u_alu/u_c0/U9/O (MUX2X1AS7)                      0.37     33.85 f
+  U64/O (AND2X1AS7)                                0.18     34.03 f
+  result_out_reg[8]/D (SFFQX1AS7)                  0.00     34.03 f
+  data arrival time                                         34.03
+
+  clock clk (rise edge)                           40.00     40.00
+  clock network delay (ideal)                      0.00     40.00
+  result_out_reg[8]/CK (SFFQX1AS7)                 0.00     40.00 r
+  clock uncertainty                               -4.00     36.00
+  library setup time                              -1.52     34.48
+  data required time                                        34.48
+  ------------------------------------------------------------------------
+  data required time                                        34.48
+  data arrival time                                        -34.03
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.44
+
+
+
+  Startpoint: b_reg_reg[9] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: result_out_reg[3] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      3.20      3.20
+
+  b_reg_reg[9]/CK (SFFQX1AS7)                      0.00      3.20 r
+  b_reg_reg[9]/Q (SFFQX1AS7)                       0.77      3.97 r
+  u_alu/u_divider/U14/O (INVX1AS7)                 0.58      4.54 f
+  u_alu/u_divider/U43/O (NAND2X1AS7)               0.32      4.87 r
+  u_alu/u_divider/ctmTdsLR_1_927/O (OR4X1AS7)      0.18      5.05 r
+  u_alu/u_divider/U51/O (NOR2X1AS7)                0.07      5.12 f
+  u_alu/u_divider/U26/O (NAND2X1AS7)               0.19      5.31 r
+  u_alu/u_divider/ctmTdsLR_2_675/O (AOI12B2X1AS7)
+                                                   0.42      5.73 r
+  u_alu/u_divider/U64/O (NOR2X2AS7)                0.06      5.79 f
+  u_alu/u_divider/U67/O (OAI12X1AS7)               0.26      6.05 r
+  u_alu/u_divider/ctmTdsLR_1_817/O (AOI22B2X1AS7)
+                                                   0.13      6.17 f
+  u_alu/u_divider/U74/O (NOR2X2AS7)                0.17      6.34 r
+  u_alu/u_divider/U75/O (NAND2X2AS7)               0.15      6.49 f
+  u_alu/u_divider/U89/O (OAI12X2AS7)               0.28      6.77 r
+  u_alu/u_divider/U90/O (NOR2X1AS7)                0.10      6.87 f
+  u_alu/u_divider/U93/O (OAI12X1AS7)               0.43      7.29 r
+  u_alu/u_divider/U97/O (AOI12X1AS7)               0.14      7.43 f
+  u_alu/u_divider/U98/O (NOR2X2AS7)                0.18      7.61 r
+  u_alu/u_divider/U99/O (NAND2X2AS7)               0.19      7.80 f
+  u_alu/u_divider/U115/O (NOR2X1AS7)               0.25      8.05 r
+  u_alu/u_divider/U116/O (AOI12X1AS7)              0.12      8.17 f
+  u_alu/u_divider/U117/O (NOR2X1AS7)               0.36      8.54 r
+  u_alu/u_divider/U128/O (OAI12X1AS7)              0.10      8.63 f
+  u_alu/u_divider/U129/O (AOI12X1AS7)              0.23      8.86 r
+  u_alu/u_divider/ctmTdsLR_1_930/O (OAI22B2X1AS7)
+                                                   0.13      8.99 f
+  u_alu/u_divider/U136/O (NAND2X2AS7)              0.24      9.23 r
+  u_alu/u_divider/ctmTdsLR_2_1062/O (MUX2X1AS7)    0.39      9.62 f
+  u_alu/u_divider/U159/O (NOR2X1AS7)               0.24      9.86 r
+  u_alu/u_divider/U162/O (OAI12X1AS7)              0.14     10.00 f
+  u_alu/u_divider/U166/O (AOI12X1AS7)              0.38     10.39 r
+  u_alu/u_divider/ctmTdsLR_1_736/O (OAI22B2X1AS7)
+                                                   0.13     10.52 f
+  u_alu/u_divider/U183/O (NAND2X2AS7)              0.27     10.79 r
+  u_alu/u_divider/ctmTdsLR_2_851/O (MUX2X1AS7)     0.40     11.19 f
+  u_alu/u_divider/U205/O (NOR2X1AS7)               0.28     11.46 r
+  u_alu/u_divider/U208/O (OAI12X2AS7)              0.12     11.58 f
+  u_alu/u_divider/U212/O (AOI12X1AS7)              0.35     11.93 r
+  u_alu/u_divider/U239/O (OAI12X1AS7)              0.12     12.05 f
+  u_alu/u_divider/U240/O (NAND2X2AS7)              0.28     12.33 r
+  u_alu/u_divider/U241/O (CLKINVX1AS7)             0.28     12.61 f
+  u_alu/u_divider/ctmTdsLR_1_644/O (NOR2B1X1AS7)   0.35     12.96 r
+  u_alu/u_divider/U297/O (NOR2X1AS7)               0.10     13.07 f
+  u_alu/u_divider/U298/O (NOR2X1AS7)               0.26     13.33 r
+  u_alu/u_divider/U299/O (NAND2X1AS7)              0.09     13.42 f
+  u_alu/u_divider/U21/O (OAI12X1AS7)               0.28     13.70 r
+  u_alu/u_divider/U307/O (NAND2X2AS7)              0.30     14.00 f
+  u_alu/u_divider/ctmTdsLR_1_1008/O (MUX2X1AS7)    0.43     14.43 f
+  u_alu/u_divider/U356/O (NOR2X1AS7)               0.33     14.76 r
+  u_alu/u_divider/U379/O (OAI12X1AS7)              0.18     14.94 f
+  u_alu/u_divider/U383/O (AOI12X1AS7)              0.24     15.18 r
+  u_alu/u_divider/U384/O (OAI12X1AS7)              0.17     15.35 f
+  u_alu/u_divider/ctmTdsLR_1_681/O (AOI22B2X2AS7)
+                                                   0.66     16.01 r
+  u_alu/u_divider/U423/O (AOI12X1AS7)              0.32     16.33 f
+  u_alu/u_divider/U424/O (NOR2X1AS7)               0.41     16.74 r
+  u_alu/u_divider/U435/O (OAI12X1AS7)              0.12     16.86 f
+  u_alu/u_divider/U436/O (AOI12X1AS7)              0.30     17.16 r
+  u_alu/u_divider/U20/O (OAI12X2AS7)               0.17     17.33 f
+  u_alu/u_divider/ctmTdsLR_1_1037/O (AOI22B2X2AS7)
+                                                   0.74     18.06 r
+  u_alu/u_divider/ctmTdsLR_2_1090/O (OAI22B2X1AS7)
+                                                   0.27     18.33 f
+  u_alu/u_divider/U564/O (NOR2X1AS7)               0.43     18.77 r
+  u_alu/u_divider/U573/O (NOR2X1AS7)               0.10     18.87 f
+  u_alu/u_divider/U581/O (AOI12X1AS7)              0.26     19.13 r
+  u_alu/u_divider/U582/O (OAI12X2AS7)              0.19     19.32 f
+  u_alu/u_divider/ctmTdsLR_1_831/O (AOI22B2X2AS7)
+                                                   0.78     20.11 r
+  u_alu/u_divider/ctmTdsLR_1_952/O (MUX2X1AS7)     0.60     20.71 f
+  u_alu/u_divider/U690/O (NAND2X1AS7)              0.20     20.92 r
+  u_alu/u_divider/U692/O (OAI12X1AS7)              0.18     21.10 f
+  u_alu/u_divider/U696/O (AOI12X1AS7)              0.30     21.40 r
+  u_alu/u_divider/U19/O (OAI12X2AS7)               0.21     21.60 f
+  u_alu/u_divider/ctmTdsLR_1_658/O (AOI22B2X2AS7)
+                                                   0.96     22.57 r
+  u_alu/u_divider/ctmTdsLR_1_757/O (OAI22B2X1AS7)
+                                                   0.27     22.84 f
+  u_alu/u_divider/U774/O (NOR2X1AS7)               0.42     23.26 r
+  u_alu/u_divider/U785/O (OAI12X1AS7)              0.10     23.37 f
+  u_alu/u_divider/U786/O (AOI12X1AS7)              0.39     23.76 r
+  u_alu/u_divider/U829/O (OAI12X1AS7)              0.35     24.10 f
+  u_alu/u_divider/U841/O (AOI12X2AS7)              1.12     25.23 r
+  u_alu/u_divider/ctmTdsLR_1_1108/O (MUX2X1AS7)    0.63     25.86 r
+  u_alu/u_divider/U940/O (NOR2X1AS7)               0.09     25.96 f
+  u_alu/u_divider/U948/O (NOR2X1AS7)               0.35     26.30 r
+  u_alu/u_divider/U967/O (NAND2X1AS7)              0.12     26.42 f
+  u_alu/u_divider/U18/O (OAI12X1AS7)               0.92     27.34 r
+  u_alu/u_divider/U987/O (AOI12X4AS7)              0.35     27.68 f
+  u_alu/u_divider/ctmTdsLR_3_966/O (OAI22B2X1AS7)
+                                                   0.38     28.07 f
+  u_alu/u_divider/U1019/O (NOR2X1AS7)              0.30     28.37 r
+  u_alu/u_divider/U1022/O (OAI12X1AS7)             0.15     28.52 f
+  u_alu/u_divider/U1026/O (AOI12X1AS7)             0.43     28.94 r
+  u_alu/u_divider/U4/O (OAI12X2AS7)                0.32     29.26 f
+  u_alu/u_divider/U3/O (AOI12X4AS7)                0.70     29.96 r
+  u_alu/u_divider/U1157/O (MUX2X1AS7)              0.54     30.50 r
+  u_alu/u_divider/U1275/O (NAND2X1AS7)             0.17     30.67 f
+  u_alu/u_divider/U1277/O (OAI12X1AS7)             0.41     31.08 r
+  u_alu/u_divider/U1281/O (AOI12X1AS7)             0.27     31.36 f
+  u_alu/u_divider/U1289/O (OAI12X1AS7)             0.31     31.66 r
+  u_alu/u_divider/U1290/O (AOI12X1AS7)             0.07     31.74 f
+  u_alu/u_divider/U5/O (INVX1AS7)                  1.14     32.88 r
+  u_alu/u_divider/U1315/O (OAI112X1AS7)            0.06     32.94 f
+  u_alu/u_a3/U8/O (AND2X1AS7)                      0.23     33.17 f
+  u_alu/u_b1/U4/O (MUX2X1AS7)                      0.32     33.50 f
+  u_alu/u_c0/U4/O (MUX2X1AS7)                      0.34     33.84 f
+  U77/O (AND2X1AS7)                                0.19     34.02 f
+  result_out_reg[3]/D (SFFQX1AS7)                  0.00     34.02 f
+  data arrival time                                         34.02
+
+  clock clk (rise edge)                           40.00     40.00
+  clock network delay (ideal)                      0.00     40.00
+  result_out_reg[3]/CK (SFFQX1AS7)                 0.00     40.00 r
+  clock uncertainty                               -4.00     36.00
+  library setup time                              -1.53     34.47
+  data required time                                        34.47
+  ------------------------------------------------------------------------
+  data required time                                        34.47
+  data arrival time                                        -34.02
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.45
+
+
+
+  Startpoint: b_reg_reg[9] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: result_out_reg[15] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      3.20      3.20
+
+  b_reg_reg[9]/CK (SFFQX1AS7)                      0.00      3.20 r
+  b_reg_reg[9]/Q (SFFQX1AS7)                       0.77      3.97 r
+  u_alu/u_divider/U14/O (INVX1AS7)                 0.58      4.54 f
+  u_alu/u_divider/U43/O (NAND2X1AS7)               0.32      4.87 r
+  u_alu/u_divider/ctmTdsLR_1_927/O (OR4X1AS7)      0.18      5.05 r
+  u_alu/u_divider/U51/O (NOR2X1AS7)                0.07      5.12 f
+  u_alu/u_divider/U26/O (NAND2X1AS7)               0.19      5.31 r
+  u_alu/u_divider/ctmTdsLR_2_675/O (AOI12B2X1AS7)
+                                                   0.42      5.73 r
+  u_alu/u_divider/U64/O (NOR2X2AS7)                0.06      5.79 f
+  u_alu/u_divider/U67/O (OAI12X1AS7)               0.26      6.05 r
+  u_alu/u_divider/ctmTdsLR_1_817/O (AOI22B2X1AS7)
+                                                   0.13      6.17 f
+  u_alu/u_divider/U74/O (NOR2X2AS7)                0.17      6.34 r
+  u_alu/u_divider/U75/O (NAND2X2AS7)               0.15      6.49 f
+  u_alu/u_divider/U89/O (OAI12X2AS7)               0.28      6.77 r
+  u_alu/u_divider/U90/O (NOR2X1AS7)                0.10      6.87 f
+  u_alu/u_divider/U93/O (OAI12X1AS7)               0.43      7.29 r
+  u_alu/u_divider/U97/O (AOI12X1AS7)               0.14      7.43 f
+  u_alu/u_divider/U98/O (NOR2X2AS7)                0.18      7.61 r
+  u_alu/u_divider/U99/O (NAND2X2AS7)               0.19      7.80 f
+  u_alu/u_divider/U115/O (NOR2X1AS7)               0.25      8.05 r
+  u_alu/u_divider/U116/O (AOI12X1AS7)              0.12      8.17 f
+  u_alu/u_divider/U117/O (NOR2X1AS7)               0.36      8.54 r
+  u_alu/u_divider/U128/O (OAI12X1AS7)              0.10      8.63 f
+  u_alu/u_divider/U129/O (AOI12X1AS7)              0.23      8.86 r
+  u_alu/u_divider/ctmTdsLR_1_930/O (OAI22B2X1AS7)
+                                                   0.13      8.99 f
+  u_alu/u_divider/U136/O (NAND2X2AS7)              0.24      9.23 r
+  u_alu/u_divider/ctmTdsLR_2_1062/O (MUX2X1AS7)    0.39      9.62 f
+  u_alu/u_divider/U159/O (NOR2X1AS7)               0.24      9.86 r
+  u_alu/u_divider/U162/O (OAI12X1AS7)              0.14     10.00 f
+  u_alu/u_divider/U166/O (AOI12X1AS7)              0.38     10.39 r
+  u_alu/u_divider/ctmTdsLR_1_736/O (OAI22B2X1AS7)
+                                                   0.13     10.52 f
+  u_alu/u_divider/U183/O (NAND2X2AS7)              0.27     10.79 r
+  u_alu/u_divider/ctmTdsLR_2_851/O (MUX2X1AS7)     0.40     11.19 f
+  u_alu/u_divider/U205/O (NOR2X1AS7)               0.28     11.46 r
+  u_alu/u_divider/U208/O (OAI12X2AS7)              0.12     11.58 f
+  u_alu/u_divider/U212/O (AOI12X1AS7)              0.35     11.93 r
+  u_alu/u_divider/U239/O (OAI12X1AS7)              0.12     12.05 f
+  u_alu/u_divider/U240/O (NAND2X2AS7)              0.28     12.33 r
+  u_alu/u_divider/U241/O (CLKINVX1AS7)             0.28     12.61 f
+  u_alu/u_divider/ctmTdsLR_1_644/O (NOR2B1X1AS7)   0.35     12.96 r
+  u_alu/u_divider/U297/O (NOR2X1AS7)               0.10     13.07 f
+  u_alu/u_divider/U298/O (NOR2X1AS7)               0.26     13.33 r
+  u_alu/u_divider/U299/O (NAND2X1AS7)              0.09     13.42 f
+  u_alu/u_divider/U21/O (OAI12X1AS7)               0.28     13.70 r
+  u_alu/u_divider/U307/O (NAND2X2AS7)              0.30     14.00 f
+  u_alu/u_divider/ctmTdsLR_1_1008/O (MUX2X1AS7)    0.43     14.43 f
+  u_alu/u_divider/U356/O (NOR2X1AS7)               0.33     14.76 r
+  u_alu/u_divider/U379/O (OAI12X1AS7)              0.18     14.94 f
+  u_alu/u_divider/U383/O (AOI12X1AS7)              0.24     15.18 r
+  u_alu/u_divider/U384/O (OAI12X1AS7)              0.17     15.35 f
+  u_alu/u_divider/ctmTdsLR_1_681/O (AOI22B2X2AS7)
+                                                   0.66     16.01 r
+  u_alu/u_divider/U423/O (AOI12X1AS7)              0.32     16.33 f
+  u_alu/u_divider/U424/O (NOR2X1AS7)               0.41     16.74 r
+  u_alu/u_divider/U435/O (OAI12X1AS7)              0.12     16.86 f
+  u_alu/u_divider/U436/O (AOI12X1AS7)              0.30     17.16 r
+  u_alu/u_divider/U20/O (OAI12X2AS7)               0.17     17.33 f
+  u_alu/u_divider/ctmTdsLR_1_1037/O (AOI22B2X2AS7)
+                                                   0.74     18.06 r
+  u_alu/u_divider/ctmTdsLR_2_1090/O (OAI22B2X1AS7)
+                                                   0.27     18.33 f
+  u_alu/u_divider/U564/O (NOR2X1AS7)               0.43     18.77 r
+  u_alu/u_divider/U573/O (NOR2X1AS7)               0.10     18.87 f
+  u_alu/u_divider/U581/O (AOI12X1AS7)              0.26     19.13 r
+  u_alu/u_divider/U582/O (OAI12X2AS7)              0.19     19.32 f
+  u_alu/u_divider/ctmTdsLR_1_831/O (AOI22B2X2AS7)
+                                                   0.78     20.11 r
+  u_alu/u_divider/ctmTdsLR_1_952/O (MUX2X1AS7)     0.60     20.71 f
+  u_alu/u_divider/U690/O (NAND2X1AS7)              0.20     20.92 r
+  u_alu/u_divider/U692/O (OAI12X1AS7)              0.18     21.10 f
+  u_alu/u_divider/U696/O (AOI12X1AS7)              0.30     21.40 r
+  u_alu/u_divider/U19/O (OAI12X2AS7)               0.21     21.60 f
+  u_alu/u_divider/ctmTdsLR_1_658/O (AOI22B2X2AS7)
+                                                   0.96     22.57 r
+  u_alu/u_divider/ctmTdsLR_1_757/O (OAI22B2X1AS7)
+                                                   0.27     22.84 f
+  u_alu/u_divider/U774/O (NOR2X1AS7)               0.42     23.26 r
+  u_alu/u_divider/U785/O (OAI12X1AS7)              0.10     23.37 f
+  u_alu/u_divider/U786/O (AOI12X1AS7)              0.39     23.76 r
+  u_alu/u_divider/U829/O (OAI12X1AS7)              0.35     24.10 f
+  u_alu/u_divider/U841/O (AOI12X2AS7)              1.12     25.23 r
+  u_alu/u_divider/ctmTdsLR_1_1108/O (MUX2X1AS7)    0.63     25.86 r
+  u_alu/u_divider/U940/O (NOR2X1AS7)               0.09     25.96 f
+  u_alu/u_divider/U948/O (NOR2X1AS7)               0.35     26.30 r
+  u_alu/u_divider/U967/O (NAND2X1AS7)              0.12     26.42 f
+  u_alu/u_divider/U18/O (OAI12X1AS7)               0.92     27.34 r
+  u_alu/u_divider/U987/O (AOI12X4AS7)              0.35     27.68 f
+  u_alu/u_divider/ctmTdsLR_3_966/O (OAI22B2X1AS7)
+                                                   0.38     28.07 f
+  u_alu/u_divider/U1019/O (NOR2X1AS7)              0.30     28.37 r
+  u_alu/u_divider/U1022/O (OAI12X1AS7)             0.15     28.52 f
+  u_alu/u_divider/U1026/O (AOI12X1AS7)             0.43     28.94 r
+  u_alu/u_divider/U4/O (OAI12X2AS7)                0.32     29.26 f
+  u_alu/u_divider/U3/O (AOI12X4AS7)                0.70     29.96 r
+  u_alu/u_divider/U1157/O (MUX2X1AS7)              0.54     30.50 r
+  u_alu/u_divider/U1275/O (NAND2X1AS7)             0.17     30.67 f
+  u_alu/u_divider/U1277/O (OAI12X1AS7)             0.41     31.08 r
+  u_alu/u_divider/U1281/O (AOI12X1AS7)             0.27     31.36 f
+  u_alu/u_divider/U1289/O (OAI12X1AS7)             0.31     31.66 r
+  u_alu/u_divider/U1290/O (AOI12X1AS7)             0.07     31.74 f
+  u_alu/u_divider/U5/O (INVX1AS7)                  1.14     32.88 r
+  u_alu/u_divider/U1420/O (OAI112X1AS7)            0.04     32.92 f
+  u_alu/u_a3/U17/O (AND2X1AS7)                     0.23     33.15 f
+  u_alu/u_b1/U16/O (MUX2X1AS7)                     0.32     33.47 f
+  u_alu/u_c0/U16/O (MUX2X1AS7)                     0.34     33.81 f
+  U62/O (AND2X1AS7)                                0.20     34.01 f
+  result_out_reg[15]/D (SFFQX1AS7)                 0.00     34.01 f
+  data arrival time                                         34.01
+
+  clock clk (rise edge)                           40.00     40.00
+  clock network delay (ideal)                      0.00     40.00
+  result_out_reg[15]/CK (SFFQX1AS7)                0.00     40.00 r
+  clock uncertainty                               -4.00     36.00
+  library setup time                              -1.53     34.47
+  data required time                                        34.47
+  ------------------------------------------------------------------------
+  data required time                                        34.47
+  data arrival time                                        -34.01
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.46
+
+
+
+  Startpoint: b_reg_reg[9] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: n_out_reg (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      3.20      3.20
+
+  b_reg_reg[9]/CK (SFFQX1AS7)                      0.00      3.20 r
+  b_reg_reg[9]/Q (SFFQX1AS7)                       0.77      3.97 r
+  u_alu/u_divider/U14/O (INVX1AS7)                 0.58      4.54 f
+  u_alu/u_divider/U43/O (NAND2X1AS7)               0.32      4.87 r
+  u_alu/u_divider/ctmTdsLR_1_927/O (OR4X1AS7)      0.18      5.05 r
+  u_alu/u_divider/U51/O (NOR2X1AS7)                0.07      5.12 f
+  u_alu/u_divider/U26/O (NAND2X1AS7)               0.19      5.31 r
+  u_alu/u_divider/ctmTdsLR_2_675/O (AOI12B2X1AS7)
+                                                   0.42      5.73 r
+  u_alu/u_divider/U64/O (NOR2X2AS7)                0.06      5.79 f
+  u_alu/u_divider/U67/O (OAI12X1AS7)               0.26      6.05 r
+  u_alu/u_divider/ctmTdsLR_1_817/O (AOI22B2X1AS7)
+                                                   0.13      6.17 f
+  u_alu/u_divider/U74/O (NOR2X2AS7)                0.17      6.34 r
+  u_alu/u_divider/U75/O (NAND2X2AS7)               0.15      6.49 f
+  u_alu/u_divider/U89/O (OAI12X2AS7)               0.28      6.77 r
+  u_alu/u_divider/U90/O (NOR2X1AS7)                0.10      6.87 f
+  u_alu/u_divider/U93/O (OAI12X1AS7)               0.43      7.29 r
+  u_alu/u_divider/U97/O (AOI12X1AS7)               0.14      7.43 f
+  u_alu/u_divider/U98/O (NOR2X2AS7)                0.18      7.61 r
+  u_alu/u_divider/U99/O (NAND2X2AS7)               0.19      7.80 f
+  u_alu/u_divider/U115/O (NOR2X1AS7)               0.25      8.05 r
+  u_alu/u_divider/U116/O (AOI12X1AS7)              0.12      8.17 f
+  u_alu/u_divider/U117/O (NOR2X1AS7)               0.36      8.54 r
+  u_alu/u_divider/U128/O (OAI12X1AS7)              0.10      8.63 f
+  u_alu/u_divider/U129/O (AOI12X1AS7)              0.23      8.86 r
+  u_alu/u_divider/ctmTdsLR_1_930/O (OAI22B2X1AS7)
+                                                   0.13      8.99 f
+  u_alu/u_divider/U136/O (NAND2X2AS7)              0.24      9.23 r
+  u_alu/u_divider/ctmTdsLR_2_1062/O (MUX2X1AS7)    0.39      9.62 f
+  u_alu/u_divider/U159/O (NOR2X1AS7)               0.24      9.86 r
+  u_alu/u_divider/U162/O (OAI12X1AS7)              0.14     10.00 f
+  u_alu/u_divider/U166/O (AOI12X1AS7)              0.38     10.39 r
+  u_alu/u_divider/ctmTdsLR_1_736/O (OAI22B2X1AS7)
+                                                   0.13     10.52 f
+  u_alu/u_divider/U183/O (NAND2X2AS7)              0.27     10.79 r
+  u_alu/u_divider/ctmTdsLR_2_851/O (MUX2X1AS7)     0.40     11.19 f
+  u_alu/u_divider/U205/O (NOR2X1AS7)               0.28     11.46 r
+  u_alu/u_divider/U208/O (OAI12X2AS7)              0.12     11.58 f
+  u_alu/u_divider/U212/O (AOI12X1AS7)              0.35     11.93 r
+  u_alu/u_divider/U239/O (OAI12X1AS7)              0.12     12.05 f
+  u_alu/u_divider/U240/O (NAND2X2AS7)              0.28     12.33 r
+  u_alu/u_divider/U241/O (CLKINVX1AS7)             0.28     12.61 f
+  u_alu/u_divider/ctmTdsLR_1_644/O (NOR2B1X1AS7)   0.35     12.96 r
+  u_alu/u_divider/U297/O (NOR2X1AS7)               0.10     13.07 f
+  u_alu/u_divider/U298/O (NOR2X1AS7)               0.26     13.33 r
+  u_alu/u_divider/U299/O (NAND2X1AS7)              0.09     13.42 f
+  u_alu/u_divider/U21/O (OAI12X1AS7)               0.28     13.70 r
+  u_alu/u_divider/U307/O (NAND2X2AS7)              0.30     14.00 f
+  u_alu/u_divider/ctmTdsLR_1_1008/O (MUX2X1AS7)    0.43     14.43 f
+  u_alu/u_divider/U356/O (NOR2X1AS7)               0.33     14.76 r
+  u_alu/u_divider/U379/O (OAI12X1AS7)              0.18     14.94 f
+  u_alu/u_divider/U383/O (AOI12X1AS7)              0.24     15.18 r
+  u_alu/u_divider/U384/O (OAI12X1AS7)              0.17     15.35 f
+  u_alu/u_divider/ctmTdsLR_1_681/O (AOI22B2X2AS7)
+                                                   0.66     16.01 r
+  u_alu/u_divider/U423/O (AOI12X1AS7)              0.32     16.33 f
+  u_alu/u_divider/U424/O (NOR2X1AS7)               0.41     16.74 r
+  u_alu/u_divider/U435/O (OAI12X1AS7)              0.12     16.86 f
+  u_alu/u_divider/U436/O (AOI12X1AS7)              0.30     17.16 r
+  u_alu/u_divider/U20/O (OAI12X2AS7)               0.17     17.33 f
+  u_alu/u_divider/ctmTdsLR_1_1037/O (AOI22B2X2AS7)
+                                                   0.74     18.06 r
+  u_alu/u_divider/ctmTdsLR_2_1090/O (OAI22B2X1AS7)
+                                                   0.27     18.33 f
+  u_alu/u_divider/U564/O (NOR2X1AS7)               0.43     18.77 r
+  u_alu/u_divider/U573/O (NOR2X1AS7)               0.10     18.87 f
+  u_alu/u_divider/U581/O (AOI12X1AS7)              0.26     19.13 r
+  u_alu/u_divider/U582/O (OAI12X2AS7)              0.19     19.32 f
+  u_alu/u_divider/ctmTdsLR_1_831/O (AOI22B2X2AS7)
+                                                   0.78     20.11 r
+  u_alu/u_divider/ctmTdsLR_1_952/O (MUX2X1AS7)     0.60     20.71 f
+  u_alu/u_divider/U690/O (NAND2X1AS7)              0.20     20.92 r
+  u_alu/u_divider/U692/O (OAI12X1AS7)              0.18     21.10 f
+  u_alu/u_divider/U696/O (AOI12X1AS7)              0.30     21.40 r
+  u_alu/u_divider/U19/O (OAI12X2AS7)               0.21     21.60 f
+  u_alu/u_divider/ctmTdsLR_1_658/O (AOI22B2X2AS7)
+                                                   0.96     22.57 r
+  u_alu/u_divider/ctmTdsLR_1_757/O (OAI22B2X1AS7)
+                                                   0.27     22.84 f
+  u_alu/u_divider/U774/O (NOR2X1AS7)               0.42     23.26 r
+  u_alu/u_divider/U785/O (OAI12X1AS7)              0.10     23.37 f
+  u_alu/u_divider/U786/O (AOI12X1AS7)              0.39     23.76 r
+  u_alu/u_divider/U829/O (OAI12X1AS7)              0.35     24.10 f
+  u_alu/u_divider/U841/O (AOI12X2AS7)              1.12     25.23 r
+  u_alu/u_divider/ctmTdsLR_1_1108/O (MUX2X1AS7)    0.63     25.86 r
+  u_alu/u_divider/U940/O (NOR2X1AS7)               0.09     25.96 f
+  u_alu/u_divider/U948/O (NOR2X1AS7)               0.35     26.30 r
+  u_alu/u_divider/U967/O (NAND2X1AS7)              0.12     26.42 f
+  u_alu/u_divider/U18/O (OAI12X1AS7)               0.92     27.34 r
+  u_alu/u_divider/U987/O (AOI12X4AS7)              0.35     27.68 f
+  u_alu/u_divider/ctmTdsLR_3_966/O (OAI22B2X1AS7)
+                                                   0.38     28.07 f
+  u_alu/u_divider/U1019/O (NOR2X1AS7)              0.30     28.37 r
+  u_alu/u_divider/U1022/O (OAI12X1AS7)             0.15     28.52 f
+  u_alu/u_divider/U1026/O (AOI12X1AS7)             0.43     28.94 r
+  u_alu/u_divider/U4/O (OAI12X2AS7)                0.32     29.26 f
+  u_alu/u_divider/U3/O (AOI12X4AS7)                0.70     29.96 r
+  u_alu/u_divider/U1157/O (MUX2X1AS7)              0.54     30.50 r
+  u_alu/u_divider/U1275/O (NAND2X1AS7)             0.17     30.67 f
+  u_alu/u_divider/U1277/O (OAI12X1AS7)             0.41     31.08 r
+  u_alu/u_divider/U1281/O (AOI12X1AS7)             0.27     31.36 f
+  u_alu/u_divider/U1289/O (OAI12X1AS7)             0.31     31.66 r
+  u_alu/u_divider/U1290/O (AOI12X1AS7)             0.07     31.74 f
+  u_alu/u_divider/U5/O (INVX1AS7)                  1.14     32.88 r
+  u_alu/u_divider/U1420/O (OAI112X1AS7)            0.04     32.92 f
+  u_alu/u_a3/U17/O (AND2X1AS7)                     0.23     33.15 f
+  u_alu/u_b1/U16/O (MUX2X1AS7)                     0.32     33.47 f
+  u_alu/u_c0/U16/O (MUX2X1AS7)                     0.34     33.81 f
+  U62/O (AND2X1AS7)                                0.20     34.01 f
+  n_out_reg/D (SFFQX1AS7)                          0.00     34.01 f
+  data arrival time                                         34.01
+
+  clock clk (rise edge)                           40.00     40.00
+  clock network delay (ideal)                      0.00     40.00
+  n_out_reg/CK (SFFQX1AS7)                         0.00     40.00 r
+  clock uncertainty                               -4.00     36.00
+  library setup time                              -1.53     34.47
+  data required time                                        34.47
+  ------------------------------------------------------------------------
+  data required time                                        34.47
+  data arrival time                                        -34.01
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.46
+
+
+
+  Startpoint: b_reg_reg[9] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: result_out_reg[6] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      3.20      3.20
+
+  b_reg_reg[9]/CK (SFFQX1AS7)                      0.00      3.20 r
+  b_reg_reg[9]/Q (SFFQX1AS7)                       0.77      3.97 r
+  u_alu/u_divider/U14/O (INVX1AS7)                 0.58      4.54 f
+  u_alu/u_divider/U43/O (NAND2X1AS7)               0.32      4.87 r
+  u_alu/u_divider/ctmTdsLR_1_927/O (OR4X1AS7)      0.18      5.05 r
+  u_alu/u_divider/U51/O (NOR2X1AS7)                0.07      5.12 f
+  u_alu/u_divider/U26/O (NAND2X1AS7)               0.19      5.31 r
+  u_alu/u_divider/ctmTdsLR_2_675/O (AOI12B2X1AS7)
+                                                   0.42      5.73 r
+  u_alu/u_divider/U64/O (NOR2X2AS7)                0.06      5.79 f
+  u_alu/u_divider/U67/O (OAI12X1AS7)               0.26      6.05 r
+  u_alu/u_divider/ctmTdsLR_1_817/O (AOI22B2X1AS7)
+                                                   0.13      6.17 f
+  u_alu/u_divider/U74/O (NOR2X2AS7)                0.17      6.34 r
+  u_alu/u_divider/U75/O (NAND2X2AS7)               0.15      6.49 f
+  u_alu/u_divider/U89/O (OAI12X2AS7)               0.28      6.77 r
+  u_alu/u_divider/U90/O (NOR2X1AS7)                0.10      6.87 f
+  u_alu/u_divider/U93/O (OAI12X1AS7)               0.43      7.29 r
+  u_alu/u_divider/U97/O (AOI12X1AS7)               0.14      7.43 f
+  u_alu/u_divider/U98/O (NOR2X2AS7)                0.18      7.61 r
+  u_alu/u_divider/U99/O (NAND2X2AS7)               0.19      7.80 f
+  u_alu/u_divider/U115/O (NOR2X1AS7)               0.25      8.05 r
+  u_alu/u_divider/U116/O (AOI12X1AS7)              0.12      8.17 f
+  u_alu/u_divider/U117/O (NOR2X1AS7)               0.36      8.54 r
+  u_alu/u_divider/U128/O (OAI12X1AS7)              0.10      8.63 f
+  u_alu/u_divider/U129/O (AOI12X1AS7)              0.23      8.86 r
+  u_alu/u_divider/ctmTdsLR_1_930/O (OAI22B2X1AS7)
+                                                   0.13      8.99 f
+  u_alu/u_divider/U136/O (NAND2X2AS7)              0.24      9.23 r
+  u_alu/u_divider/ctmTdsLR_2_1062/O (MUX2X1AS7)    0.39      9.62 f
+  u_alu/u_divider/U159/O (NOR2X1AS7)               0.24      9.86 r
+  u_alu/u_divider/U162/O (OAI12X1AS7)              0.14     10.00 f
+  u_alu/u_divider/U166/O (AOI12X1AS7)              0.38     10.39 r
+  u_alu/u_divider/ctmTdsLR_1_736/O (OAI22B2X1AS7)
+                                                   0.13     10.52 f
+  u_alu/u_divider/U183/O (NAND2X2AS7)              0.27     10.79 r
+  u_alu/u_divider/ctmTdsLR_2_851/O (MUX2X1AS7)     0.40     11.19 f
+  u_alu/u_divider/U205/O (NOR2X1AS7)               0.28     11.46 r
+  u_alu/u_divider/U208/O (OAI12X2AS7)              0.12     11.58 f
+  u_alu/u_divider/U212/O (AOI12X1AS7)              0.35     11.93 r
+  u_alu/u_divider/U239/O (OAI12X1AS7)              0.12     12.05 f
+  u_alu/u_divider/U240/O (NAND2X2AS7)              0.28     12.33 r
+  u_alu/u_divider/U241/O (CLKINVX1AS7)             0.28     12.61 f
+  u_alu/u_divider/ctmTdsLR_1_644/O (NOR2B1X1AS7)   0.35     12.96 r
+  u_alu/u_divider/U297/O (NOR2X1AS7)               0.10     13.07 f
+  u_alu/u_divider/U298/O (NOR2X1AS7)               0.26     13.33 r
+  u_alu/u_divider/U299/O (NAND2X1AS7)              0.09     13.42 f
+  u_alu/u_divider/U21/O (OAI12X1AS7)               0.28     13.70 r
+  u_alu/u_divider/U307/O (NAND2X2AS7)              0.30     14.00 f
+  u_alu/u_divider/ctmTdsLR_1_1008/O (MUX2X1AS7)    0.43     14.43 f
+  u_alu/u_divider/U356/O (NOR2X1AS7)               0.33     14.76 r
+  u_alu/u_divider/U379/O (OAI12X1AS7)              0.18     14.94 f
+  u_alu/u_divider/U383/O (AOI12X1AS7)              0.24     15.18 r
+  u_alu/u_divider/U384/O (OAI12X1AS7)              0.17     15.35 f
+  u_alu/u_divider/ctmTdsLR_1_681/O (AOI22B2X2AS7)
+                                                   0.66     16.01 r
+  u_alu/u_divider/U423/O (AOI12X1AS7)              0.32     16.33 f
+  u_alu/u_divider/U424/O (NOR2X1AS7)               0.41     16.74 r
+  u_alu/u_divider/U435/O (OAI12X1AS7)              0.12     16.86 f
+  u_alu/u_divider/U436/O (AOI12X1AS7)              0.30     17.16 r
+  u_alu/u_divider/U20/O (OAI12X2AS7)               0.17     17.33 f
+  u_alu/u_divider/ctmTdsLR_1_1037/O (AOI22B2X2AS7)
+                                                   0.74     18.06 r
+  u_alu/u_divider/ctmTdsLR_2_1090/O (OAI22B2X1AS7)
+                                                   0.27     18.33 f
+  u_alu/u_divider/U564/O (NOR2X1AS7)               0.43     18.77 r
+  u_alu/u_divider/U573/O (NOR2X1AS7)               0.10     18.87 f
+  u_alu/u_divider/U581/O (AOI12X1AS7)              0.26     19.13 r
+  u_alu/u_divider/U582/O (OAI12X2AS7)              0.19     19.32 f
+  u_alu/u_divider/ctmTdsLR_1_831/O (AOI22B2X2AS7)
+                                                   0.78     20.11 r
+  u_alu/u_divider/ctmTdsLR_1_952/O (MUX2X1AS7)     0.60     20.71 f
+  u_alu/u_divider/U690/O (NAND2X1AS7)              0.20     20.92 r
+  u_alu/u_divider/U692/O (OAI12X1AS7)              0.18     21.10 f
+  u_alu/u_divider/U696/O (AOI12X1AS7)              0.30     21.40 r
+  u_alu/u_divider/U19/O (OAI12X2AS7)               0.21     21.60 f
+  u_alu/u_divider/ctmTdsLR_1_658/O (AOI22B2X2AS7)
+                                                   0.96     22.57 r
+  u_alu/u_divider/ctmTdsLR_1_757/O (OAI22B2X1AS7)
+                                                   0.27     22.84 f
+  u_alu/u_divider/U774/O (NOR2X1AS7)               0.42     23.26 r
+  u_alu/u_divider/U785/O (OAI12X1AS7)              0.10     23.37 f
+  u_alu/u_divider/U786/O (AOI12X1AS7)              0.39     23.76 r
+  u_alu/u_divider/U829/O (OAI12X1AS7)              0.35     24.10 f
+  u_alu/u_divider/U841/O (AOI12X2AS7)              1.12     25.23 r
+  u_alu/u_divider/ctmTdsLR_1_1108/O (MUX2X1AS7)    0.63     25.86 r
+  u_alu/u_divider/U940/O (NOR2X1AS7)               0.09     25.96 f
+  u_alu/u_divider/U948/O (NOR2X1AS7)               0.35     26.30 r
+  u_alu/u_divider/U967/O (NAND2X1AS7)              0.12     26.42 f
+  u_alu/u_divider/U18/O (OAI12X1AS7)               0.92     27.34 r
+  u_alu/u_divider/U987/O (AOI12X4AS7)              0.35     27.68 f
+  u_alu/u_divider/ctmTdsLR_3_966/O (OAI22B2X1AS7)
+                                                   0.38     28.07 f
+  u_alu/u_divider/U1019/O (NOR2X1AS7)              0.30     28.37 r
+  u_alu/u_divider/U1022/O (OAI12X1AS7)             0.15     28.52 f
+  u_alu/u_divider/U1026/O (AOI12X1AS7)             0.43     28.94 r
+  u_alu/u_divider/U4/O (OAI12X2AS7)                0.32     29.26 f
+  u_alu/u_divider/U3/O (AOI12X4AS7)                0.70     29.96 r
+  u_alu/u_divider/U1157/O (MUX2X1AS7)              0.54     30.50 r
+  u_alu/u_divider/U1275/O (NAND2X1AS7)             0.17     30.67 f
+  u_alu/u_divider/U1277/O (OAI12X1AS7)             0.41     31.08 r
+  u_alu/u_divider/U1281/O (AOI12X1AS7)             0.27     31.36 f
+  u_alu/u_divider/U1289/O (OAI12X1AS7)             0.31     31.66 r
+  u_alu/u_divider/U1290/O (AOI12X1AS7)             0.07     31.74 f
+  u_alu/u_divider/U5/O (INVX1AS7)                  1.14     32.88 r
+  u_alu/u_divider/U1337/O (OAI112X1AS7)            0.07     32.95 f
+  u_alu/u_a3/U7/O (AND2X1AS7)                      0.22     33.18 f
+  u_alu/u_b1/U7/O (MUX2X1AS7)                      0.31     33.48 f
+  u_alu/u_c0/U7/O (MUX2X1AS7)                      0.35     33.83 f
+  U69/O (AND2X1AS7)                                0.18     34.01 f
+  result_out_reg[6]/D (SFFQX1AS7)                  0.00     34.01 f
+  data arrival time                                         34.01
+
+  clock clk (rise edge)                           40.00     40.00
+  clock network delay (ideal)                      0.00     40.00
+  result_out_reg[6]/CK (SFFQX1AS7)                 0.00     40.00 r
+  clock uncertainty                               -4.00     36.00
+  library setup time                              -1.52     34.48
+  data required time                                        34.48
+  ------------------------------------------------------------------------
+  data required time                                        34.48
+  data arrival time                                        -34.01
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.47
+
+
+
+  Startpoint: b_reg_reg[9] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: result_out_reg[2] (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      3.20      3.20
+
+  b_reg_reg[9]/CK (SFFQX1AS7)                      0.00      3.20 r
+  b_reg_reg[9]/Q (SFFQX1AS7)                       0.77      3.97 r
+  u_alu/u_divider/U14/O (INVX1AS7)                 0.58      4.54 f
+  u_alu/u_divider/U43/O (NAND2X1AS7)               0.32      4.87 r
+  u_alu/u_divider/ctmTdsLR_1_927/O (OR4X1AS7)      0.18      5.05 r
+  u_alu/u_divider/U51/O (NOR2X1AS7)                0.07      5.12 f
+  u_alu/u_divider/U26/O (NAND2X1AS7)               0.19      5.31 r
+  u_alu/u_divider/ctmTdsLR_2_675/O (AOI12B2X1AS7)
+                                                   0.42      5.73 r
+  u_alu/u_divider/U64/O (NOR2X2AS7)                0.06      5.79 f
+  u_alu/u_divider/U67/O (OAI12X1AS7)               0.26      6.05 r
+  u_alu/u_divider/ctmTdsLR_1_817/O (AOI22B2X1AS7)
+                                                   0.13      6.17 f
+  u_alu/u_divider/U74/O (NOR2X2AS7)                0.17      6.34 r
+  u_alu/u_divider/U75/O (NAND2X2AS7)               0.15      6.49 f
+  u_alu/u_divider/U89/O (OAI12X2AS7)               0.28      6.77 r
+  u_alu/u_divider/U90/O (NOR2X1AS7)                0.10      6.87 f
+  u_alu/u_divider/U93/O (OAI12X1AS7)               0.43      7.29 r
+  u_alu/u_divider/U97/O (AOI12X1AS7)               0.14      7.43 f
+  u_alu/u_divider/U98/O (NOR2X2AS7)                0.18      7.61 r
+  u_alu/u_divider/U99/O (NAND2X2AS7)               0.19      7.80 f
+  u_alu/u_divider/U115/O (NOR2X1AS7)               0.25      8.05 r
+  u_alu/u_divider/U116/O (AOI12X1AS7)              0.12      8.17 f
+  u_alu/u_divider/U117/O (NOR2X1AS7)               0.36      8.54 r
+  u_alu/u_divider/U128/O (OAI12X1AS7)              0.10      8.63 f
+  u_alu/u_divider/U129/O (AOI12X1AS7)              0.23      8.86 r
+  u_alu/u_divider/ctmTdsLR_1_930/O (OAI22B2X1AS7)
+                                                   0.13      8.99 f
+  u_alu/u_divider/U136/O (NAND2X2AS7)              0.24      9.23 r
+  u_alu/u_divider/ctmTdsLR_2_1062/O (MUX2X1AS7)    0.39      9.62 f
+  u_alu/u_divider/U159/O (NOR2X1AS7)               0.24      9.86 r
+  u_alu/u_divider/U162/O (OAI12X1AS7)              0.14     10.00 f
+  u_alu/u_divider/U166/O (AOI12X1AS7)              0.38     10.39 r
+  u_alu/u_divider/ctmTdsLR_1_736/O (OAI22B2X1AS7)
+                                                   0.13     10.52 f
+  u_alu/u_divider/U183/O (NAND2X2AS7)              0.27     10.79 r
+  u_alu/u_divider/ctmTdsLR_2_851/O (MUX2X1AS7)     0.40     11.19 f
+  u_alu/u_divider/U205/O (NOR2X1AS7)               0.28     11.46 r
+  u_alu/u_divider/U208/O (OAI12X2AS7)              0.12     11.58 f
+  u_alu/u_divider/U212/O (AOI12X1AS7)              0.35     11.93 r
+  u_alu/u_divider/U239/O (OAI12X1AS7)              0.12     12.05 f
+  u_alu/u_divider/U240/O (NAND2X2AS7)              0.28     12.33 r
+  u_alu/u_divider/U241/O (CLKINVX1AS7)             0.28     12.61 f
+  u_alu/u_divider/ctmTdsLR_1_644/O (NOR2B1X1AS7)   0.35     12.96 r
+  u_alu/u_divider/U297/O (NOR2X1AS7)               0.10     13.07 f
+  u_alu/u_divider/U298/O (NOR2X1AS7)               0.26     13.33 r
+  u_alu/u_divider/U299/O (NAND2X1AS7)              0.09     13.42 f
+  u_alu/u_divider/U21/O (OAI12X1AS7)               0.28     13.70 r
+  u_alu/u_divider/U307/O (NAND2X2AS7)              0.30     14.00 f
+  u_alu/u_divider/ctmTdsLR_1_1008/O (MUX2X1AS7)    0.43     14.43 f
+  u_alu/u_divider/U356/O (NOR2X1AS7)               0.33     14.76 r
+  u_alu/u_divider/U379/O (OAI12X1AS7)              0.18     14.94 f
+  u_alu/u_divider/U383/O (AOI12X1AS7)              0.24     15.18 r
+  u_alu/u_divider/U384/O (OAI12X1AS7)              0.17     15.35 f
+  u_alu/u_divider/ctmTdsLR_1_681/O (AOI22B2X2AS7)
+                                                   0.66     16.01 r
+  u_alu/u_divider/U423/O (AOI12X1AS7)              0.32     16.33 f
+  u_alu/u_divider/U424/O (NOR2X1AS7)               0.41     16.74 r
+  u_alu/u_divider/U435/O (OAI12X1AS7)              0.12     16.86 f
+  u_alu/u_divider/U436/O (AOI12X1AS7)              0.30     17.16 r
+  u_alu/u_divider/U20/O (OAI12X2AS7)               0.17     17.33 f
+  u_alu/u_divider/ctmTdsLR_1_1037/O (AOI22B2X2AS7)
+                                                   0.74     18.06 r
+  u_alu/u_divider/ctmTdsLR_2_1090/O (OAI22B2X1AS7)
+                                                   0.27     18.33 f
+  u_alu/u_divider/U564/O (NOR2X1AS7)               0.43     18.77 r
+  u_alu/u_divider/U573/O (NOR2X1AS7)               0.10     18.87 f
+  u_alu/u_divider/U581/O (AOI12X1AS7)              0.26     19.13 r
+  u_alu/u_divider/U582/O (OAI12X2AS7)              0.19     19.32 f
+  u_alu/u_divider/ctmTdsLR_1_831/O (AOI22B2X2AS7)
+                                                   0.78     20.11 r
+  u_alu/u_divider/ctmTdsLR_1_952/O (MUX2X1AS7)     0.60     20.71 f
+  u_alu/u_divider/U690/O (NAND2X1AS7)              0.20     20.92 r
+  u_alu/u_divider/U692/O (OAI12X1AS7)              0.18     21.10 f
+  u_alu/u_divider/U696/O (AOI12X1AS7)              0.30     21.40 r
+  u_alu/u_divider/U19/O (OAI12X2AS7)               0.21     21.60 f
+  u_alu/u_divider/ctmTdsLR_1_658/O (AOI22B2X2AS7)
+                                                   0.96     22.57 r
+  u_alu/u_divider/ctmTdsLR_1_757/O (OAI22B2X1AS7)
+                                                   0.27     22.84 f
+  u_alu/u_divider/U774/O (NOR2X1AS7)               0.42     23.26 r
+  u_alu/u_divider/U785/O (OAI12X1AS7)              0.10     23.37 f
+  u_alu/u_divider/U786/O (AOI12X1AS7)              0.39     23.76 r
+  u_alu/u_divider/U829/O (OAI12X1AS7)              0.35     24.10 f
+  u_alu/u_divider/U841/O (AOI12X2AS7)              1.12     25.23 r
+  u_alu/u_divider/ctmTdsLR_1_1108/O (MUX2X1AS7)    0.63     25.86 r
+  u_alu/u_divider/U940/O (NOR2X1AS7)               0.09     25.96 f
+  u_alu/u_divider/U948/O (NOR2X1AS7)               0.35     26.30 r
+  u_alu/u_divider/U967/O (NAND2X1AS7)              0.12     26.42 f
+  u_alu/u_divider/U18/O (OAI12X1AS7)               0.92     27.34 r
+  u_alu/u_divider/U987/O (AOI12X4AS7)              0.35     27.68 f
+  u_alu/u_divider/ctmTdsLR_3_966/O (OAI22B2X1AS7)
+                                                   0.38     28.07 f
+  u_alu/u_divider/U1019/O (NOR2X1AS7)              0.30     28.37 r
+  u_alu/u_divider/U1022/O (OAI12X1AS7)             0.15     28.52 f
+  u_alu/u_divider/U1026/O (AOI12X1AS7)             0.43     28.94 r
+  u_alu/u_divider/U4/O (OAI12X2AS7)                0.32     29.26 f
+  u_alu/u_divider/U3/O (AOI12X4AS7)                0.70     29.96 r
+  u_alu/u_divider/U1157/O (MUX2X1AS7)              0.54     30.50 r
+  u_alu/u_divider/U1275/O (NAND2X1AS7)             0.17     30.67 f
+  u_alu/u_divider/U1277/O (OAI12X1AS7)             0.41     31.08 r
+  u_alu/u_divider/U1281/O (AOI12X1AS7)             0.27     31.36 f
+  u_alu/u_divider/U1289/O (OAI12X1AS7)             0.31     31.66 r
+  u_alu/u_divider/U1290/O (AOI12X1AS7)             0.07     31.74 f
+  u_alu/u_divider/U5/O (INVX1AS7)                  1.14     32.88 r
+  u_alu/u_divider/U1308/O (OAI112X1AS7)            0.07     32.95 f
+  u_alu/u_a3/U4/O (AND2X1AS7)                      0.22     33.17 f
+  u_alu/u_b1/U3/O (MUX2X1AS7)                      0.33     33.49 f
+  u_alu/u_c0/U3/O (MUX2X1AS7)                      0.35     33.84 f
+  U76/O (AND2X1AS7)                                0.17     34.01 f
+  result_out_reg[2]/D (SFFQX1AS7)                  0.00     34.01 f
+  data arrival time                                         34.01
+
+  clock clk (rise edge)                           40.00     40.00
+  clock network delay (ideal)                      0.00     40.00
+  result_out_reg[2]/CK (SFFQX1AS7)                 0.00     40.00 r
+  clock uncertainty                               -4.00     36.00
+  library setup time                              -1.52     34.48
+  data required time                                        34.48
+  ------------------------------------------------------------------------
+  data required time                                        34.48
+  data arrival time                                        -34.01
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.47
 
 
 1

@@ -2,10 +2,10 @@
 Report : qor
 Design : alu_plus_sync_WIDTH16
 Version: Y-2026.03-SP2
-Date   : Mon Nov  2 19:03:54 2026
+Date   : Mon Nov  9 12:18:00 2026
 ****************************************
 Information: The stitching and editing of coupling caps is turned OFF for design 'lib_icc2_alu_plus_sync:alu_plus_sync.design'. (TIM-125)
-Information: Design alu_plus_sync has 2475 nets, 0 global routed, 2473 detail routed. (NEX-024)
+Information: Design alu_plus_sync has 1622 nets, 0 global routed, 1620 detail routed. (NEX-024)
 Information: The RC mode used is DR for design 'alu_plus_sync_WIDTH16'. (NEX-022)
 ---extraction options---
 Corner: default
@@ -19,34 +19,34 @@ Global options:
  extract.enable_coupling_cap    : false
 Extracting design: alu_plus_sync 
 Information: coupling capacitance is lumped to ground. (NEX-030)
-Information: 2473 nets are successfully extracted. (NEX-028)
+Information: 1620 nets are successfully extracted. (NEX-028)
 Warning: Advanced receiver model has not been enabled for detailed routed design. (TIM-204)
 Information: Activity for scenario default was cached, no propagation required. (POW-005)
 Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
-Information: Net estimation statistics: timing graph nets = 2473, routed nets = 2473, across physical hierarchy nets = 0, parasitics cached nets = 2473, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+Information: Net estimation statistics: timing graph nets = 1620, routed nets = 1620, across physical hierarchy nets = 0, parasitics cached nets = 1620, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
 
 
 Scenario           'default'
 Timing Path Group  'clk'
 ----------------------------------------
-Levels of Logic:                    107
-Critical Path Length:             18.53
-Critical Path Slack:              -1.45
-Critical Path Clk Period:         20.00
-Total Negative Slack:            -18.52
-No. of Violating Paths:              18
-Worst Hold Violation:             -0.01
-Total Hold Violation:             -0.01
-No. of Hold Violations:               2
+Levels of Logic:                     98
+Critical Path Length:             32.98
+Critical Path Slack:               0.84
+Critical Path Clk Period:         40.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:             -0.02
+Total Hold Violation:             -0.04
+No. of Hold Violations:               3
 ----------------------------------------
 
 Scenario           'default'
 Timing Path Group  'INREG'
 ----------------------------------------
-Levels of Logic:                      3
-Critical Path Length:              8.82
-Critical Path Slack:               7.59
-Critical Path Clk Period:         20.00
+Levels of Logic:                      2
+Critical Path Length:             16.32
+Critical Path Slack:              15.80
+Critical Path Clk Period:         40.00
 Total Negative Slack:              0.00
 No. of Violating Paths:               0
 Worst Hold Violation:              0.00
@@ -57,27 +57,27 @@ No. of Hold Violations:               0
 Scenario           'default'
 Timing Path Group  'REGOUT'
 ----------------------------------------
-Levels of Logic:                      1
-Critical Path Length:              0.85
-Critical Path Slack:               5.56
-Critical Path Clk Period:         20.00
+Levels of Logic:                     10
+Critical Path Length:              3.45
+Critical Path Slack:              11.85
+Critical Path Clk Period:         40.00
 Total Negative Slack:              0.00
 No. of Violating Paths:               0
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
+Worst Hold Violation:             -2.50
+Total Hold Violation:            -14.83
+No. of Hold Violations:               8
 ----------------------------------------
 
 
 Cell Count
 ----------------------------------------
 Hierarchical Cell Count:             10
-Hierarchical Port Count:            544
-Leaf Cell Count:                   2442
-Buf/Inv Cell Count:                 581
-Buf Cell Count:                     134
-Inv Cell Count:                     447
-Combinational Cell Count:          2387
+Hierarchical Port Count:            532
+Leaf Cell Count:                   1588
+Buf/Inv Cell Count:                 282
+Buf Cell Count:                     150
+Inv Cell Count:                     132
+Combinational Cell Count:          1533
    Single-bit Isolation Cell Count:                        0
    Multi-bit Isolation Cell Count:                         0
    Isolation Cell Banking Ratio:                           0.00%
@@ -100,24 +100,24 @@ Macro Count:                          0
 
 Area
 ----------------------------------------
-Combinational Area:            27682.10
-Noncombinational Area:          2412.75
-Buf/Inv Area:                   4036.84
-Total Buffer Area:              1432.17
-Total Inverter Area:            2604.67
+Combinational Area:            17487.59
+Noncombinational Area:          2315.98
+Buf/Inv Area:                   3465.91
+Total Buffer Area:              2772.40
+Total Inverter Area:             693.50
 Macro/Black Box Area:              0.00
 Net Area:                             0
-Net XLength:                   30026.94
-Net YLength:                   32174.33
+Net XLength:                   19132.34
+Net YLength:                   21321.21
 ----------------------------------------
-Cell Area (netlist):                          30094.85
-Cell Area (netlist and physical only):        32965.63
-Net Length:                    62201.26
+Cell Area (netlist):                          19803.57
+Cell Area (netlist and physical only):        21613.13
+Net Length:                    40453.55
 
 
 Design Rules
 ----------------------------------------
-Total Number of Nets:              2475
+Total Number of Nets:              1622
 Nets with Violations:                 0
 Max Trans Violations:                 0
 Max Cap Violations:                   0

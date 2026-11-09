@@ -12,9 +12,9 @@ PDC app_options settings =========
 	place.legalize.preroute_shape_merge_distance: 0.0
 	place.legalize.enable_non_preferred_direction_span_check: 0
 
-Layer METAL1: cached 0 shapes out of 88 total shapes.
+Layer METAL1: cached 0 shapes out of 69 total shapes.
 Layer METAL2: cached 0 shapes out of 0 total shapes.
-Cached 968 vias out of 1513 total vias.
+Cached 622 vias out of 974 total vias.
 
 check_legality for block design alu_plus_sync_WIDTH16 ... 
 Information: Initializing classic cellmap without advanced rules enabled and without PDC enabled
@@ -32,9 +32,9 @@ Information: The following app options are used in cellmap
         place.common.use_placement_model : false
         place.common.enable_advanced_placement_model : true
         cts.placement.cell_spacing_rule_style : maximum
-Total 0.0161 seconds to build cellmap data
+Total 0.0132 seconds to build cellmap data
 Information: Creating classic rule checker.
-=====> Processed 62 ref cells (0 fillers) from library
+=====> Processed 30 ref cells (0 fillers) from library
 Design has no advanced rules
 Checking legality
 Checking cell legality:
@@ -51,10 +51,10 @@ Checking packing rule legality.
 
 VIOLATIONS BY CATEGORY:
    MOVABLE  APP-FIXED USER-FIXED  DESCRIPTION
-      1154          0          0  Two objects overlap.
+       775          0          0  Two objects overlap.
          0          0          0  A cell violates a pnet.
          0          0          0  A cell is illegal at a site.
-      2661          0          0  A cell is not aligned with a site.
+      1786          0          0  A cell is not aligned with a site.
          0          0          0  A cell has an illegal orientation.
          0          0          0  A cell spacing rule is violated.
          0          0          0  A layer rule is violated.
@@ -62,15 +62,15 @@ VIOLATIONS BY CATEGORY:
          0          0          0  Two cells violate cts margins.
          0          0          0  Two cells violate coloring.
 
-      3815          0          0  TOTAL
+      2561          0          0  TOTAL
 
-TOTAL 3815 Violations.
+TOTAL 2561 Violations.
 
 VIOLATIONS BY SUBCATEGORY:
      MOVABLE  APP-FIXED USER-FIXED  DESCRIPTION
 
-      1154          0          0    Two objects overlap.
-        1154          0          0    Two cells overlap.
+       775          0          0    Two objects overlap.
+         775          0          0    Two cells overlap.
            0          0          0    Two cells have overlapping keepout margins.
            0          0          0    A cell overlaps a blockage.
            0          0          0    A cell keepout margin overlaps a blockage.
@@ -83,8 +83,8 @@ VIOLATIONS BY SUBCATEGORY:
            0          0          0    A cell violates legal index rule.
            0          0          0    A cell has the wrong variant for its location.
 
-      2661          0          0    A cell is not aligned with a site.
-        2661          0          0    A cell is not aligned with the base site.
+      1786          0          0    A cell is not aligned with a site.
+        1786          0          0    A cell is not aligned with the base site.
            0          0          0    A cell is not aligned with an overlaid site.
 
          0          0          0    A cell has an illegal orientation.

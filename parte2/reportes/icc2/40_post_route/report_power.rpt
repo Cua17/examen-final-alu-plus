@@ -3,7 +3,7 @@ Report : power
         -significant_digits 2
 Design : alu_plus_sync_WIDTH16
 Version: Y-2026.03-SP2
-Date   : Mon Nov  2 19:04:15 2026
+Date   : Mon Nov  9 12:18:13 2026
 ****************************************
 Mode: default
 Corner: default
@@ -25,11 +25,11 @@ Supply nets:
 VDD (power) probability 1.00 (default)
 VSS (ground) probability 1.00 (default)
 
-  Cell Internal Power    = 1.38e+09 pW ( 55.6%)
-  Net Switching Power    = 1.10e+09 pW ( 44.4%)
-Total Dynamic Power      = 2.49e+09 pW (100.0%)
+  Cell Internal Power    = 5.63e+08 pW ( 59.7%)
+  Net Switching Power    = 3.80e+08 pW ( 40.3%)
+Total Dynamic Power      = 9.43e+08 pW (100.0%)
 
-Cell Leakage Power       = 6.14e+03 pW
+Cell Leakage Power       = 3.91e+03 pW
 
 
   Attributes
@@ -42,10 +42,10 @@ Power Group         Internal Power        Switching Power          Leakage Power
 io_pad                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
 memory                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
 black_box                 0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
-clock_network             4.84e+08               2.61e+08               5.17e+01               7.45e+08    ( 29.9%)        i
-register                  6.94e+07               5.12e+07               4.31e+02               1.21e+08    (  4.8%)         
+clock_network             1.87e+08               1.24e+08               1.97e+01               3.12e+08    ( 33.0%)        i
+register                  2.45e+07               2.45e+07               3.20e+02               4.90e+07    (  5.2%)         
 sequential                0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
-combinational             8.32e+08               7.92e+08               5.66e+03               1.62e+09    ( 65.2%)         
+combinational             3.51e+08               2.31e+08               3.57e+03               5.82e+08    ( 61.8%)         
 -----------------------------------------------------------------------------------------------------------------------------
-Total                     1.38e+09 pW            1.10e+09 pW            6.14e+03 pW            2.49e+09 pW
+Total                     5.63e+08 pW            3.80e+08 pW            3.91e+03 pW            9.43e+08 pW
 1

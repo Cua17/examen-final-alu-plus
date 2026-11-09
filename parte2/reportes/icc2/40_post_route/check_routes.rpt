@@ -30,40 +30,35 @@ Warning: Layer METAL4 default pitch 0.480 may be too small to handle up/down via
 Information: When applicable Min-max layer allow_pin_connection mode will allow paths of length 8.07 outside the layer range. (ZRT-707)
 Information: When applicable Min-max layer allow_pin_connection mode will allow paths of length 8.07 outside the layer range on clock nets. (ZRT-718)
 Information: When applicable layer based tapering will taper up to 0.00 in distance from the pin. (ZRT-706)
-Warning: Standard cell pin AND3X4AS7/O has no valid via regions. (ZRT-044)
-Warning: Standard cell pin NAND2B1X4AS7/I1 has no valid via regions. (ZRT-044)
-Warning: Standard cell pin AND2X1AS7/O has no valid via regions. (ZRT-044)
-Warning: Standard cell pin CLKBUFX4AS7/O has no valid via regions. (ZRT-044)
-Warning: Standard cell pin NAND3B1X2AS7/I2 has no valid via regions. (ZRT-044)
-Warning: Standard cell pin NAND4X4AS7/I4 has no valid via regions. (ZRT-044)
-Warning: Standard cell pin OR2X1AS7/O has no valid via regions. (ZRT-044)
-Warning: Standard cell pin BUFX8AS7/O has no valid via regions. (ZRT-044)
-Warning: Standard cell pin OR4X2AS7/O has no valid via regions. (ZRT-044)
-Warning: Standard cell pin NOR2B1X4AS7/I1 has no valid via regions. (ZRT-044)
-Warning: Standard cell pin NAND4B1X2AS7/I2 has no valid via regions. (ZRT-044)
-Warning: Standard cell pin NAND4B1X2AS7/I3 has no valid via regions. (ZRT-044)
-Warning: Standard cell pin CLKBUFX8AS7/O has no valid via regions. (ZRT-044)
-Warning: Standard cell pin NOR3X2AS7/I2 has no valid via regions. (ZRT-044)
-Warning: Standard cell pin CLKBUFX12AS7/O has no valid via regions. (ZRT-044)
-Warning: Standard cell pin NAND4X2AS7/I2 has no valid via regions. (ZRT-044)
-Warning: Standard cell pin NAND4X2AS7/I3 has no valid via regions. (ZRT-044)
 Warning: Standard cell pin BUFX4AS7/O has no valid via regions. (ZRT-044)
+Warning: Standard cell pin BUFX8AS7/O has no valid via regions. (ZRT-044)
+Warning: Standard cell pin CLKBUFX8AS7/O has no valid via regions. (ZRT-044)
+Warning: Standard cell pin CLKBUFX4AS7/O has no valid via regions. (ZRT-044)
 Warning: Standard cell pin BUFX12AS7/O has no valid via regions. (ZRT-044)
 Warning: Standard cell pin NOR3B1X2AS7/I2 has no valid via regions. (ZRT-044)
-Info: Number of printing ZRT-044 has exceeded limit 20.
+Warning: Standard cell pin CLKBUFX12AS7/O has no valid via regions. (ZRT-044)
+Warning: Standard cell pin NOR3X2AS7/I2 has no valid via regions. (ZRT-044)
+Warning: Standard cell pin OR2X1AS7/O has no valid via regions. (ZRT-044)
+Warning: Standard cell pin AND4X1AS7/O has no valid via regions. (ZRT-044)
+Warning: Standard cell pin AND2X1AS7/O has no valid via regions. (ZRT-044)
+Warning: Standard cell pin FAX1AS7/CI has no valid via regions. (ZRT-044)
+Warning: Standard cell pin OR4X1AS7/O has no valid via regions. (ZRT-044)
+Warning: Standard cell pin OR3X1AS7/O has no valid via regions. (ZRT-044)
+Warning: Standard cell pin NOR3B1X4AS7/I1 has no valid via regions. (ZRT-044)
+Warning: Standard cell pin NOR3X4AS7/I1 has no valid via regions. (ZRT-044)
 
 
 Start checking for open nets ... 
 
-Total number of nets = 2475, of which 0 are not extracted
+Total number of nets = 1628, of which 0 are not extracted
 Total number of open nets = 0, of which 0 are frozen
 
-Check 2475 nets, 0 have Errors
+Check 1628 nets, 0 have Errors
 
 [CHECK OPEN NETS] Elapsed real time: 0:00:00 
 [CHECK OPEN NETS] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
 [CHECK OPEN NETS] Stage (MB): Used    0  Alloctr    0  Proc    0 
-[CHECK OPEN NETS] Total (MB): Used    0  Alloctr    0  Proc 9373 
+[CHECK OPEN NETS] Total (MB): Used    0  Alloctr    0  Proc 9114 
 Printing options for 'route.common.*'
 common.eco_route_fix_existing_drc                       :	 true                
 common.verbose_level                                    :	 0                   
@@ -75,23 +70,19 @@ detail.enable_auto_ndr_flow                             :	 true
 
 Printing options for 'route.auto_via_ladder.*'
 
-There are 0 out of total 2475 nets with relaxed min layer from GR.
+There are 0 out of total 1628 nets with relaxed min layer from GR.
 
 Begin full DRC check ...
 
 Information: Using 8 threads for routing. (ZRT-444)
-Checked	2/9 Partitions, Violations =	0
-Checked	3/9 Partitions, Violations =	0
-Checked	4/9 Partitions, Violations =	0
-Checked	5/9 Partitions, Violations =	0
-Checked	6/9 Partitions, Violations =	0
-Checked	7/9 Partitions, Violations =	0
-Checked	8/9 Partitions, Violations =	0
-Checked	9/9 Partitions, Violations =	0
+Checked	1/4 Partitions, Violations =	0
+Checked	2/4 Partitions, Violations =	0
+Checked	3/4 Partitions, Violations =	0
+Checked	4/4 Partitions, Violations =	0
 [DRC CHECK] Elapsed real time: 0:00:00 
 [DRC CHECK] Elapsed cpu  time: sys=0:00:00 usr=0:00:01 total=0:00:01
 [DRC CHECK] Stage (MB): Used    0  Alloctr    0  Proc    0 
-[DRC CHECK] Total (MB): Used    0  Alloctr    0  Proc 9373 
+[DRC CHECK] Total (MB): Used    0  Alloctr    0  Proc 9114 
 Warning: No antenna rules defined, Skip antenna analysis. (ZRT-309)
 
 DRC-SUMMARY:
@@ -101,77 +92,76 @@ Information: The app option "route.detail.report_soft_drc_separately" will be on
 	@@@@@@@ TOTAL SOFT VIOLATIONS =	0
 
 
-Total Wire Length =                    53361 micron
-Total Number of Contacts =             15054
-Total Number of Wires =                14545
-Total Number of PtConns =              1923
-Total Number of Routed Wires =       14170
-Total Routed Wire Length =           53034 micron
-Total Number of Routed Contacts =       15054
-	Layer              METAL1 :       1638 micron
-	Layer              METAL2 :      22921 micron
-	Layer              METAL3 :      22718 micron
-	Layer              METAL4 :       5247 micron
-	Layer              METAL5 :        509 micron
-	Via         V45_X_V1S1E11 :         33
-	Via    V34_X_V1S1E11(rot) :        559
-	Via        V23_HH_V1S1E11 :          1
-	Via         V23_X_V1S1E11 :       6827
-	Via        V12_HH_V1S1E11 :         30
-	Via   V12_HH_V1S1E11(rot) :         14
-	Via        V12_VH_V1S1E11 :         81
+Total Wire Length =                    33092 micron
+Total Number of Contacts =             11049
+Total Number of Wires =                10644
+Total Number of PtConns =              1513
+Total Number of Routed Wires =       10397
+Total Routed Wire Length =           32871 micron
+Total Number of Routed Contacts =       11049
+	Layer              METAL1 :        952 micron
+	Layer              METAL2 :      14508 micron
+	Layer              METAL3 :      13924 micron
+	Layer              METAL4 :       3166 micron
+	Layer              METAL5 :        322 micron
+	Via         V45_X_V1S1E11 :         30
+	Via    V34_X_V1S1E11(rot) :        519
+	Via        V23_HH_V1S1E11 :          2
+	Via         V23_X_V1S1E11 :       5132
+	Via        V12_HH_V1S1E11 :         41
+	Via        V12_VH_V1S1E11 :         75
 	Via   V12_VH_V1S1E11(rot) :          6
-	Via        V12_VV_V1S1E11 :       1319
-	Via   V12_VV_V1S1E11(rot) :         27
-	Via         V12_X_V1S1E11 :       6157
+	Via        V12_VV_V1S1E11 :       1256
+	Via   V12_VV_V1S1E11(rot) :         39
+	Via         V12_X_V1S1E11 :       3949
 
  
 Redundant via conversion report:
 --------------------------------
 
-  Total optimized via conversion rate =  0.00% (0 / 15054 vias)
+  Total optimized via conversion rate =  0.00% (0 / 11049 vias)
  
-    Layer VIA1       =  0.00% (0      / 7634    vias)
+    Layer VIA1       =  0.00% (0      / 5366    vias)
         Un-optimized =  0.00% (0       vias)
-        Un-mapped    = 100.00% (7634    vias)
-    Layer VIA2       =  0.00% (0      / 6828    vias)
+        Un-mapped    = 100.00% (5366    vias)
+    Layer VIA2       =  0.00% (0      / 5134    vias)
         Un-optimized =  0.00% (0       vias)
-        Un-mapped    = 100.00% (6828    vias)
-    Layer VIA3       =  0.00% (0      / 559     vias)
+        Un-mapped    = 100.00% (5134    vias)
+    Layer VIA3       =  0.00% (0      / 519     vias)
         Un-optimized =  0.00% (0       vias)
-        Un-mapped    = 100.00% (559     vias)
-    Layer VIA4       =  0.00% (0      / 33      vias)
+        Un-mapped    = 100.00% (519     vias)
+    Layer VIA4       =  0.00% (0      / 30      vias)
         Un-optimized =  0.00% (0       vias)
-        Un-mapped    = 100.00% (33      vias)
+        Un-mapped    = 100.00% (30      vias)
  
-  Total double via conversion rate    =  0.00% (0 / 15054 vias)
+  Total double via conversion rate    =  0.00% (0 / 11049 vias)
  
-    Layer VIA1       =  0.00% (0      / 7634    vias)
-    Layer VIA2       =  0.00% (0      / 6828    vias)
-    Layer VIA3       =  0.00% (0      / 559     vias)
-    Layer VIA4       =  0.00% (0      / 33      vias)
+    Layer VIA1       =  0.00% (0      / 5366    vias)
+    Layer VIA2       =  0.00% (0      / 5134    vias)
+    Layer VIA3       =  0.00% (0      / 519     vias)
+    Layer VIA4       =  0.00% (0      / 30      vias)
  
-  The optimized via conversion rate based on total routed via count =  0.00% (0 / 15054 vias)
+  The optimized via conversion rate based on total routed via count =  0.00% (0 / 11049 vias)
  
-    Layer VIA1       =  0.00% (0      / 7634    vias)
+    Layer VIA1       =  0.00% (0      / 5366    vias)
         Un-optimized =  0.00% (0       vias)
-        Un-mapped    = 100.00% (7634    vias)
-    Layer VIA2       =  0.00% (0      / 6828    vias)
+        Un-mapped    = 100.00% (5366    vias)
+    Layer VIA2       =  0.00% (0      / 5134    vias)
         Un-optimized =  0.00% (0       vias)
-        Un-mapped    = 100.00% (6828    vias)
-    Layer VIA3       =  0.00% (0      / 559     vias)
+        Un-mapped    = 100.00% (5134    vias)
+    Layer VIA3       =  0.00% (0      / 519     vias)
         Un-optimized =  0.00% (0       vias)
-        Un-mapped    = 100.00% (559     vias)
-    Layer VIA4       =  0.00% (0      / 33      vias)
+        Un-mapped    = 100.00% (519     vias)
+    Layer VIA4       =  0.00% (0      / 30      vias)
         Un-optimized =  0.00% (0       vias)
-        Un-mapped    = 100.00% (33      vias)
+        Un-mapped    = 100.00% (30      vias)
  
 
 
 Verify Summary:
 
 
-Total number of nets = 2475, of which 0 are not extracted
+Total number of nets = 1628, of which 0 are not extracted
 Total number of open nets = 0, of which 0 are frozen
 Total number of excluded ports = 0 ports of 0 unplaced cells connected to 0 nets
                                  0 ports without pins of 0 cells connected to 0 nets

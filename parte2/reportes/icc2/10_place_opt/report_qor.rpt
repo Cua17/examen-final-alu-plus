@@ -2,42 +2,42 @@
 Report : qor
 Design : alu_plus_sync_WIDTH16
 Version: Y-2026.03-SP2
-Date   : Mon Nov  2 19:00:20 2026
+Date   : Mon Nov  9 12:16:54 2026
 ****************************************
 Information: The stitching and editing of coupling caps is turned OFF for design 'lib_icc2_alu_plus_sync:alu_plus_sync.design'. (TIM-125)
 Information: Design Average RC for design alu_plus_sync  (NEX-011)
-Information: r = 0.376014 ohm/um, via_r = 13.500001 ohm/cut, c = 0.134439 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
-Information: r = 0.458333 ohm/um, via_r = 13.499999 ohm/cut, c = 0.140574 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
+Information: r = 0.376708 ohm/um, via_r = 13.499999 ohm/cut, c = 0.133427 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
+Information: r = 0.458333 ohm/um, via_r = 13.499999 ohm/cut, c = 0.139855 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
 Information: The RC mode used is VR for design 'alu_plus_sync_WIDTH16'. (NEX-022)
 Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
-Information: Net estimation statistics: timing graph nets = 2558, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 2558, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+Information: Net estimation statistics: timing graph nets = 1532, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 1532, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
 
 
 Scenario           'default'
 Timing Path Group  'clk'
 ----------------------------------------
-Levels of Logic:                    114
-Critical Path Length:             19.35
-Critical Path Slack:              -3.02
-Critical Path Clk Period:         20.00
-Total Negative Slack:            -49.66
-No. of Violating Paths:              18
-Worst Hold Violation:             -0.50
-Total Hold Violation:             -6.17
-No. of Hold Violations:              19
+Levels of Logic:                    100
+Critical Path Length:             31.25
+Critical Path Slack:               0.02
+Critical Path Clk Period:         40.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:             -2.09
+Total Hold Violation:            -40.87
+No. of Hold Violations:              20
 ----------------------------------------
 
 Scenario           'default'
 Timing Path Group  'INREG'
 ----------------------------------------
 Levels of Logic:                      1
-Critical Path Length:              8.18
-Critical Path Slack:               7.26
-Critical Path Clk Period:         20.00
+Critical Path Length:             16.15
+Critical Path Slack:              15.12
+Critical Path Clk Period:         40.00
 Total Negative Slack:              0.00
 No. of Violating Paths:               0
-Worst Hold Violation:             -1.19
-Total Hold Violation:            -39.93
+Worst Hold Violation:             -2.57
+Total Hold Violation:            -88.94
 No. of Hold Violations:              35
 ----------------------------------------
 
@@ -45,13 +45,13 @@ Scenario           'default'
 Timing Path Group  'REGOUT'
 ----------------------------------------
 Levels of Logic:                      0
-Critical Path Length:              0.79
-Critical Path Slack:               5.45
-Critical Path Clk Period:         20.00
+Critical Path Length:              0.75
+Critical Path Slack:              12.05
+Critical Path Clk Period:         40.00
 Total Negative Slack:              0.00
 No. of Violating Paths:               0
-Worst Hold Violation:             -1.01
-Total Hold Violation:            -17.22
+Worst Hold Violation:             -2.40
+Total Hold Violation:            -47.94
 No. of Hold Violations:              20
 ----------------------------------------
 
@@ -59,12 +59,12 @@ No. of Hold Violations:              20
 Cell Count
 ----------------------------------------
 Hierarchical Cell Count:             10
-Hierarchical Port Count:            541
-Leaf Cell Count:                   2526
-Buf/Inv Cell Count:                 649
-Buf Cell Count:                     139
-Inv Cell Count:                     510
-Combinational Cell Count:          2471
+Hierarchical Port Count:            532
+Leaf Cell Count:                   1500
+Buf/Inv Cell Count:                 171
+Buf Cell Count:                       2
+Inv Cell Count:                     169
+Combinational Cell Count:          1445
    Single-bit Isolation Cell Count:                        0
    Multi-bit Isolation Cell Count:                         0
    Isolation Cell Banking Ratio:                           0.00%
@@ -87,24 +87,24 @@ Macro Count:                          0
 
 Area
 ----------------------------------------
-Combinational Area:            27828.86
-Noncombinational Area:          2419.20
-Buf/Inv Area:                   4133.61
-Total Buffer Area:              1185.41
-Total Inverter Area:            2948.20
+Combinational Area:            15079.68
+Noncombinational Area:          2330.50
+Buf/Inv Area:                    859.62
+Total Buffer Area:                16.13
+Total Inverter Area:             843.49
 Macro/Black Box Area:              0.00
 Net Area:                             0
-Net XLength:                   25370.94
-Net YLength:                   27527.57
+Net XLength:                   14587.59
+Net YLength:                   15804.53
 ----------------------------------------
-Cell Area (netlist):                          30248.06
-Cell Area (netlist and physical only):        33118.85
-Net Length:                    52898.51
+Cell Area (netlist):                          17410.18
+Cell Area (netlist and physical only):        19219.74
+Net Length:                    30392.12
 
 
 Design Rules
 ----------------------------------------
-Total Number of Nets:              2560
+Total Number of Nets:              1534
 Nets with Violations:                 0
 Max Trans Violations:                 0
 Max Cap Violations:                   0

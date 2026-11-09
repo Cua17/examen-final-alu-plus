@@ -4,7 +4,7 @@ Information: Updating design information... (UID-85)
 Report : qor
 Design : alu_plus_sync_WIDTH16
 Version: X-2025.06-SP5-5
-Date   : Mon Nov  2 14:20:27 2026
+Date   : Mon Nov  9 12:15:10 2026
 ****************************************
 
 
@@ -12,8 +12,8 @@ Date   : Mon Nov  2 14:20:27 2026
   -----------------------------------
   Levels of Logic:               1.00
   Critical Path Length:          0.12
-  Critical Path Slack:           8.91
-  Critical Path Clk Period:     20.00
+  Critical Path Slack:          18.36
+  Critical Path Clk Period:     40.00
   Total Negative Slack:          0.00
   No. of Violating Paths:        0.00
   Worst Hold Violation:          0.00
@@ -24,9 +24,9 @@ Date   : Mon Nov  2 14:20:27 2026
   Timing Path Group 'REGOUT'
   -----------------------------------
   Levels of Logic:               0.00
-  Critical Path Length:          0.73
-  Critical Path Slack:           7.27
-  Critical Path Clk Period:     20.00
+  Critical Path Length:          0.69
+  Critical Path Slack:          15.31
+  Critical Path Clk Period:     40.00
   Total Negative Slack:          0.00
   No. of Violating Paths:        0.00
   Worst Hold Violation:          0.00
@@ -36,10 +36,10 @@ Date   : Mon Nov  2 14:20:27 2026
 
   Timing Path Group 'clk'
   -----------------------------------
-  Levels of Logic:             122.00
-  Critical Path Length:         17.06
-  Critical Path Slack:           0.00
-  Critical Path Clk Period:     20.00
+  Levels of Logic:             101.00
+  Critical Path Length:         30.05
+  Critical Path Slack:           4.43
+  Critical Path Clk Period:     40.00
   Total Negative Slack:          0.00
   No. of Violating Paths:        0.00
   Worst Hold Violation:          0.00
@@ -52,12 +52,12 @@ Date   : Mon Nov  2 14:20:27 2026
   -----------------------------------
   Hierarchical Cell Count:         10
   Hierarchical Port Count:        512
-  Leaf Cell Count:               2661
-  Buf/Inv Cell Count:             878
-  Buf Cell Count:                 138
-  Inv Cell Count:                 740
+  Leaf Cell Count:               1786
+  Buf/Inv Cell Count:             357
+  Buf Cell Count:                  17
+  Inv Cell Count:                 340
   CT Buf/Inv Cell Count:            0
-  Combinational Cell Count:      2606
+  Combinational Cell Count:      1731
   Sequential Cell Count:           55
   Macro Count:                      0
   -----------------------------------
@@ -65,21 +65,21 @@ Date   : Mon Nov  2 14:20:27 2026
 
   Area
   -----------------------------------
-  Combinational Area:    27743.385921
-  Noncombinational Area:  2704.665623
-  Buf/Inv Area:           5369.011161
-  Total Buffer Area:          1128.96
-  Total Inverter Area:        4240.05
+  Combinational Area:    15861.888125
+  Noncombinational Area:  2615.961609
+  Buf/Inv Area:           1782.143964
+  Total Buffer Area:           137.09
+  Total Inverter Area:        1645.06
   Macro/Black Box Area:      0.000000
   Net Area:                  0.000000
   -----------------------------------
-  Cell Area:             30448.051544
-  Design Area:           30448.051544
+  Cell Area:             18477.849734
+  Design Area:           18477.849734
 
 
   Design Rules
   -----------------------------------
-  Total Number of Nets:          2742
+  Total Number of Nets:          1867
   Nets With Violations:             0
   Max Trans Violations:             0
   Max Cap Violations:               0
@@ -91,11 +91,11 @@ Date   : Mon Nov  2 14:20:27 2026
   Compile CPU Statistics
   -----------------------------------------
   Resource Sharing:                    0.36
-  Logic Optimization:                  7.42
-  Mapping Optimization:              170.78
+  Logic Optimization:                  1.56
+  Mapping Optimization:                2.26
   -----------------------------------------
-  Overall Compile Time:              193.30
-  Overall Compile Wall Clock Time:   194.44
+  Overall Compile Time:               11.24
+  Overall Compile Wall Clock Time:    11.61
 
   --------------------------------------------------------------------
 

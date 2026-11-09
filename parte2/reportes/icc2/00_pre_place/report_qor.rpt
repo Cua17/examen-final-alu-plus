@@ -2,15 +2,15 @@
 Report : qor
 Design : alu_plus_sync_WIDTH16
 Version: Y-2026.03-SP2
-Date   : Mon Nov  2 18:56:57 2026
+Date   : Mon Nov  9 12:15:41 2026
 ****************************************
 Information: The stitching and editing of coupling caps is turned OFF for design 'lib_icc2_alu_plus_sync:alu_plus_sync.design'. (TIM-125)
 Information: Design Average RC for design alu_plus_sync  (NEX-011)
-Information: r = 0.376014 ohm/um, via_r = 13.500001 ohm/cut, c = 0.138907 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
-Information: r = 0.458333 ohm/um, via_r = 13.499999 ohm/cut, c = 0.143101 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
+Information: r = 0.376625 ohm/um, via_r = 13.499999 ohm/cut, c = 0.139116 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
+Information: r = 0.458333 ohm/um, via_r = 13.499999 ohm/cut, c = 0.145422 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
 Information: The RC mode used is VR for design 'alu_plus_sync_WIDTH16'. (NEX-022)
 Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
-Information: Net estimation statistics: timing graph nets = 2693, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 2693, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+Information: Net estimation statistics: timing graph nets = 1818, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 1818, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
 ************************************************************
 Timer Settings:
 Delay Calculation Style:                   auto
@@ -29,14 +29,14 @@ Smart Arc Optimization:                    disabled
 Scenario           'default'
 Timing Path Group  'clk'
 ----------------------------------------
-Levels of Logic:                    119
-Critical Path Length:             22.09
-Critical Path Slack:              -6.63
-Critical Path Clk Period:         20.00
-Total Negative Slack:           -115.36
+Levels of Logic:                    102
+Critical Path Length:             42.18
+Critical Path Slack:             -10.90
+Critical Path Clk Period:         40.00
+Total Negative Slack:           -188.80
 No. of Violating Paths:              18
-Worst Hold Violation:             -0.52
-Total Hold Violation:             -8.25
+Worst Hold Violation:             -2.03
+Total Hold Violation:            -34.11
 No. of Hold Violations:              20
 ----------------------------------------
 
@@ -44,13 +44,13 @@ Scenario           'default'
 Timing Path Group  'INREG'
 ----------------------------------------
 Levels of Logic:                      1
-Critical Path Length:              8.15
-Critical Path Slack:               7.29
-Critical Path Clk Period:         20.00
+Critical Path Length:             16.14
+Critical Path Slack:              15.13
+Critical Path Clk Period:         40.00
 Total Negative Slack:              0.00
 No. of Violating Paths:               0
-Worst Hold Violation:             -1.17
-Total Hold Violation:            -40.33
+Worst Hold Violation:             -2.57
+Total Hold Violation:            -89.21
 No. of Hold Violations:              35
 ----------------------------------------
 
@@ -58,13 +58,13 @@ Scenario           'default'
 Timing Path Group  'REGOUT'
 ----------------------------------------
 Levels of Logic:                      0
-Critical Path Length:              0.81
-Critical Path Slack:               5.59
-Critical Path Clk Period:         20.00
+Critical Path Length:              0.80
+Critical Path Slack:              12.00
+Critical Path Clk Period:         40.00
 Total Negative Slack:              0.00
 No. of Violating Paths:               0
-Worst Hold Violation:             -1.04
-Total Hold Violation:            -19.95
+Worst Hold Violation:             -2.41
+Total Hold Violation:            -47.78
 No. of Hold Violations:              20
 ----------------------------------------
 
@@ -73,11 +73,11 @@ Cell Count
 ----------------------------------------
 Hierarchical Cell Count:             10
 Hierarchical Port Count:            532
-Leaf Cell Count:                   2661
-Buf/Inv Cell Count:                 878
-Buf Cell Count:                     138
-Inv Cell Count:                     740
-Combinational Cell Count:          2606
+Leaf Cell Count:                   1786
+Buf/Inv Cell Count:                 357
+Buf Cell Count:                      17
+Inv Cell Count:                     340
+Combinational Cell Count:          1731
    Single-bit Isolation Cell Count:                        0
    Multi-bit Isolation Cell Count:                         0
    Isolation Cell Banking Ratio:                           0.00%
@@ -100,27 +100,27 @@ Macro Count:                          0
 
 Area
 ----------------------------------------
-Combinational Area:            28053.04
-Noncombinational Area:          2395.01
-Buf/Inv Area:                   5369.01
-Total Buffer Area:              1128.96
-Total Inverter Area:            4240.05
+Combinational Area:            16171.55
+Noncombinational Area:          2306.30
+Buf/Inv Area:                   1782.14
+Total Buffer Area:               137.09
+Total Inverter Area:            1645.06
 Macro/Black Box Area:              0.00
 Net Area:                             0
-Net XLength:                   30087.14
-Net YLength:                   28961.10
+Net XLength:                   17938.73
+Net YLength:                   19235.79
 ----------------------------------------
-Cell Area (netlist):                          30448.05
-Cell Area (netlist and physical only):        33318.83
-Net Length:                    59048.24
+Cell Area (netlist):                          18477.85
+Cell Area (netlist and physical only):        20287.41
+Net Length:                    37174.52
 
 
 Design Rules
 ----------------------------------------
-Total Number of Nets:              2746
-Nets with Violations:                 4
-Max Trans Violations:                 2
-Max Cap Violations:                   4
+Total Number of Nets:              1871
+Nets with Violations:                11
+Max Trans Violations:                 9
+Max Cap Violations:                  11
 ----------------------------------------
 
 1

@@ -25,8 +25,8 @@ José Daniel Cuá Fagiani — Carné 21200
 | `sim/testbench_widths.sv` (WIDTH=16 y WIDTH=32, misma arquitectura) | **10/10 PASS** |
 | `parte2/sim/testbench_sync.sv` (envoltorio síncrono, WIDTH=16, Vivado xsim) | **5/5 PASS** |
 | `parte2/sim/testbench_sync.sv` con **VCS** real (servidor del curso) | **5/5 PASS** |
-| Síntesis **Design Compiler** real (GF150MCU + M31LLSC733GL150MS) | **Timing OK — WNS/TNS = 0.00, 0 violaciones**, 2671 celdas, 30448 µm² |
-| Flujo físico **IC Compiler II** real (floorplan→place→CTS→route→GDSII) | **Completo**, GDSII exportado; timing post-layout **no cumple** (slack -1.45 ns) — ver detalle |
+| Síntesis **Design Compiler** real (GF150MCU + M31LLSC733GL150MS) | **Timing OK — slack +4.43 ns, 0 violaciones**, 1796 celdas, 18478 µm² (40 ns / 25 MHz) |
+| Flujo físico **IC Compiler II** real (floorplan→place→CTS→route→GDSII) | **Completo — timing post-layout cumple**, slack +0.81 ns, 0 violaciones de setup/hold |
 
 Reportes reales y respuestas de la Discusión (PDF item 7.1), incluyendo
 la comparación de timing/área entre DC e ICC2 etapa por etapa, en
@@ -65,7 +65,8 @@ parte2/
   scripts/     synth_dc.tcl (Design Compiler), impl_icc2.tcl (IC Compiler II) -- ambos corridos reales
   netlist/     netlist sintetizada (alu_plus_sync_synth.v) y SDC de DC
   reportes/    reportes reales de DC e ICC2 (uno por etapa), logs de synth_dc/impl_icc2/VCS
-  gds/         alu_plus_sync.gds (GDSII final de ICC2)
+  gds/         alu_plus_sync.gds (GDSII final de ICC2) + img/ (imagen del layout real)
+  icc2_db/     base de datos final de ICC2 (lib_icc2_alu_plus_sync)
   docs/        estado del flujo, discusión con reportes reales, tratamiento del triestado
 ```
 

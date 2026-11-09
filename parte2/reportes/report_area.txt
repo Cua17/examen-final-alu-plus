@@ -3,7 +3,7 @@
 Report : area
 Design : alu_plus_sync_WIDTH16
 Version: X-2025.06-SP5-5
-Date   : Mon Nov  2 14:20:27 2026
+Date   : Mon Nov  9 12:15:10 2026
 ****************************************
 
 Library(s) Used:
@@ -11,21 +11,21 @@ Library(s) Used:
     M31LLSC733GL150MS_25CTT3P3_ctyp_nldm (File: /home/cuax/bootcamp_data/ExamenFinal_ALU/m31/M31LLSC733GL150MS_25CTT3P3_ctyp_nldm.db)
 
 Number of ports:                          569
-Number of nets:                          3155
-Number of cells:                         2671
-Number of combinational cells:           2574
+Number of nets:                          2280
+Number of cells:                         1796
+Number of combinational cells:           1699
 Number of sequential cells:                87
 Number of macros/black boxes:               0
-Number of buf/inv:                        878
-Number of references:                      11
+Number of buf/inv:                        357
+Number of references:                       6
 
-Combinational area:              27743.385921
-Buf/Inv area:                     5369.011161
-Noncombinational area:            2704.665623
+Combinational area:              15861.888125
+Buf/Inv area:                     1782.143964
+Noncombinational area:            2615.961609
 Macro/Black Box area:                0.000000
 Net Interconnect area:      undefined  (Wire load has zero net area)
 
-Total cell area:                 30448.051544
+Total cell area:                 18477.849734
 Total area:                 undefined
 
 Hierarchical area distribution
@@ -36,18 +36,18 @@ Hierarchical area distribution
 Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-  Black-
                                   Total       Total    national    national   boxes   Design
 --------------------------------  ----------  -------  ----------  ---------  ------  ---------------------
-alu_plus_sync_WIDTH16             30448.0515    100.0    541.9008  2395.0080  0.0000  alu_plus_sync_WIDTH16
-u_alu                             27511.1427     90.4    638.6688   309.6576  0.0000  alu_plus_WIDTH16
-u_alu/u_a0                          283.8528      0.9    283.8528     0.0000  0.0000  mux2_WIDTH16_6
-u_alu/u_a1                          129.0240      0.4    129.0240     0.0000  0.0000  mux2_WIDTH16_5
-u_alu/u_a2                          154.8288      0.5    154.8288     0.0000  0.0000  mux2_WIDTH16_4
-u_alu/u_a3                          256.4352      0.8    256.4352     0.0000  0.0000  mux2_WIDTH16_3
-u_alu/u_adder                       959.6160      3.2    959.6160     0.0000  0.0000  prefix_adder_WIDTH16
-u_alu/u_b0                          283.8528      0.9    283.8528     0.0000  0.0000  mux2_WIDTH16_2
-u_alu/u_b1                          511.2576      1.7    511.2576     0.0000  0.0000  mux2_WIDTH16_1
-u_alu/u_c0                          528.9984      1.7    528.9984     0.0000  0.0000  mux2_WIDTH16_0
-u_alu/u_divider                   23454.9507     77.0  23454.9507     0.0000  0.0000  array_divider_WIDTH16
+alu_plus_sync_WIDTH16             18477.8497    100.0    532.2240  2306.3040  0.0000  alu_plus_sync_WIDTH16
+u_alu                             15639.3217     84.6    437.0688   309.6576  0.0000  alu_plus_WIDTH16
+u_alu/u_a0                          283.8528      1.5    283.8528     0.0000  0.0000  mux2_WIDTH16_6
+u_alu/u_a1                          129.0240      0.7    129.0240     0.0000  0.0000  mux2_WIDTH16_5
+u_alu/u_a2                          154.8288      0.8    154.8288     0.0000  0.0000  mux2_WIDTH16_4
+u_alu/u_a3                          159.6672      0.9    159.6672     0.0000  0.0000  mux2_WIDTH16_3
+u_alu/u_adder                       959.6160      5.2    959.6160     0.0000  0.0000  prefix_adder_WIDTH16
+u_alu/u_b0                          291.9168      1.6    291.9168     0.0000  0.0000  mux2_WIDTH16_2
+u_alu/u_b1                          283.8528      1.5    283.8528     0.0000  0.0000  mux2_WIDTH16_1
+u_alu/u_c0                          283.8528      1.5    283.8528     0.0000  0.0000  mux2_WIDTH16_0
+u_alu/u_divider                   12345.9841     66.8  12345.9841     0.0000  0.0000  array_divider_WIDTH16
 --------------------------------  ----------  -------  ----------  ---------  ------  ---------------------
-Total                                                  27743.3859  2704.6656  0.0000
+Total                                                  15861.8881  2615.9616  0.0000
 
 1

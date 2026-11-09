@@ -13,7 +13,6 @@ xsim.dir/
 # sí se versionan.
 *.ddc
 alu_plus_sync_lib/
-lib_icc2_*/
 CLIBs/
 
 # excepcion: estos SI son logs reales de herramientas, entregables

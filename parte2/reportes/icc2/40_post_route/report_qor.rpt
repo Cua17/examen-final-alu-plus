@@ -2,31 +2,31 @@
 Report : qor
 Design : alu_plus_sync_WIDTH16
 Version: Y-2026.03-SP2
-Date   : Mon Nov  2 19:04:15 2026
+Date   : Mon Nov  9 12:18:13 2026
 ****************************************
 
 
 Scenario           'default'
 Timing Path Group  'clk'
 ----------------------------------------
-Levels of Logic:                    112
-Critical Path Length:             19.00
-Critical Path Slack:              -1.45
-Critical Path Clk Period:         20.00
-Total Negative Slack:            -18.18
-No. of Violating Paths:              18
-Worst Hold Violation:             -0.01
-Total Hold Violation:             -0.01
-No. of Hold Violations:               1
+Levels of Logic:                     99
+Critical Path Length:             33.01
+Critical Path Slack:               0.81
+Critical Path Clk Period:         40.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
 ----------------------------------------
 
 Scenario           'default'
 Timing Path Group  'INREG'
 ----------------------------------------
-Levels of Logic:                      3
-Critical Path Length:              8.83
-Critical Path Slack:               7.58
-Critical Path Clk Period:         20.00
+Levels of Logic:                      2
+Critical Path Length:             16.33
+Critical Path Slack:              15.78
+Critical Path Clk Period:         40.00
 Total Negative Slack:              0.00
 No. of Violating Paths:               0
 Worst Hold Violation:              0.00
@@ -37,27 +37,27 @@ No. of Hold Violations:               0
 Scenario           'default'
 Timing Path Group  'REGOUT'
 ----------------------------------------
-Levels of Logic:                      2
-Critical Path Length:              1.88
-Critical Path Slack:               5.74
-Critical Path Clk Period:         20.00
+Levels of Logic:                     10
+Critical Path Length:              3.52
+Critical Path Slack:              11.78
+Critical Path Clk Period:         40.00
 Total Negative Slack:              0.00
 No. of Violating Paths:               0
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
+Worst Hold Violation:             -2.49
+Total Hold Violation:            -12.93
+No. of Hold Violations:               6
 ----------------------------------------
 
 
 Cell Count
 ----------------------------------------
 Hierarchical Cell Count:             10
-Hierarchical Port Count:            545
-Leaf Cell Count:                   2442
-Buf/Inv Cell Count:                 581
-Buf Cell Count:                     134
-Inv Cell Count:                     447
-Combinational Cell Count:          2387
+Hierarchical Port Count:            532
+Leaf Cell Count:                   1594
+Buf/Inv Cell Count:                 288
+Buf Cell Count:                     156
+Inv Cell Count:                     132
+Combinational Cell Count:          1539
    Single-bit Isolation Cell Count:                        0
    Multi-bit Isolation Cell Count:                         0
    Isolation Cell Banking Ratio:                           0.00%
@@ -80,24 +80,24 @@ Macro Count:                          0
 
 Area
 ----------------------------------------
-Combinational Area:            27817.57
-Noncombinational Area:          2549.84
-Buf/Inv Area:                   4046.52
-Total Buffer Area:              1432.17
-Total Inverter Area:            2614.35
+Combinational Area:            17598.87
+Noncombinational Area:          2315.98
+Buf/Inv Area:                   3577.19
+Total Buffer Area:              2883.69
+Total Inverter Area:             693.50
 Macro/Black Box Area:              0.00
 Net Area:                             0
-Net XLength:                   30142.43
-Net YLength:                   32338.68
+Net XLength:                   19408.99
+Net YLength:                   21670.02
 ----------------------------------------
-Cell Area (netlist):                          30367.41
-Cell Area (netlist and physical only):        33238.19
-Net Length:                    62481.12
+Cell Area (netlist):                          19914.85
+Cell Area (netlist and physical only):        21724.42
+Net Length:                    41079.01
 
 
 Design Rules
 ----------------------------------------
-Total Number of Nets:              2475
+Total Number of Nets:              1628
 Nets with Violations:                 0
 Max Trans Violations:                 0
 Max Cap Violations:                   0

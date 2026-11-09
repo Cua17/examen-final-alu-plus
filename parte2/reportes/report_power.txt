@@ -4,7 +4,7 @@ Report : power
         -analysis_effort low
 Design : alu_plus_sync_WIDTH16
 Version: X-2025.06-SP5-5
-Date   : Mon Nov  2 14:20:27 2026
+Date   : Mon Nov  9 12:15:10 2026
 ****************************************
 
 
@@ -45,12 +45,12 @@ Attributes
 i - Including register clock pin internal power
 
 
-  Cell Internal Power  =   1.4379 mW   (69%)
-  Net Switching Power  = 632.6550 uW   (31%)
+  Cell Internal Power  = 797.7167 uW   (82%)
+  Net Switching Power  = 171.3513 uW   (18%)
                          ---------
-Total Dynamic Power    =   2.0705 mW  (100%)
+Total Dynamic Power    = 969.0681 uW  (100%)
 
-Cell Leakage Power     =   6.1127 nW
+Cell Leakage Power     =   3.1454 nW
 
 
                  Internal         Switching           Leakage            Total
@@ -59,10 +59,10 @@ Power Group      Power            Power               Power              Power  
 io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
-clock_network      0.5910            0.0000            0.0000            0.5910  (  28.54%)  i
-register       7.4214e-02        5.3925e-02          353.9665            0.1281  (   6.19%)
+clock_network      0.4770            0.0000            0.0000            0.4770  (  49.23%)  i
+register       4.4558e-02        2.4737e-02          316.0858        6.9296e-02  (   7.15%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational      0.7727            0.5787        5.7588e+03            1.3514  (  65.27%)
+combinational      0.2761            0.1466        2.8293e+03            0.4227  (  43.62%)
 --------------------------------------------------------------------------------------------------
-Total              1.4379 mW         0.6327 mW     6.1127e+03 pW         2.0705 mW
+Total              0.7977 mW         0.1714 mW     3.1454e+03 pW         0.9691 mW
 1

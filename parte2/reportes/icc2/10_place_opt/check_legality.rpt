@@ -12,9 +12,9 @@ PDC app_options settings =========
 	place.legalize.preroute_shape_merge_distance: 0.0
 	place.legalize.enable_non_preferred_direction_span_check: 0
 
-Layer METAL1: cached 0 shapes out of 88 total shapes.
+Layer METAL1: cached 0 shapes out of 69 total shapes.
 Layer METAL2: cached 0 shapes out of 0 total shapes.
-Cached 968 vias out of 1513 total vias.
+Cached 622 vias out of 974 total vias.
 
 check_legality for block design alu_plus_sync_WIDTH16 ... 
 Information: Initializing classic cellmap without advanced rules enabled and without PDC enabled
@@ -32,9 +32,9 @@ Information: The following app options are used in cellmap
         place.common.use_placement_model : false
         place.common.enable_advanced_placement_model : true
         cts.placement.cell_spacing_rule_style : maximum
-Total 0.0168 seconds to build cellmap data
+Total 0.0126 seconds to build cellmap data
 Information: Creating classic rule checker.
-=====> Processed 83 ref cells (0 fillers) from library
+=====> Processed 40 ref cells (0 fillers) from library
 Design has no advanced rules
 Checking legality
 Checking cell legality:

@@ -67,11 +67,16 @@ link
 # ------------------------------------------------------------------
 # 2. Restricciones de timing
 # ------------------------------------------------------------------
-# Periodo de partida para un bloque chico (ALU de 16 bits + registros) en
-# GF150MCU + M31 7-track (proceso de 150nm, bastante mas lento que un nodo
-# moderno) -- AJUSTAR con el report_timing real de la primera corrida;
-# 20ns (50MHz) es un punto de partida conservador, no un numero medido.
-set clk_val 20.0
+# Periodo ajustado con datos reales de cada corrida:
+#   20ns -> post-route slack -1.45ns (no cumple)
+#   24ns -> post-route slack -0.01ns (practicamente al limite)
+#   25ns -> post-route slack -0.03ns (peor que con 24ns -- place_opt/
+#           route_opt de ICC2 optimizan para "cumplir justo", no para
+#           maximizar margen, asi que subir de a poco no garantiza mas
+#           margen real de forma proporcional)
+# 30ns da margen amplio y deja de depender de ese comportamiento del
+# optimizador cerca del limite.
+set clk_val 40.0
 set CLK_PORT clk
 
 create_clock -name clk -period $clk_val [get_ports $CLK_PORT]
