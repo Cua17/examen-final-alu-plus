@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Examen Final — ALU+ | Arquitectura de Computadoras</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --panel: #161a21;
+    --border: #262b35;
+    --text: #e6e8eb;
+    --muted: #9aa3b2;
+    --accent: #5eead4;
+    --accent2: #818cf8;
+    --ok: #4ade80;
+    --warn: #fbbf24;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 48px 20px 80px; }
+  header { margin-bottom: 40px; }
+  .eyebrow { color: var(--accent); font-size: 13px; text-transform: uppercase; letter-spacing: .08em; font-weight: 600; }
+  h1 { font-size: clamp(28px, 5vw, 40px); margin: 10px 0 8px; line-height: 1.15; }
+  .sub { color: var(--muted); font-size: 16px; }
+  .byline { margin-top: 18px; color: var(--muted); font-size: 14px; }
+  .byline strong { color: var(--text); }
+
+  section { margin-top: 44px; }
+  h2 { font-size: 20px; border-bottom: 1px solid var(--border); padding-bottom: 10px; margin-bottom: 18px; }
+  p { color: #cdd3dc; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+  }
+  .card .label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 6px; }
+  .card .value { font-size: 20px; font-weight: 700; }
+  .card .note { color: var(--muted); font-size: 13px; margin-top: 4px; }
+  .ok { color: var(--ok); }
+  .warn { color: var(--warn); }
+
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--border); }
+  th { color: var(--muted); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
+
+  ul.links { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+  ul.links a {
+    color: var(--text); text-decoration: none; display: flex; justify-content: space-between;
+    background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px;
+  }
+  ul.links a:hover { border-color: var(--accent2); }
+  ul.links .arrow { color: var(--muted); }
+
+  .pill { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; }
+  .pill.ok { background: rgba(74,222,128,.12); color: var(--ok); }
+  .pill.warn { background: rgba(251,191,36,.12); color: var(--warn); }
+
+  footer { margin-top: 60px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--border); padding-top: 20px; }
+  code { background: var(--panel); border: 1px solid var(--border); padding: 1px 6px; border-radius: 4px; font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Examen Final — Arquitectura de Computadoras</div>
+    <h1>ALU+ : Prefix Adder + Divisor</h1>
+    <p class="sub">De RTL en SystemVerilog a GDSII real — síntesis con Design Compiler e implementación física con IC Compiler II, sobre el PDK real de GlobalFoundries 150MCU + celdas M31.</p>
+    <div class="byline">José Daniel Cuá Fagiani — Carné 21200</div>
+  </header>
+
+  <section>
+    <h2>Resultados principales</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="label">Parte 1 — Vivado xsim</div>
+        <div class="value ok">35/35 PASS</div>
+        <div class="note">WIDTH=8, testbench principal</div>
+      </div>
+      <div class="card">
+        <div class="label">Parte 1 — otros anchos</div>
+        <div class="value ok">10/10 PASS</div>
+        <div class="note">WIDTH=16 y 32, misma arquitectura</div>
+      </div>
+      <div class="card">
+        <div class="label">Envoltorio síncrono — VCS real</div>
+        <div class="value ok">5/5 PASS</div>
+        <div class="note">Servidor del curso, Synopsys VCS</div>
+      </div>
+      <div class="card">
+        <div class="label">Síntesis — Design Compiler</div>
+        <div class="value ok">Timing OK</div>
+        <div class="note">WNS/TNS = 0.00 ns, 0 violaciones · 2671 celdas · 30448 µm²</div>
+      </div>
+      <div class="card">
+        <div class="label">Diseño físico — IC Compiler II</div>
+        <div class="value ok">GDSII exportado</div>
+        <div class="note">Floorplan → place → CTS → route, check_legality / check_routes sin violaciones</div>
+      </div>
+      <div class="card">
+        <div class="label">Timing post-layout</div>
+        <div class="value warn">-1.45 ns</div>
+        <div class="note">18 caminos violados — ver Discusión para el análisis etapa por etapa</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>El flujo completo</h2>
+    <p>
+      <strong>Parte 1:</strong> ALU original + Prefix Adder (Kogge-Stone) y Divisor en arreglo,
+      parametrizados, con mux ternario nativo, bus triestado real para AND/OR y banderas NZCV —
+      verificado con simulación real, no solo "debería funcionar".
+    </p>
+    <p>
+      <strong>Parte 2:</strong> el PDF de la cátedra indicaba un PDK de GF 150nm + librerías M31 —
+      se confirmó con el material real del curso y se corrió el flujo completo contra ese PDK real
+      (no una sustitución open-source): <code>dc_shell-t</code> para síntesis y <code>icc2_shell</code>
+      para floorplan, placement, síntesis de árbol de reloj, ruteo y exportación de GDSII.
+    </p>
+  </section>
+
+  <section>
+    <h2>Documentación</h2>
+    <ul class="links">
+      <li><a href="README.md">README principal <span class="arrow">→</span></a></li>
+      <li><a href="docs/01-alu-estructura.md">Estructura de la ALU+ y asignación <span class="arrow">→</span></a></li>
+      <li><a href="docs/02-prefix-adder.md">Prefix Adder (Kogge-Stone) <span class="arrow">→</span></a></li>
+      <li><a href="docs/03-divisor.md">Divisor en arreglo <span class="arrow">→</span></a></li>
+      <li><a href="docs/04-flags-triestado.md">Banderas NZCV y bus triestado AND/OR <span class="arrow">→</span></a></li>
+      <li><a href="docs/05-verificacion.md">Verificación (Parte 1) <span class="arrow">→</span></a></li>
+      <li><a href="parte2/docs/00-estado.md">Parte 2 — estado del flujo, cómo se resolvió cada bloqueo <span class="arrow">→</span></a></li>
+      <li><a href="parte2/docs/04-triestado.md">Parte 2 — tratamiento del triestado en síntesis <span class="arrow">→</span></a></li>
+      <li><a href="parte2/docs/05-discusion.md">Parte 2 — Discusión con reportes reales <span class="arrow">→</span></a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Entregables</h2>
+    <table>
+      <tr><th>Archivo</th><th>Contenido</th></tr>
+      <tr><td><code>src/</code></td><td>RTL: mux2, prefix_adder, array_divider, alu_plus</td></tr>
+      <tr><td><code>sim/</code></td><td>Testbenches Parte 1 (Vivado)</td></tr>
+      <tr><td><code>parte2/rtl/</code></td><td>Envoltorio síncrono (alu_plus_sync)</td></tr>
+      <tr><td><code>parte2/scripts/</code></td><td>synth_dc.tcl, impl_icc2.tcl</td></tr>
+      <tr><td><code>parte2/netlist/</code></td><td>Netlist sintetizada + SDC</td></tr>
+      <tr><td><code>parte2/reportes/</code></td><td>Reportes reales de DC e ICC2, por etapa</td></tr>
+      <tr><td><code>parte2/gds/alu_plus_sync.gds</code></td><td>GDSII final</td></tr>
+    </table>
+  </section>
+
+  <footer>
+    Manejo de Base de Datos (pivoteada a Arquitectura de Computadoras) — 2026, Ciclo 2.
+  </footer>
+
+</div>
+</body>
+</html>
