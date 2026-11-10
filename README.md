@@ -58,7 +58,7 @@ de alimentación, parásitos, densidad de floorplan).
 src/           mux2.sv, prefix_adder.sv, array_divider.sv, alu_plus.sv
 sim/           testbench.sv (35 checks, WIDTH=8), testbench_widths.sv (10 checks, WIDTH=16/32)
 docs/          diseño de la ALU+, prefix adder, divisor, flags/triestado, verificación
-guiones/       guion para la presentación oral / video (Parte 1)
+guiones/       guion completo del video (Parte 1 y Parte 2), con demo en vivo en Vivado
 parte2/
   rtl/         alu_plus_sync.sv (envoltorio síncrono, registros de entrada/salida)
   sim/         testbench_sync.sv (verificado con Vivado xsim y VCS real)
@@ -98,6 +98,8 @@ Tiene que terminar en `TESTBENCH: PASS` (35/35). Igual para
 
 ## Video y presentación
 
-Pendiente de grabar: guion en [`guiones/guion_parte1_alu.md`](guiones/guion_parte1_alu.md).
+Pendiente de grabar: guion completo (Parte 1 y Parte 2, con demo en
+vivo en el visor de formas de onda de Vivado) en
+[`guiones/guion_video_examen_final.md`](guiones/guion_video_examen_final.md).
 El PDF pide un video sin límite de tiempo por cada inciso (enlace de
 YouTube oculto, no privado) y una presentación oral de 15 minutos.
