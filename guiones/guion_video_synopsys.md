@@ -88,7 +88,7 @@ exit
 
 **Escribir:**
 ```bash
-cd ../vcs_run
+cd vcs_run
 ./simv_sync
 ```
 

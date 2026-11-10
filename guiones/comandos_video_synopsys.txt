@@ -24,7 +24,7 @@ report_qor
 exit
 
 3.1
-cd ../vcs_run
+cd vcs_run
 ./simv_sync
 
 4
