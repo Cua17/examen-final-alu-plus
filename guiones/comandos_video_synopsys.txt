@@ -1,6 +1,10 @@
 COMANDOS — Video Synopsys
 
 0
+ssh cuax@10.252.1.11
+
+0.1
+cd ~/bootcamp_data/ExamenFinal_ALU/ExamenFinal/parte2
 
 1.1
 dc_shell-t
